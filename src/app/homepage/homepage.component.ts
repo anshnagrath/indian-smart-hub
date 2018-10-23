@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent {
-  public toScroll = false; toRegister = false; Documentation = false;
-  public toflip = false; tax = false; personalService = false;
-  public forFinalcial = false;
+  public toScroll = false; toRegister = false; Documentation = false; complaince = false; brandingSols = false;
+  public toflip = false; tax = false; personalService = false; creativeGall = false; digital = false; logins = false;
+  public forFinalcial = false; port = false;
   public GST = false;
+
 
   constructor() { }
   forSmartHub() {
@@ -17,9 +18,15 @@ export class HomepageComponent {
   }
   flip() {
     this.toflip = !this.toflip;
+    this.creativeGall = false;
+    this.forFinalcial = false;
+
+
   }
   finalcialFlux() {
     this.forFinalcial = !this.forFinalcial;
+    this.toflip = false;
+    this.creativeGall = false;
 
   }
   registration() {
@@ -44,6 +51,32 @@ export class HomepageComponent {
   personalservice() {
     this.forFinalcial = false;
     this.personalService = !this.personalService;
+
+  }
+  complainceandf() {
+    this.forFinalcial = false;
+    this.complaince = !this.complaince;
+  }
+  creativeGallery() {
+    this.creativeGall = !this.creativeGall;
+    this.forFinalcial = false;
+    this.toflip = false;
+  }
+  brandingSol() {
+    this.creativeGall = false;
+    this.brandingSols = !this.brandingSols;
+  }
+  digitalmarketing() {
+    this.creativeGall = false;
+    this.digital = !this.digital;
+  }
+  portfoliomanagment() {
+    this.creativeGall = false;
+    this.port = !this.port;
+  }
+  login() {
+    this.logins = !this.logins;
+    this.toflip = false;
 
   }
 }
