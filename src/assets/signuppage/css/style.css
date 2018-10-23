@@ -41,6 +41,7 @@ body {
 	text-align:center;
 }
 /*--header--*/
+
 .header-w3l {
     padding: 6em 0 4.5em;
 }
@@ -77,19 +78,28 @@ body {
     text-shadow: 1px 1px 1px #000;
 }
 .sub-main-w3 input[type="email"], .sub-main-w3 input[type="password"] {
-    outline: none;
-    font-size: 14px;
+	border-radius: 30px;
+	-webkit-appearance: none;
+	font-family: 'Source Sans Pro', sans-serif;
+    background: transparent;
+	outline: none;
+    font-size: 20px;
     border: none;
-    box-shadow: 2px 2px 21px rgba(0, 0, 0, 0.29);
-    background: rgba(255, 255, 255, 0.21);
     width: 95.9%;
-    color: #fff;
     padding: 10px;
     letter-spacing: 1px;
-    font-family: 'Roboto', sans-serif;
+  
+}
+#facebook ,#google{
+	border-radius: 30px;
+  background: transparent;
 }
 .sub-main-w3 input[type="submit"] {
-    color: #fff;
+	border-radius: 30px;
+	-webkit-appearance: none;
+	font-family: 'Source Sans Pro', sans-serif;
+    background: transparent;
+    
     background: #34bf49;
     border: none;
     width: 100%;
@@ -104,7 +114,7 @@ body {
     -o-transition: 0.5s all;
     -moz-transition: 0.5s all;
     -ms-transition: 0.5s all;
-    font-family: 'Roboto', sans-serif;
+
     margin-top: 1.5em;
 }
 .sub-main-w3 input[type="submit"]:hover {
@@ -293,7 +303,7 @@ input.checkbox:checked:after {
 /*--placeholder-color--*/
 
 ::-webkit-input-placeholder{
-	color:#fff;
+	color:transparent;
 }
 
 :-moz-placeholder { /* Firefox 18- */
@@ -305,7 +315,7 @@ input.checkbox:checked:after {
 }
 
 :-ms-input-placeholder {  
-   color: #fff;  
+   color:transparent;  
 }
 /*--//placeholder-color--*/
 

@@ -18,12 +18,14 @@ export class HomepageComponent {
   }
   flip() {
     this.toflip = !this.toflip;
+    this.logins = false;
     this.creativeGall = false;
     this.forFinalcial = false;
 
 
   }
   finalcialFlux() {
+    this.logins = false;
     this.forFinalcial = !this.forFinalcial;
     this.toflip = false;
     this.creativeGall = false;
@@ -59,6 +61,7 @@ export class HomepageComponent {
   }
   creativeGallery() {
     this.creativeGall = !this.creativeGall;
+    this.logins = false;
     this.forFinalcial = false;
     this.toflip = false;
   }
@@ -68,10 +71,12 @@ export class HomepageComponent {
   }
   digitalmarketing() {
     this.creativeGall = false;
+    this.logins = false;
     this.digital = !this.digital;
   }
   portfoliomanagment() {
     this.creativeGall = false;
+    this.logins = false;
     this.port = !this.port;
   }
   login() {
