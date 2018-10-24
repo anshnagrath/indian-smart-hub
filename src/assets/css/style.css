@@ -378,7 +378,7 @@ background-size:40px;
   opacity: 0.8;
 }
 #nav{
-
+    font-family:sans-serif;
     background:#7f7f7f;
     background:rgba(0,0,0,0.5)
 }

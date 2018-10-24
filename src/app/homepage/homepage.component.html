@@ -51,9 +51,9 @@
                      
                     <li class="nav-item dropdown">
                     
-                              <a (click)="forSmartHub()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                              <a  (click)="forSmartHub()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                   Smart Hub
-                           <div *ngIf="toScroll"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                           <div style="margin-top:14%" id="nav" *ngIf="toScroll"class="dropdown-menu show" aria-labelledby="navbarDropdown">
 
                                     <a class="dropdown-item text-center">About Us</a>
                                     <a class="dropdown-item text-center" >Vission and Values</a>
@@ -66,10 +66,10 @@
                             <li class="nav-item dropdown">
                               <a (click)="creativeGallery()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                              Creative gallery
-                                <div id="nav"*ngIf="creativeGall"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                <div id="nav" style="margin-top:10% "*ngIf="creativeGall"class="dropdown-menu show" aria-labelledby="navbarDropdown">
                                     <a (click)="brandingSol()" class="dropdown-item text-center">Branding Solution ></a>
                                     
-                                    <div  style="margin-left: 100%;margin-top:-37%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='brandingSols'>
+                                    <div id="nav" style="margin-left: 100%;margin-top:-37%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='brandingSols'>
                                       <a class="dropdown-item ">Logo Design</a>
                                       <a class="dropdown-item ">Business Card</a> 
                                       <a class="dropdown-item ">Letterhead Design</a>
@@ -101,7 +101,7 @@
                                   
                                     <a (click)="digitalmarketing()"class="dropdown-item text-center" >Digital Marketing</a>
 
-                                    <div  style="margin-left: 100%;margin-top:-25%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='digital'>
+                                    <div id="nav" style="margin-left: 100%;margin-top:-25%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='digital'>
                                       <a class="dropdown-item ">Content writing</a>
                                       <a class="dropdown-item ">Aticle writing</a> 
                                       <a class="dropdown-item ">Social media page creatiion</a>
@@ -118,7 +118,7 @@
                                       <a class="dropdown-item ">Social media paid campaigns</a>
                                       </div>
                                     <a (click)="portfoliomanagment()"class="dropdown-item text-center" >Portfolio management</a>
-                                    <div  style="margin-left: 100%;margin-top:-13%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='port'>
+                                    <div id="nav" style="margin-left: 100%;margin-top:-13%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='port'>
                                       <a class="dropdown-item ">Web Content writing</a>
                                       <a class="dropdown-item ">Blog article writing</a> 
                                       <a class="dropdown-item ">Social media page creatiion</a>
@@ -146,10 +146,10 @@
                               <li class="nav-item dropdown">
                                   <a (click)="finalcialFlux()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                    Financial flux
-                                    <div *ngIf="forFinalcial"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                    <div style="margin-top:11%" id ="nav" *ngIf="forFinalcial"class="dropdown-menu show" aria-labelledby="navbarDropdown">
                       
                                   <a (click)="registration()"class="dropdown-item ">Regitration ></a>
-                                        <div style="margin-left: 100%;margin-top:-64%"*ngIf="toRegister"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                        <div id="nav" style="margin-left: 100%;margin-top:-67%"*ngIf="toRegister"class="dropdown-menu show" aria-labelledby="navbarDropdown">
                                             <a class="dropdown-item ">Company Registration</a>
                                             <a class="dropdown-item ">Trademark Registration</a> 
                                             <a class="dropdown-item ">SER</a>
@@ -166,7 +166,7 @@
                                            
                                             </div>
                                         <a (click)="forGST()"class="dropdown-item " >GST ></a>
-                                        <div style="margin-left: 100%;margin-top:-55%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='GST'>
+                                        <div id="nav" style="margin-left: 100%;margin-top:-55%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='GST'>
                                             <a class="dropdown-item ">GST Registration</a>
                                             <a class="dropdown-item ">GST Data Entry</a> 
                                             <a class="dropdown-item ">GST return Filing</a>
@@ -175,7 +175,7 @@
 
                                         </div>
                                         <a (click)="forDocumentation()"class="dropdown-item " >Documentation</a>
-                                        <div  style="margin-left: 100%;margin-top:-45%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='Documentation'>
+                                        <div id="nav" style="margin-left: 100%;margin-top:-45%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='Documentation'>
                                             <a class="dropdown-item ">Lease Deed</a>
                                             <a class="dropdown-item ">Offer letter</a> 
                                             <a class="dropdown-item ">Appointment Letter</a>
@@ -183,14 +183,14 @@
                                             <a class="dropdown-item ">Lease Deed</a>
                                         </div>
                                         <a (click)="forTax()" class="dropdown-item " >Tax compliance</a>
-                                        <div  style="margin-left: 100%;margin-top:-35%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='tax'>
+                                        <div id="nav" style="margin-left: 100%;margin-top:-35%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='tax'>
                                             <a class="dropdown-item ">ITR filing</a>
                                             <a class="dropdown-item ">Annual filings</a> 
                     
                                         </div>
                                         <a (click)="personalservice()"class="dropdown-item " >Personal services</a>
                                     
-                                      <div  style="margin-left: 100%;margin-top:-23%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='personalService'>
+                                      <div  id="nav" style="margin-left: 100%;margin-top:-25%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='personalService'>
                                           <a class="dropdown-item ">Pan Card</a>
                                           <a class="dropdown-item ">Digital Signatures</a> 
                                           <a class="dropdown-item ">Legal services</a>
@@ -201,7 +201,7 @@
                                         </div>
                                         <a (click)="complainceandf()"class="dropdown-item " >Complaince and Funding</a>
                             
-                                        <div  style="margin-left: 100%;margin-top:-13%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='complaince'>
+                                        <div id="nav" style="margin-left: 100%;margin-top:-13%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='complaince'>
                                             <a class="dropdown-item ">Buisness Plan</a>
                                             <a class="dropdown-item ">C.M.A report</a> 
                                             <a class="dropdown-item ">Team Loan</a>
@@ -215,7 +215,7 @@
                                 <li class="nav-item dropdown">
                                   <a (click)="flip()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     edu basket
-                                    <div *ngIf="toflip"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                    <div style="margin-top:13%" id="nav" *ngIf="toflip"class="dropdown-menu show" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item text-center">Future Planner</a>
                                         <a class="dropdown-item text-center" >Jagsun edu</a>
                                         <a class="dropdown-item text-center" >Jagsun academy</a>
@@ -229,7 +229,7 @@
                                   <a (click)="login()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                  Login
                                </a>
-                               <div *ngIf="logins"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                               <div style="margin-top:18%" id="nav" *ngIf="logins"class="dropdown-menu show" aria-labelledby="navbarDropdown">
                                   <a routerLink='/login'class="dropdown-item text-center">Login</a>
                                   <a routerLink='/signup'class="dropdown-item text-center" >Sign up</a>
       
