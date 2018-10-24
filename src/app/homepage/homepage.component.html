@@ -31,7 +31,7 @@
          <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
       </head>
       <body>
-        <div class="container">
+        <div class="container-fluid">
         <div class="header-outs" id="home">
             <div class="header-bar">
                <nav class="navbar navbar-expand-lg navbar-light">
@@ -49,19 +49,19 @@
                      </li>
 
                      
-                    <!-- <li class="nav-item dropdown">
+                    <li class="nav-item dropdown">
                     
                               <a (click)="forSmartHub()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                   Smart Hub
-                                  <a class="dropdown-item text-center" >Become a partner</a>
-                                <div *ngIf="toScroll"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                           <div *ngIf="toScroll"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+
                                     <a class="dropdown-item text-center">About Us</a>
                                     <a class="dropdown-item text-center" >Vission and Values</a>
                                     <a class="dropdown-item text-center" >FAQ's</a>
                                   </div>
                               </a>
                              
-                            </li> -->
+                            </li>
 
                             <li class="nav-item dropdown">
                               <a (click)="creativeGallery()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -69,7 +69,7 @@
                                 <div id="nav"*ngIf="creativeGall"class="dropdown-menu show" aria-labelledby="navbarDropdown">
                                     <a (click)="brandingSol()" class="dropdown-item text-center">Branding Solution ></a>
                                     
-                                    <div  style="margin-left: 100%;margin-top:-20%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='brandingSols'>
+                                    <div  style="margin-left: 100%;margin-top:-37%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='brandingSols'>
                                       <a class="dropdown-item ">Logo Design</a>
                                       <a class="dropdown-item ">Business Card</a> 
                                       <a class="dropdown-item ">Letterhead Design</a>
@@ -101,7 +101,7 @@
                                   
                                     <a (click)="digitalmarketing()"class="dropdown-item text-center" >Digital Marketing</a>
 
-                                    <div  style="margin-left: 100%;margin-top:-20%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='digital'>
+                                    <div  style="margin-left: 100%;margin-top:-25%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='digital'>
                                       <a class="dropdown-item ">Content writing</a>
                                       <a class="dropdown-item ">Aticle writing</a> 
                                       <a class="dropdown-item ">Social media page creatiion</a>
@@ -118,7 +118,7 @@
                                       <a class="dropdown-item ">Social media paid campaigns</a>
                                       </div>
                                     <a (click)="portfoliomanagment()"class="dropdown-item text-center" >Portfolio management</a>
-                                    <div  style="margin-left: 100%;margin-top:-20%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='port'>
+                                    <div  style="margin-left: 100%;margin-top:-13%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='port'>
                                       <a class="dropdown-item ">Web Content writing</a>
                                       <a class="dropdown-item ">Blog article writing</a> 
                                       <a class="dropdown-item ">Social media page creatiion</a>
@@ -152,11 +152,11 @@
                                         <div style="margin-left: 100%;margin-top:-64%"*ngIf="toRegister"class="dropdown-menu show" aria-labelledby="navbarDropdown">
                                             <a class="dropdown-item ">Company Registration</a>
                                             <a class="dropdown-item ">Trademark Registration</a> 
-                                            <a class="dropdown-item ">Special Entity Registration</a>
+                                            <a class="dropdown-item ">SER</a>
                                             <a class="dropdown-item ">Intellectual Property</a>
                                             <a class="dropdown-item ">ESI Registration</a>
                                             <a class="dropdown-item ">MSME Registration</a>
-                                            <a class="dropdown-item ">Import Export Code Registration</a>
+                                            <a class="dropdown-item ">IECR</a>
                                             <a class="dropdown-item ">FSSAI</a>
                                             <a class="dropdown-item ">Food Safety Registration</a>
 
@@ -166,7 +166,7 @@
                                            
                                             </div>
                                         <a (click)="forGST()"class="dropdown-item " >GST ></a>
-                                        <div style="margin-left: 100%;margin-top:-47%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='GST'>
+                                        <div style="margin-left: 100%;margin-top:-55%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='GST'>
                                             <a class="dropdown-item ">GST Registration</a>
                                             <a class="dropdown-item ">GST Data Entry</a> 
                                             <a class="dropdown-item ">GST return Filing</a>
@@ -175,7 +175,7 @@
 
                                         </div>
                                         <a (click)="forDocumentation()"class="dropdown-item " >Documentation</a>
-                                        <div  style="margin-left: 100%;margin-top:-20%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='Documentation'>
+                                        <div  style="margin-left: 100%;margin-top:-45%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='Documentation'>
                                             <a class="dropdown-item ">Lease Deed</a>
                                             <a class="dropdown-item ">Offer letter</a> 
                                             <a class="dropdown-item ">Appointment Letter</a>
@@ -183,14 +183,14 @@
                                             <a class="dropdown-item ">Lease Deed</a>
                                         </div>
                                         <a (click)="forTax()" class="dropdown-item " >Tax compliance</a>
-                                        <div  style="margin-left: 100%;margin-top:-20%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='tax'>
+                                        <div  style="margin-left: 100%;margin-top:-35%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='tax'>
                                             <a class="dropdown-item ">ITR filing</a>
                                             <a class="dropdown-item ">Annual filings</a> 
                     
                                         </div>
                                         <a (click)="personalservice()"class="dropdown-item " >Personal services</a>
                                     
-                                      <div  style="margin-left: 100%;margin-top:-20%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='personalService'>
+                                      <div  style="margin-left: 100%;margin-top:-23%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='personalService'>
                                           <a class="dropdown-item ">Pan Card</a>
                                           <a class="dropdown-item ">Digital Signatures</a> 
                                           <a class="dropdown-item ">Legal services</a>
@@ -201,12 +201,12 @@
                                         </div>
                                         <a (click)="complainceandf()"class="dropdown-item " >Complaince and Funding</a>
                             
-                                        <div  style="margin-left: 100%;margin-top:-20%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='complaince'>
+                                        <div  style="margin-left: 100%;margin-top:-13%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='complaince'>
                                             <a class="dropdown-item ">Buisness Plan</a>
                                             <a class="dropdown-item ">C.M.A report</a> 
                                             <a class="dropdown-item ">Team Loan</a>
                                             <a class="dropdown-item ">Working Capital Loans </a>
-                                            <a class="dropdown-item ">Persona lLoans</a>
+                                            <a class="dropdown-item ">Personal Loans</a>
                                               </div>
                                         </div>
                                   </a>
@@ -788,60 +788,13 @@
             </div>
          </section> -->
          <!--//team -->
-         <!--contact -->
          <br><br><br><br>
-         <div class="contact" id="contact">
-            <div class="container">
-               <h3 class="title clr">CONTACT US</h3>
-               <div class=" contact-form">
-                  <form action="#" method="post">
-                     <div class="row contact-bothside-agileinfo">
-                        <div class="col-md-6 col-sm-6 col-xs-6 form-right form-left">
-                           <input type="text" name="Name" placeholder="Name" required="">
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-6 form-right ">
-                           <input type="text" name="Last name" placeholder="Last name" required="">
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-6 form-right form-left">
-                           <input type="email" name="Email" placeholder="Email" required="">
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-6 form-right ">
-                           <input type="text" name="phone" placeholder="Phone" required="">
-                        </div>
-                        <textarea name="Message" placeholder="Message" required=""></textarea>
-                        <input type="submit" value="SUBMIT">
-                     </div>
-                  </form>
-               </div>
-            </div>
-         </div>
-         <!--//contact -->
          <!-- //Footer -->
          <div class="footer">
             <div class="container">
                <div class="row footer-agile-grids">
-                  <div class="col-lg-3 col-md-6 col-sm-6 wthree-left-right">
-                     <h4>About</h4>
-                     <div class="abt-footer">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-                        <h5><a href="#about" class="scroll">Read more..</a></h5>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6 wthree-left-right">
-                     <h4> Opening Hours</h4>
-                     <div class="wls-hours-list">
-                        <ul>
-                           <li class="d-flex">Monday   <span class="time ml-auto"> 9:30-18:30</span></li>
-                           <li class="d-flex">Tuesday  <span class="time ml-auto"> 9:30-18:30</span></li>
-                           <li class="d-flex">Wednesday<span class="time ml-auto"> 9:30-18:30</span></li>
-                           <li class="d-flex">Thursday <span class="time ml-auto"> 9:30-18:30</span></li>
-                           <li class="d-flex">Friday   <span class="time ml-auto"> 9:30-18:30</span></li>
-                           <li class="d-flex">Saturday <span class="time ml-auto"> 9:30-18:30</span></li>
-                           <li class="d-flex">Sunday   <span class="time ml-auto">     closed</span></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6 wthree-left-right">
+             
+                  <div class="col-lg-6  wthree-left-right">
                      <h4>Our Address</h4>
                      <div class="addres-up">
                         <ul>
@@ -876,7 +829,7 @@
                         </ul>
                      </div>
                   </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6 wthree-left-right">
+                  <div class="col-lg-6 wthree-left-right">
                      <h4>Our Location</h4>
                      <div class="contact-map">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-73.9940307!3d40.719109700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e2f24131%3A0x64ffc98d24069f02!2sCANADA!5e0!3m2!1sen!2sin!4v1441710758555" allowfullscreen=""></iframe>
@@ -886,7 +839,7 @@
             </div>
          </div>
          <footer>
-            <p>©2018 Leccy. All Rights Reserved | Design by <a href="http://www.W3Layouts.com" target="_blank">W3Layouts</a></p>
+            <p>© All Rights Reserved | Design by <a href="www.google.com`" target="_blank">Digital Boxitin</a></p>
          </footer>
          <!-- //Footer -->
          <div id="exampleModalLive" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLiveLabel" aria-hidden="true">
