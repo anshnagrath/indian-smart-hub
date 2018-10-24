@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { ElementRef } from '@angular/core';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -8,11 +8,34 @@ import { Component } from '@angular/core';
 export class HomepageComponent {
   public toScroll = false; toRegister = false; Documentation = false; complaince = false; brandingSols = false;
   public toflip = false; tax = false; personalService = false; creativeGall = false; digital = false; logins = false;
-  public forFinalcial = false; port = false;
-  public GST = false;
+  public forFinalcial = false; port = false; creativeClose = false;
+  public GST = false; smarthubsec = false;
 
 
-  constructor() { }
+  constructor(private _eref: ElementRef) {
+  }
+  close() {
+    // this.toScroll = true;
+
+    if (this.smarthubsec !== true && this.creativeClose !== true) {
+      this.toScroll = false;
+      console.log('in');
+      this.smarthubsec = true
+      // this.scroll == false ? this.creativeGall = true : this.creativeGall = false;
+      // console.log("in")
+    }
+    // if (this.smarthubsec == true && this.creativeClose !== true) {
+    //   this.creativeGall = false;
+    //   console.log('in2')
+
+    // }
+    // if (this.creativeClose == true) { this.creativeGall = false; }
+    //  else console.log("outside ")
+    // else {
+    //   console.log(this.smarthubsec, 'scsdccccccccccccccccccccccC')
+
+    // }
+  }
   forSmartHub() {
     this.toScroll = !this.toScroll;
     this.logins = false;
@@ -104,6 +127,7 @@ export class HomepageComponent {
     this.complaince = !this.complaince;
   }
   creativeGallery() {
+    console.log('in3')
     this.creativeGall = !this.creativeGall;
     this.logins = false;
     this.forFinalcial = false;
@@ -135,6 +159,7 @@ export class HomepageComponent {
     this.logins = !this.logins;
     this.toflip = false;
     this.toScroll = false;
+    this.forFinalcial = false;
 
   }
 }

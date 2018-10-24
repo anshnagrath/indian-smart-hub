@@ -49,24 +49,24 @@
                      </li>
 
                      
-                    <li class="nav-item dropdown">
+                    <li (clickOutside)="close()"class="nav-item dropdown">
                     
                               <a  (click)="forSmartHub()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                   Smart Hub
-                           <div style="margin-top:14%" id="nav" *ngIf="toScroll"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                           <div style="margin-top:14%" (click)="smarthubsec=true"id="nav" *ngIf="toScroll"class="dropdown-menu show" aria-labelledby="navbarDropdown">
 
                                     <a class="dropdown-item text-center">About Us</a>
                                     <a class="dropdown-item text-center" >Vission and Values</a>
                                     <a class="dropdown-item text-center" >FAQ's</a>
                                   </div>
-                              </a>
+                              </a>  
                              
                             </li>
 
                             <li class="nav-item dropdown">
                               <a (click)="creativeGallery()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                              Creative gallery
-                                <div id="nav" style="margin-top:10% "*ngIf="creativeGall"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                <div id="nav" style="margin-top:10% "  (click)="creativeClose=true" *ngIf="creativeGall"class="dropdown-menu show" aria-labelledby="navbarDropdown">
                                     <a (click)="brandingSol()" class="dropdown-item text-center">Branding Solution ></a>
                                     
                                     <div id="nav" style="margin-left: 100%;margin-top:-37%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='brandingSols'>

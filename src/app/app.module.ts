@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { ClickOutsideModule } from 'ng4-click-outside';
 
 @NgModule({
     declarations: [
@@ -15,6 +16,7 @@ import { SignupComponent } from './signup/signup.component';
     ],
     imports: [
         BrowserModule,
+        ClickOutsideModule,
         RouterModule.forRoot([
             { path: '', component: HomepageComponent, pathMatch: 'full' },
             { path: 'login', component: LoginComponent, pathMatch: 'full' },
