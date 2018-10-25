@@ -6,6 +6,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ClickOutsideModule } from 'ng4-click-outside';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SliderModule } from 'angular-image-slider';
 
 @NgModule({
     declarations: [
@@ -16,12 +18,14 @@ import { ClickOutsideModule } from 'ng4-click-outside';
     ],
     imports: [
         BrowserModule,
+         BrowserAnimationsModule,
         ClickOutsideModule,
         RouterModule.forRoot([
             { path: '', component: HomepageComponent, pathMatch: 'full' },
             { path: 'login', component: LoginComponent, pathMatch: 'full' },
             { path: 'signup', component: SignupComponent, pathMatch: 'full' }
-        ])
+        ]),
+         SliderModule
     ],
     providers: [],
     bootstrap: [AppComponent]
