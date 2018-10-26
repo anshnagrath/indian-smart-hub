@@ -130,7 +130,7 @@ a.navbar-brand span {
     text-align: center;
 }
 .navbar-light .navbar-nav .nav-link {
-    color: #fff;
+    /* color: #fff; */
     font-size: 15px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -381,7 +381,7 @@ background-size:40px;
   float: left;
   opacity: 0.8;
 }
-#nav{
+#nav,#nav:focus{
     color:white;
     font-family:sans-serif;
     /* background:#7f7f7f; */
@@ -1030,11 +1030,9 @@ label.header {
 	-moz-transition: all 0.35s;
 	transition: all 0.35s;
 }
-/* .ehover14:hover img{
-	-ms-filter: brightness(1.4);
-	filter: brightness(1.4);
-	-webkit-filter: brightness(1.4);
-} */
+.navbar-default .navbar-nav > li > a:hover> div > a:focus {
+    background-color: black !important;
+}
 .ehover14 .overlay {
     -moz-opacity: 0;
     opacity: 0;
@@ -1369,10 +1367,6 @@ span.time {
     display: inline-block;
     padding-left: 15px;
 }
-/* .wthree-left-right h5 a:hover,.addres-up ul li p a:hover{color:#000;}
-.addres-up ul li {
-    padding-bottom: 14px;
-} */
 .contact-map iframe {
     width: 100%;
     height: 254px;
@@ -1402,9 +1396,6 @@ span.time {
     transition: 0.5s all;
     -moz-transition: 0.5s all;
 }
-/* .icons ul li a span:hover {
-    color: #000;
-} */
 .wthree-left-right h5 a {
     outline: none;
     color: #ffeb3b;

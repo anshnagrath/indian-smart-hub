@@ -53,11 +53,10 @@
                     
                               <a  (click)="forSmartHub()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                   Smart Hub
-                           <div style="margin-top:14%" (click)="smarthubsec=true"id="nav" *ngIf="toScroll"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                           <div style="margin-top:14%;text-align:center;" (click)="smarthubsec=true"id="nav" *ngIf="toScroll"class="dropdown-menu show" aria-labelledby="navbarDropdown">
 
-                                    <a class="dropdown-item text-center">About Us</a>
-                                    <a class="dropdown-item text-center" >Vission and Values</a>
-                                    <a class="dropdown-item text-center" >FAQ's</a>
+                                    <a class="dropdown" >About Us</a><br>
+                                    <a class="dropdown" >FAQ's</a>
                                   </div>
                               </a>  
                              
@@ -66,74 +65,76 @@
                             <li class="nav-item dropdown">
                               <a (click)="creativeGallery()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                              Creative gallery
-                                <div id="nav" style="margin-top:10% "  (click)="creativeClose=true" *ngIf="creativeGall"class="dropdown-menu show" aria-labelledby="navbarDropdown">
-                                    <a (click)="brandingSol()" class="dropdown-item text-center">Branding Solution ></a>
+                                <div id="nav" style="margin-top:10%;text-align:center;"  (click)="creativeClose=true" *ngIf="creativeGall"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                    <a (click)="brandingSol()" class="dropdown">Branding Solution </a>
                                     
-                                    <div id="nav" style="margin-left: 100%;margin-top:-37%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='brandingSols'>
-                                      <a class="dropdown-item ">Logo Design</a>
-                                      <a class="dropdown-item ">Business Card</a> 
-                                      <a class="dropdown-item ">Letterhead Design</a>
-                                      <a class="dropdown-item ">Standy Design</a>
-                                      <a class="dropdown-item ">Cover letter design</a>
-                                      <a class="dropdown-item ">Envelop Design</a>
-                                      <a class="dropdown-item ">Invoice Design</a>
-                                      <a class="dropdown-item ">Voucher design</a>
-                                      <a class="dropdown-item ">Poster Design</a>
-                                      <a class="dropdown-item ">Product package Design</a>
-                                      <a class="dropdown-item ">customized stationary design</a>
-                                      <a class="dropdown-item ">Outdoor Medium design</a>
-                                      <a class="dropdown-item ">Threature slide Design</a>
-                                      <a class="dropdown-item ">certificate design</a>
-                                      <a class="dropdown-item ">Flyer Design</a>
-                                      <a class="dropdown-item ">Brocher Design</a>
-                                      <a class="dropdown-item ">Magazine design</a>
-                                      <a class="dropdown-item ">Letterhead Design</a>
-                                      <a class="dropdown-item ">Banner Design</a>
-                                      <a class="dropdown-item ">Newsletter design</a>
-                                      <a class="dropdown-item ">Singage Design</a>
-                                      <a class="dropdown-item ">vehicle branding Design</a>
-                                      <a class="dropdown-item ">Press add design</a>
-                                      <a class="dropdown-item ">Cd's and cd cover design</a>
-                                      <a class="dropdown-item ">catelog design</a>
+                                    <div id="nav"  style="margin-left: 100%;margin-top:-32%;text-align:center;display: inline-block; overflow: hidden;
+                                    white-space: nowrap;" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='brandingSols'>
+                                      <a class="dropdown">Logo Design<br></a>
+                                      <a class="dropdown">Business Card<br></a> 
+                                      <a class="dropdown">Letterhead Design<br></a>
+                                      <a class="dropdown">Standy Design<br></a>
+                                      <a class="dropdown">Cover letter design <br></a>
+                                      <a class="dropdown ">Envelop Design<br></a>
+                                      <a class="dropdown">Invoice Design<br></a>
+                                      <a class="dropdown">Voucher design<br></a>
+                                      <a class="dropdown">Poster Design<br></a>
+                                      <a class="dropdown">Product package Design<br></a>
+                                      <a class="dropdown">customized design<br></a>
+                                      <a class="dropdown">Outdoor Medium design<br></a>
+                                      <a class="dropdown">Threature slide Design<br></a>
+                                      <a class="dropdown">certificate design<br></a>
+                                      <a class="dropdown">Flyer Design<br></a>
+                                      <a class="dropdown">Brocher Design<br></a>
+                                      <a class="dropdown">Magazine design<br></a>
+                                      <a class="dropdown">Letterhead Design<br></a>
+                                      <a class="dropdown">Banner Design<br></a>
+                                      <a class="dropdown">Newsletter design<br></a>
+                                      <a class="dropdown">Singage Design<br></a>
+                                      <a class="dropdown">vehicle branding Design<br></a>
+                                      <a class="dropdown">Press add design<br></a>
+                                      <a class="dropdown">&nbsp;Cd's and cd cover design&nbsp;<br></a>
+                                      <a class="dropdown">catelog design</a>
                                      
                                         </div>
                                   
                                   
-                                    <a (click)="digitalmarketing()"class="dropdown-item text-center" >Digital Marketing</a>
+                                    <a (click)="digitalmarketing()"class="dropdown" >Digital Marketing</a><br>
 
-                                    <div id="nav" style="margin-left: 100%;margin-top:-25%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='digital'>
-                                      <a class="dropdown-item ">Content writing</a>
-                                      <a class="dropdown-item ">Aticle writing</a> 
-                                      <a class="dropdown-item ">Social media page creatiion</a>
-                                      <a class="dropdown-item ">Social media page maintenance</a>
-                                      <a class="dropdown-item ">Search engine optimization</a>
-                                      <a class="dropdown-item ">Search engine marketing</a>
-                                      <a class="dropdown-item ">Social media marketing</a>
-                                      <a class="dropdown-item ">Social media optimization</a>
-                                      <a class="dropdown-item ">Online campaign creation</a>
-                                      <a class="dropdown-item ">Online reputation management</a>
-                                      <a class="dropdown-item ">Email marketing</a>
-                                      <a class="dropdown-item ">Sms marketing</a>
-                                      <a class="dropdown-item ">Blog creation and maintains</a>
-                                      <a class="dropdown-item ">Social media paid campaigns</a>
+                                    <div id="nav" style="margin-left: 100%;margin-top:-25%;text-align:center;display: inline-block; overflow: hidden;
+                                    white-space: nowrap;" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='digital'>
+                                      <a class="dropdown">Content writing<br></a>
+                                      <a class="dropdown">Aticle writing<br></a> 
+                                      <a class="dropdown">Social media page creatiion<br></a>
+                                      <a class="dropdown">&nbsp;Social media page maintenance&nbsp;<br></a>
+                                      <a class="dropdown">Search engine optimization<br></a>
+                                      <a class="dropdown">Search engine marketing<br></a>
+                                      <a class="dropdown">Social media marketing<br></a>
+                                      <a class="dropdown">Social media optimization<br></a>
+                                      <a class="dropdown">Online campaign creation<br></a>
+                                      <a class="dropdown">Online reputation management<br></a>
+                                      <a class="dropdown">Email marketing<br></a>
+                                      <a class="dropdown">Sms marketing<br></a>
+                                      <a class="dropdown">Blog creation and maintains<br></a>
+                                      <a class="dropdown">Social media paid campaigns<br></a>
                                       </div>
-                                    <a (click)="portfoliomanagment()"class="dropdown-item text-center" >Portfolio management</a>
-                                    <div id="nav" style="margin-left: 100%;margin-top:-13%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='port'>
-                                      <a class="dropdown-item ">Web Content writing</a>
-                                      <a class="dropdown-item ">Blog article writing</a> 
-                                      <a class="dropdown-item ">Social media page creatiion</a>
-                                      <a class="dropdown-item ">Social media pages</a>
-                                      <a class="dropdown-item ">maintains</a>
-                                      <a class="dropdown-item ">website template design</a>
-                                      <a class="dropdown-item ">content management system</a>
-                                      <a class="dropdown-item ">E-commerece application</a>
-                                      <a class="dropdown-item ">Devlopment</a>
-                                      <a class="dropdown-item ">Web re design</a>
-                                      <a class="dropdown-item ">web maintains</a>
-                                      <a class="dropdown-item ">Bulk sms marketing</a>
-                                      <a class="dropdown-item ">Voip services</a>
-                                      <a class="dropdown-item ">Mobile application</a>
-                                      <a class="dropdown-item ">devlopment</a>
+                                    <a (click)="portfoliomanagment()"class="dropdown" >Portfolio management</a>
+                                    <div id="nav" style="margin-left: 100%;margin-top:-13%;text-align:center;display:inline-block;overflow:hidden; white-space: nowrap;" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='port'>
+                                      <a class="dropdown">&nbsp;Web Content writing<br></a>
+                                      <a class="dropdown">&nbsp;Blog article writing&nbsp;<br></a> 
+                                      <a class="dropdown">&nbsp;Social media page creatiion&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;Social media pages&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;maintains&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;website template design&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;content management system&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;E-commerece application&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;Devlopment&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;Web re design&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;web maintains&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;Bulk sms marketing&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;Voip services&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;Mobile application&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;devlopment&nbsp;<br></a>
                                          
 
     </div> 
@@ -146,67 +147,67 @@
                               <li class="nav-item dropdown">
                                   <a (click)="finalcialFlux()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                    Financial flux
-                                    <div style="margin-top:11%" id ="nav" *ngIf="forFinalcial"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                    <div style="margin-top:11%;text-align:center;display:inline-block; white-space: nowrap;" id ="nav" *ngIf="forFinalcial"class="dropdown-menu show" aria-labelledby="navbarDropdown">
                       
-                                  <a (click)="registration()"class="dropdown-item ">Regitration ></a>
-                                        <div id="nav" style="margin-left: 100%;margin-top:-67%"*ngIf="toRegister"class="dropdown-menu show" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item ">Company Registration</a>
-                                            <a class="dropdown-item ">Trademark Registration</a> 
-                                            <a class="dropdown-item ">SER</a>
-                                            <a class="dropdown-item ">Intellectual Property</a>
-                                            <a class="dropdown-item ">ESI Registration</a>
-                                            <a class="dropdown-item ">MSME Registration</a>
-                                            <a class="dropdown-item ">IECR</a>
-                                            <a class="dropdown-item ">FSSAI</a>
-                                            <a class="dropdown-item ">Food Safety Registration</a>
+                                  <a (click)="registration()"class="dropdown">Regitration <br></a>
+                                        <div id="nav" style="margin-left: 100%;margin-top:-56%;text-align:center;display:inline-block; white-space: nowrap;" *ngIf="toRegister" class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown">Company Registration<br></a>
+                                            <a class="dropdown">Trademark Registration<br></a> 
+                                            <a class="dropdown">SER<br></a>
+                                            <a class="dropdown">Intellectual Property<br></a>
+                                            <a class="dropdown">ESI Registration<br></a>
+                                            <a class="dropdown">MSME Registration<br></a>
+                                            <a class="dropdown">IECR<br></a>
+                                            <a class="dropdown">FSSAI<br></a>
+                                            <a class="dropdown">&nbsp;Food Safety Registration &nbsp;<br></a>
 
-                                            <a class="dropdown-item ">Iso Registration</a>
-                                            <a class="dropdown-item ">patent</a>
-                                            <a class="dropdown-item ">Copy Right Registration</a>
+                                            <a class="dropdown">Iso Registration<br></a>
+                                            <a class="dropdown">patent<br></a>
+                                            <a class="dropdown">Copy Right Registration<br></a>
                                            
                                             </div>
-                                        <a (click)="forGST()"class="dropdown-item " >GST ></a>
-                                        <div id="nav" style="margin-left: 100%;margin-top:-55%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='GST'>
-                                            <a class="dropdown-item ">GST Registration</a>
-                                            <a class="dropdown-item ">GST Data Entry</a> 
-                                            <a class="dropdown-item ">GST return Filing</a>
-                                            <a class="dropdown-item ">GST invoice Entry</a>
+                                        <a (click)="forGST()"class="dropdown" >GST <br></a>
+                                        <div id="nav" style="margin-left:100%;margin-top:-50%;text-align:center;display:inline-block;white-space:nowrap" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='GST'>
+                                            <a class="dropdown">GST Registration<br></a>
+                                            <a class="dropdown">GST Data Entry<br></a> 
+                                            <a class="dropdown"> &nbsp;GST return Filing  &nbsp;<br></a>
+                                            <a class="dropdown">GST invoice Entry<br></a>
                                             
 
                                         </div>
-                                        <a (click)="forDocumentation()"class="dropdown-item " >Documentation</a>
-                                        <div id="nav" style="margin-left: 100%;margin-top:-45%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='Documentation'>
-                                            <a class="dropdown-item ">Lease Deed</a>
-                                            <a class="dropdown-item ">Offer letter</a> 
-                                            <a class="dropdown-item ">Appointment Letter</a>
-                                            <a class="dropdown-item ">Registration letter</a>
-                                            <a class="dropdown-item ">Lease Deed</a>
+                                        <a (click)="forDocumentation()"class="dropdown ">Documentation<br></a>
+                                        <div id="nav" style="margin-left: 100%;margin-top:-40%;text-align:center;display:inline-block;white-space:nowrap" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='Documentation'>
+                                            <a class="dropdown">Lease Deed<br></a>
+                                            <a class="dropdown">Offer letter<br></a> 
+                                            <a class="dropdown">Appointment Letter<br></a>
+                                            <a class="dropdown"> &nbsp;Registration letter &nbsp;<br></a>
+                                            <a class="dropdown">Lease Deed<br></a>
                                         </div>
-                                        <a (click)="forTax()" class="dropdown-item " >Tax compliance</a>
-                                        <div id="nav" style="margin-left: 100%;margin-top:-35%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='tax'>
-                                            <a class="dropdown-item ">ITR filing</a>
-                                            <a class="dropdown-item ">Annual filings</a> 
+                                        <a (click)="forTax()" class="dropdown" >Tax compliance<br></a>
+                                        <div id="nav" style="margin-left: 100%;margin-top:-30%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='tax'>
+                                            <a class="dropdown">&nbsp;ITR filing&nbsp;<br></a>
+                                            <a class="dropdown">&nbsp;Annual filings&nbsp;<br></a> 
                     
                                         </div>
-                                        <a (click)="personalservice()"class="dropdown-item " >Personal services</a>
+                                        <a (click)="personalservice()"class="dropdown" >Personal services<br></a>
                                     
-                                      <div  id="nav" style="margin-left: 100%;margin-top:-25%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='personalService'>
-                                          <a class="dropdown-item ">Pan Card</a>
-                                          <a class="dropdown-item ">Digital Signatures</a> 
-                                          <a class="dropdown-item ">Legal services</a>
-                                          <a class="dropdown-item ">ITR filing </a>
-                                          <a class="dropdown-item ">passport</a>
-                                          <a class="dropdown-item ">Electronic services</a>
-                                          <a class="dropdown-item ">E-filings</a>
+                                      <div  id="nav" style="margin-left: 100%;margin-top:-20%;text-align:center;display:inline-block;white-space:nowrap" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='personalService'>
+                                          <a class="dropdown ">Pan Card&nbsp;<br></a>
+                                          <a class="dropdown ">Digital Signatures&nbsp;<br></a> 
+                                          <a class="dropdown ">Legal services&nbsp;<br></a>
+                                          <a class="dropdown ">ITR filing&nbsp;<br></a>
+                                          <a class="dropdown ">passport&nbsp;<br></a>
+                                          <a class="dropdown ">&nbsp;Electronic services&nbsp;<br></a>
+                                          <a class="dropdown ">E-filings&nbsp;<br></a>
                                         </div>
-                                        <a (click)="complainceandf()"class="dropdown-item " >Complaince and Funding</a>
+                                        <a (click)="complainceandf()"class="dropdown" >&nbsp;Complaince and Funding&nbsp;<br></a>
                             
-                                        <div id="nav" style="margin-left: 100%;margin-top:-13%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='complaince'>
-                                            <a class="dropdown-item ">Buisness Plan</a>
-                                            <a class="dropdown-item ">C.M.A report</a> 
-                                            <a class="dropdown-item ">Team Loan</a>
-                                            <a class="dropdown-item ">Working Capital Loans </a>
-                                            <a class="dropdown-item ">Personal Loans</a>
+                                        <div id="nav" style="margin-left: 100%;margin-top:-15%;text-align:center;display:inline-block;white-space:nowrap" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='complaince'>
+                                            <a class="dropdown ">&nbsp;Buisness Plan&nbsp;<br></a>
+                                            <a class="dropdown">&nbsp;C.M.A report&nbsp;<br></a> 
+                                            <a class="dropdown">&nbsp;Team Loan&nbsp;<br></a>
+                                            <a class="dropdown">&nbsp;Working Capital Loans&nbsp;<br></a>
+                                            <a class="dropdown">&nbsp;Personal Loans&nbsp;<br></a>
                                               </div>
                                         </div>
                                   </a>
@@ -215,12 +216,12 @@
                                 <li class="nav-item dropdown">
                                   <a (click)="flip()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     edu basket
-                                    <div style="margin-top:13%" id="nav" *ngIf="toflip"class="dropdown-menu show" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item text-center">Future Planner</a>
-                                        <a class="dropdown-item text-center" >Jagsun edu</a>
-                                        <a class="dropdown-item text-center" >Jagsun academy</a>
-                                        <a class="dropdown-item text-center" >Digital teaching aid</a>
-                                        <a class="dropdown-item text-center" >K-12 Publishing</a>
+                                    <div style="margin-top:13%;text-align:center" id="nav" *ngIf="toflip"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown">&nbsp;Future Planner &nbsp;<br></a>
+                                        <a class="dropdown" >&nbsp;Jagsun edu &nbsp;<br></a>
+                                        <a class="dropdown" >&nbsp;Jagsun academy &nbsp;<br></a>
+                                        <a class="dropdown" >&nbsp;Digital teaching aid &nbsp;<br></a>
+                                        <a class="dropdown" >&nbsp;K-12 Publishing&nbsp;<br></a>
                                       </div>
                                   </a>
                                  
@@ -229,9 +230,9 @@
                                   <a (click)="login()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                  Login
                                </a>
-                               <div style="margin-top:18%"  id="nav" *ngIf="logins"class="dropdown-menu show" aria-labelledby="navbarDropdown">
-                                  <a style="color:white;font-size:120%"routerLink='/login'class="dropdown-item text-center">Login</a>
-                                  <a style="color:white;font-size:120%"routerLink='/signup'class="dropdown-item text-center" >Sign up</a>
+                               <div style="margin-top:18%;text-align:center"  id="nav" *ngIf="logins"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                  <a style="color:white;font-size:120%"routerLink='/login'class="dropdown">&nbsp;Login<br>&nbsp;</a>
+                                  <a style="color:white;font-size:120%"routerLink='/signup'class="dropdown" >&nbsp;Sign up&nbsp;</a>
       
                                 </div>
                                </li>
