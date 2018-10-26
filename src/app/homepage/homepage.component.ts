@@ -19,7 +19,7 @@ export class HomepageComponent implements OnInit{
 'https://www.file-upload.com/dshoe34r4piy',
 'https://www.file-upload.com/d4tzslloi773',
 'https://www.file-upload.com/2vc1fhbv6iqa',
-    'https://www.file-upload.com/ou1evwlhcqp9',
+'https://www.file-upload.com/ou1evwlhcqp9',
 'https://www.file-upload.com/q2ky6363ea35',
     ];
  }
