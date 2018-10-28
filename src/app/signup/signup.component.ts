@@ -1,5 +1,6 @@
+import { AppService } from './../app.service';
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'angular2-social-login';
+import { AuthService, FacebookLoginProvider, GoogleLoginProvider } from 'angular-6-social-login';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -7,11 +8,32 @@ import { AuthService } from 'angular2-social-login';
 })
 export class SignupComponent implements OnInit {
   public sub;
-  constructor(public _auth: AuthService) { }
+  public mail; password;
+  constructor(private socialAuthService: AuthService, public service: AppService) { }
 
   ngOnInit() {
   }
   facebookLogin() {
-    this.sub = this._auth.login('facebook').subscribe((data) => { alert(JSON.stringify(data)) });
+    const socialPlatformProvider = FacebookLoginProvider.PROVIDER_ID;
+    this.socialAuthService.signIn(socialPlatformProvider).then(
+      (userData) => {
+        alert(userData);
+
+      }
+    );
+  }
+  signup() {
+    this.service.signup(this.mail, this.password).subscribe(data =>
+      console.log(data, 'signup conntent')
+    );
+  }
+  googleLogin() {
+    const socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
+    this.socialAuthService.signIn(socialPlatformProvider).then(
+      (userData) => {
+        alert(userData);
+
+      }
+    );
   }
 }

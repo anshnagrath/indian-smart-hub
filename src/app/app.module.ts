@@ -8,15 +8,31 @@ import { SignupComponent } from './signup/signup.component';
 import { ClickOutsideModule } from 'ng4-click-outside';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SliderModule } from 'angular-image-slider';
-import { Angular2SocialLoginModule } from 'angular2-social-login';
-let socialloginproviders = {
-    "google": {
-        "clientId": ""
-    },
-    "facebook": {
-        "clientId": "1375514229250365",
-        "apiVersion": "v2.11"
-    }
+import { FormsModule } from '@angular/forms';
+import { AppService } from './app.service';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+
+import {
+    AuthServiceConfig,
+    SocialLoginModule,
+    GoogleLoginProvider,
+    FacebookLoginProvider,
+} from 'angular-6-social-login';
+
+export function getAuthServiceConfigs() {
+    const config = new AuthServiceConfig(
+        [
+            {
+                id: FacebookLoginProvider.PROVIDER_ID,
+                provider: new FacebookLoginProvider('1375514229250365')
+            },
+            {
+                id: GoogleLoginProvider.PROVIDER_ID,
+                provider: new GoogleLoginProvider('334880204938-ofvpvtl1dcro61dfpenpeihduera23bl.apps.googleusercontent.com')
+            }
+        ]);
+    return config;
 }
 @NgModule({
     declarations: [
@@ -26,8 +42,11 @@ let socialloginproviders = {
         SignupComponent
     ],
     imports: [
+        HttpClientModule,
+        HttpModule,
+        FormsModule,
         BrowserModule,
-        Angular2SocialLoginModule,
+        SocialLoginModule,
         BrowserAnimationsModule,
         ClickOutsideModule,
         RouterModule.forRoot([
@@ -37,8 +56,13 @@ let socialloginproviders = {
         ]),
         SliderModule
     ],
-    providers: [],
+    providers: [{
+        provide: AuthServiceConfig,
+        useFactory: getAuthServiceConfigs
+    },
+        AppService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
-Angular2SocialLoginModule.loadProvidersScripts(socialloginproviders);
+

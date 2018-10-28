@@ -21,7 +21,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <body>
 		<!--header-->
 		<div class="header-w3l">
-			<h1>Transparent Sign In Form</h1>
+			<h1> Sign In with us </h1>
 		</div>
 		<!--//header-->
 		<!--main-->
@@ -31,17 +31,17 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<form action="#" method="post">
 					<!-- <h6>sign in with us </h6> -->
 					<div class="navbar-right social-icons"> 
-						<a (click)="facebookLogin()"href="#" id='facebook' class="one-w3ls" ><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
-						<a href="#" id='google' class="two-w3ls" ><i class="fa fa-google-plus" aria-hidden="true"></i>Google+</a>
+						<a (click)="facebookLogin()" id='facebook' class="one-w3ls" ><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
+						<a (click)="googleLogin()" id='google' class="two-w3ls" ><i class="fa fa-google-plus" aria-hidden="true"></i>Google+</a>
 						<div class="clear"></div>
 					</div>
 					<h6>Or use your email</h6>
 					<div id="put" class="icon1 ">
-						<input placeholder="Email" name="mail" type="email" required="">
+						<input [(ngModel)]="mail" placeholder="Email" name="mail" type="email" required/>
 					</div>
 					
 					<div id="in"class="icon2 ">
-						<input  placeholder="Password" name="Password" type="password" required="">
+						<input [(ngModel)]="password" placeholder="Password" name="Password" type="password" required/>
 					</div>
 					<label class="anim">
 					<input type="checkbox" class="checkbox">
@@ -49,7 +49,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<a href="#">Forgot Password</a>
 					</label> 
 						<div class="clear"></div>
-					<input type="submit" value="Sign in">
+					<input (click)="signup()" type="submit" value="Sign in">
 				</form>
 			</div>
 		</div>

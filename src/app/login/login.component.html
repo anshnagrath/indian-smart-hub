@@ -35,12 +35,12 @@
 		<!-- form starts here -->
 		<form action="#" method="post">
 			<div class="agile-field-txt">
-				<label><i class="fa fa-user" aria-hidden="true"></i> Username </label>
-				<input type="text" name="name" placeholder="Enter User Name" required="" />
+				<label><i class="fa fa-user" aria-hidden="true"></i>Email </label>
+				<input [(ngModel)]="userName" type="text" name="name" placeholder="Enter User Name" required="" />
 			</div>
 			<div class="agile-field-txt">
 				<label><i class="fa fa-unlock-alt" aria-hidden="true"></i> password </label>
-				<input type="password" name="password" placeholder="Enter Password" required="" id="myInput" />
+				<input [(ngModel)]="password" type="password" name="password" placeholder="Enter Password" required="" id="myInput" />
 				<div class="agile_label">
 					<input id="check3" name="check3" type="checkbox" value="show password" onclick="myFunction()">
 					<label class="check" for="check3">Show password</label>
@@ -66,7 +66,7 @@
 				}
 			</script>
 			<!-- //end script -->
-				<input type="submit" value="LOGIN">
+				<input (click)="login()" type="submit" value="LOGIN">
 		</form>
 	</div>
 	<!-- //form ends here -->
