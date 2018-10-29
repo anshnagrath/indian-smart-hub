@@ -14,7 +14,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(function (req, res, next) {
-  // res.setHeader('Content-Type', 'application/json');
+   res.setHeader('Content-Type', 'application/json');
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type:application/json');
@@ -22,7 +22,8 @@ app.use(function (req, res, next) {
 });
 
 // Point static path to dist
-app.use(express.static(path.join(__dirname, 'dist/ish')))
+app.use(express.static(path.join(__dirname, 'dist/ish/')))
+console.log(path.join(__dirname, 'dist/ish/'));
 // Set our api routes
 // app.use('/api', api);
 
