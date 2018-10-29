@@ -1,0 +1,352 @@
+<script>
+    addEventListener("load", function () {
+      setTimeout(hideURLbar, 0);
+    }, false);
+    
+    function hideURLbar() {
+      window.scrollTo(0, 1);
+    }
+ </script>
+ <!--booststrap css-->
+ <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+ <!-- font-awesome icons -->
+ <link href="../../assets/css/font-awesome.css" rel="stylesheet">
+ <!-- For Clients slider -->
+ <link rel="stylesheet" href="../../assets/css/flexslider.css" type="text/css" media="all" />
+ <!-- //For clients slider -->
+ <link href="../../assets/css/lsb.css" rel="stylesheet" type="text/css">
+ <!--gallery lsb lightbox-->
+ <!--stylesheets-->
+ <link href="../../assets/css/style.css" rel='stylesheet' type='text/css' media="all">
+ <!--//stylesheets-->
+ <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+
+<nav class="navbar navbar-expand-lg navbar-light">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+
+                  </button>
+                  <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+                     
+                   <ul class="navbar-nav ">
+                     <li class="nav-item">
+
+                            <a href="#" class="pull-left"><img src="../../assets/images/logo/ish-logo (2) - Copy (1).png" width="80px" height="30px"></a> 
+                       
+                     </li>
+
+                     
+                    <li (clickOutside)="close()"class="nav-item dropdown">
+                    
+                              <a  (click)="forSmartHub()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  Smart Hub
+                           <div style="margin-top:14%;text-align:center;" (click)="smarthubsec=true"id="nav" *ngIf="toScroll"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+
+                                    <a class="dropdown" >About Us</a><br>
+                                    <a class="dropdown" >FAQ's</a>
+                                  </div>
+                              </a>  
+                             
+                            </li>
+
+                            <li class="nav-item dropdown">
+                              <a (click)="creativeGallery()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                             Creative gallery
+                                <div id="nav" style="margin-top:10%;text-align:center;"  (click)="creativeClose=true" *ngIf="creativeGall"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                    <a (click)="brandingSol()" class="dropdown">Branding Solution </a>
+                                    
+                                    <div id="nav"  style="margin-left: 100%;margin-top:-32%;text-align:center;display: inline-block; overflow: hidden;
+                                    white-space: nowrap;" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='brandingSols'>
+                                      <a class="dropdown">Logo Design<br></a>
+                                      <a class="dropdown">Business Card<br></a> 
+                                      <a class="dropdown">Letterhead Design<br></a>
+                                      <a class="dropdown">Standy Design<br></a>
+                                      <a class="dropdown">Cover letter design <br></a>
+                                      <a class="dropdown ">Envelop Design<br></a>
+                                      <a class="dropdown">Invoice Design<br></a>
+                                      <a class="dropdown">Voucher design<br></a>
+                                      <a class="dropdown">Poster Design<br></a>
+                                      <a class="dropdown">Product package Design<br></a>
+                                      <a class="dropdown">customized design<br></a>
+                                      <a class="dropdown">Outdoor Medium design<br></a>
+                                      <a class="dropdown">Threature slide Design<br></a>
+                                      <a class="dropdown">certificate design<br></a>
+                                      <a class="dropdown">Flyer Design<br></a>
+                                      <a class="dropdown">Brocher Design<br></a>
+                                      <a class="dropdown">Magazine design<br></a>
+                                      <a class="dropdown">Letterhead Design<br></a>
+                                      <a class="dropdown">Banner Design<br></a>
+                                      <a class="dropdown">Newsletter design<br></a>
+                                      <a class="dropdown">Singage Design<br></a>
+                                      <a class="dropdown">vehicle branding Design<br></a>
+                                      <a class="dropdown">Press add design<br></a>
+                                      <a class="dropdown">&nbsp;Cd's and cd cover design&nbsp;<br></a>
+                                      <a class="dropdown">catelog design</a>
+                                     
+                                        </div>
+                                  
+                                  
+                                    <a (click)="digitalmarketing()"class="dropdown" >Digital Marketing</a><br>
+
+                                    <div id="nav" style="margin-left: 100%;margin-top:-25%;text-align:center;display: inline-block; overflow: hidden;
+                                    white-space: nowrap;" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='digital'>
+                                      <a class="dropdown">Content writing<br></a>
+                                      <a class="dropdown">Aticle writing<br></a> 
+                                      <a class="dropdown">Social media page creatiion<br></a>
+                                      <a class="dropdown">&nbsp;Social media page maintenance&nbsp;<br></a>
+                                      <a class="dropdown">Search engine optimization<br></a>
+                                      <a class="dropdown">Search engine marketing<br></a>
+                                      <a class="dropdown">Social media marketing<br></a>
+                                      <a class="dropdown">Social media optimization<br></a>
+                                      <a class="dropdown">Online campaign creation<br></a>
+                                      <a class="dropdown">Online reputation management<br></a>
+                                      <a class="dropdown">Email marketing<br></a>
+                                      <a class="dropdown">Sms marketing<br></a>
+                                      <a class="dropdown">Blog creation and maintains<br></a>
+                                      <a class="dropdown">Social media paid campaigns<br></a>
+                                      </div>
+                                    <a (click)="portfoliomanagment()"class="dropdown" >Portfolio management</a>
+                                    <div id="nav" style="margin-left: 100%;margin-top:-13%;text-align:center;display:inline-block;overflow:hidden; white-space: nowrap;" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='port'>
+                                      <a class="dropdown">&nbsp;Web Content writing<br></a>
+                                      <a class="dropdown">&nbsp;Blog article writing&nbsp;<br></a> 
+                                      <a class="dropdown">&nbsp;Social media page creatiion&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;Social media pages&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;maintains&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;website template design&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;content management system&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;E-commerece application&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;Devlopment&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;Web re design&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;web maintains&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;Bulk sms marketing&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;Voip services&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;Mobile application&nbsp;<br></a>
+                                      <a class="dropdown">&nbsp;devlopment&nbsp;<br></a>
+                                         
+
+    </div> 
+                                  </div>
+                              </a>
+                             
+                            </li>
+                          
+                           
+                              <li class="nav-item dropdown">
+                                  <a (click)="finalcialFlux()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                   Financial flux
+                                    <div style="margin-top:11%;text-align:center;display:inline-block; white-space: nowrap;" id ="nav" *ngIf="forFinalcial"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                      
+                                  <a (click)="registration()"class="dropdown">Regitration <br></a>
+                                        <div id="nav" style="margin-left: 100%;margin-top:-56%;text-align:center;display:inline-block; white-space: nowrap;" *ngIf="toRegister" class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown">Company Registration<br></a>
+                                            <a class="dropdown">Trademark Registration<br></a> 
+                                            <a class="dropdown">SER<br></a>
+                                            <a class="dropdown">Intellectual Property<br></a>
+                                            <a class="dropdown">ESI Registration<br></a>
+                                            <a class="dropdown">MSME Registration<br></a>
+                                            <a class="dropdown">IECR<br></a>
+                                            <a class="dropdown">FSSAI<br></a>
+                                            <a class="dropdown">&nbsp;Food Safety Registration &nbsp;<br></a>
+
+                                            <a class="dropdown">Iso Registration<br></a>
+                                            <a class="dropdown">patent<br></a>
+                                            <a class="dropdown">Copy Right Registration<br></a>
+                                           
+                                            </div>
+                                        <a (click)="forGST()"class="dropdown" >GST <br></a>
+                                        <div id="nav" style="margin-left:100%;margin-top:-50%;text-align:center;display:inline-block;white-space:nowrap" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='GST'>
+                                            <a class="dropdown">GST Registration<br></a>
+                                            <a class="dropdown">GST Data Entry<br></a> 
+                                            <a class="dropdown"> &nbsp;GST return Filing  &nbsp;<br></a>
+                                            <a class="dropdown">GST invoice Entry<br></a>
+                                            
+
+                                        </div>
+                                        <a (click)="forDocumentation()"class="dropdown ">Documentation<br></a>
+                                        <div id="nav" style="margin-left: 100%;margin-top:-40%;text-align:center;display:inline-block;white-space:nowrap" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='Documentation'>
+                                            <a class="dropdown">Lease Deed<br></a>
+                                            <a class="dropdown">Offer letter<br></a> 
+                                            <a class="dropdown">Appointment Letter<br></a>
+                                            <a class="dropdown"> &nbsp;Registration letter &nbsp;<br></a>
+                                            <a class="dropdown">Lease Deed<br></a>
+                                        </div>
+                                        <a (click)="forTax()" class="dropdown" >Tax compliance<br></a>
+                                        <div id="nav" style="margin-left: 100%;margin-top:-30%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='tax'>
+                                            <a class="dropdown">&nbsp;ITR filing&nbsp;<br></a>
+                                            <a class="dropdown">&nbsp;Annual filings&nbsp;<br></a> 
+                    
+                                        </div>
+                                        <a (click)="personalservice()"class="dropdown" >Personal services<br></a>
+                                    
+                                      <div  id="nav" style="margin-left: 100%;margin-top:-20%;text-align:center;display:inline-block;white-space:nowrap" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='personalService'>
+                                          <a class="dropdown ">Pan Card&nbsp;<br></a>
+                                          <a class="dropdown ">Digital Signatures&nbsp;<br></a> 
+                                          <a class="dropdown ">Legal services&nbsp;<br></a>
+                                          <a class="dropdown ">ITR filing&nbsp;<br></a>
+                                          <a class="dropdown ">passport&nbsp;<br></a>
+                                          <a class="dropdown ">&nbsp;Electronic services&nbsp;<br></a>
+                                          <a class="dropdown ">E-filings&nbsp;<br></a>
+                                        </div>
+                                        <a (click)="complainceandf()"class="dropdown" >&nbsp;Complaince and Funding&nbsp;<br></a>
+                            
+                                        <div id="nav" style="margin-left: 100%;margin-top:-15%;text-align:center;display:inline-block;white-space:nowrap" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='complaince'>
+                                            <a class="dropdown ">&nbsp;Buisness Plan&nbsp;<br></a>
+                                            <a class="dropdown">&nbsp;C.M.A report&nbsp;<br></a> 
+                                            <a class="dropdown">&nbsp;Team Loan&nbsp;<br></a>
+                                            <a class="dropdown">&nbsp;Working Capital Loans&nbsp;<br></a>
+                                            <a class="dropdown">&nbsp;Personal Loans&nbsp;<br></a>
+                                              </div>
+                                        </div>
+                                  </a>
+                                 
+                                </li>
+                                <li class="nav-item dropdown">
+                                  <a (click)="flip()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    edu basket
+                                    <div style="margin-top:13%;text-align:center" id="nav" *ngIf="toflip"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown">&nbsp;Future Planner &nbsp;<br></a>
+                                        <a class="dropdown" >&nbsp;Jagsun edu &nbsp;<br></a>
+                                        <a class="dropdown" >&nbsp;Jagsun academy &nbsp;<br></a>
+                                        <a class="dropdown" >&nbsp;Digital teaching aid &nbsp;<br></a>
+                                        <a class="dropdown" >&nbsp;K-12 Publishing&nbsp;<br></a>
+                                      </div>
+                                  </a>
+                                 
+                                </li>
+                                <li class="nav-item dropdown">
+                                  <a (click)="login()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                 Login
+                               </a>
+                               <div style="margin-top:18%;text-align:center"  id="nav" *ngIf="logins"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                  <a style="color:white;font-size:120%"routerLink='/login'class="dropdown">&nbsp;Login<br>&nbsp;</a>
+                                  <a style="color:white;font-size:120%"routerLink='/signup'class="dropdown" >&nbsp;Sign up &nbsp;</a>
+      
+                                </div>
+                               </li>
+                              
+                        
+                     </ul>
+                  </div>
+               </nav>
+               <script src='../../assets/js/jquery-2.2.3.min.js'></script>
+               <!--//js working-->
+               <!-- carousal service slider-->
+               <script src="../../assets/js/slick.js"></script>
+               <script>
+                  $(document).on('ready', function() {
+                    $(".center").slick({
+                    dots: true,
+                    infinite: true,
+                    centerMode: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    responsive: [
+                      {
+                        breakpoint: 768,
+                        settings: {
+                        arrows: true,
+                        centerMode: false,
+                        slidesToShow: 2
+                        }
+                      },
+                      {
+                        breakpoint: 480,
+                        settings: {
+                        arrows: true,
+                        centerMode: false,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                        }
+                      }
+                     ]
+                    });
+                  });
+               </script>
+               <!-- //carousal -->
+               <!--responsiveslides banner-->
+               <script src="../../assets/js/responsiveslides.min.js"></script>
+               <script>
+                  // You can also use "$(window).load(function() {"
+                  $(function () {
+                    // Slideshow 4
+                    $("#slider4").responsiveSlides({
+                      auto: true,
+                      pager:true,
+                      nav: false,
+                      speed: 900,
+                      namespace: "callbacks",
+                      before: function () {
+                        $('.events').append("<li>before event fired.</li>");
+                      },
+                      after: function () {
+                        $('.events').append("<li>after event fired.</li>");
+                      }
+                    });
+                  
+                  });
+               </script>
+               <!--// responsiveslides banner-->	  
+               <!--About OnScroll-Number-Increase-JavaScript -->
+               <script src="../../assets/js/jquery.waypoints.min.js"></script>
+               <script src="../../assets/js/jquery.countup.js"></script>
+               <script>
+                  $('.counter').countUp();
+               </script>
+               <!-- //OnScroll-Number-Increase-JavaScript -->
+               <!-- clients FlexSlider-JavaScript -->
+               <script defer src="../../assets/js/jquery.flexslider.js"></script>
+               <script>
+                  $(window).load(function(){
+                  $('.flexslider').flexslider({
+                    animation: "slide",
+                    start: function(slider){
+                      $('body').removeClass('loading');
+                    }
+                  });
+                  });
+               </script>
+               <!-- //clients FlexSlider-JavaScript -->
+               <!-- gallery-lightbox -->  
+               <script src="../../assets/js/lsb.min.js"></script>
+               <script>
+                  $(window).load(function() {
+                      $.fn.lightspeedBox();
+                    });
+               </script> 
+               <!-- //gallery-lightbox -->
+               <!-- start-smoth-scrolling -->
+               <script src="../../assets/js/move-top.js"></script>
+               <script src="../../assets/js/easing.js"></script>
+               <script>
+                  jQuery(document).ready(function ($) {
+                    $(".scroll").click(function (event) {
+                      event.preventDefault();
+                      $('html,body').animate({
+                        scrollTop: $(this.hash).offset().top
+                      }, 900);
+                    });
+                  });
+               </script>
+               <!-- start-smoth-scrolling -->
+               <!-- here stars scrolling icon -->
+               <script>
+                  $(document).ready(function () {
+                  
+                    var defaults = {
+                      containerID: 'toTop', // fading element id
+                      containerHoverID: 'toTopHover', // fading element hover id
+                      scrollSpeed: 1200,
+                      easingType: 'linear'
+                    };
+                  
+                  
+                    $().UItoTop({
+                      easingType: 'easeOutQuart'
+                    });
+                  
+                  });
+               </script>
+               <!-- //here ends scrolling icon -->
+               <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+               <!--bootstrap working-->
+               <script src="../../assets/js/bootstrap.min.js"></script>

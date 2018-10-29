@@ -23,7 +23,7 @@ app.use(function (req, res, next) {
 
 // Point static path to dist
 app.use(express.static(path.join(__dirname, 'dist/ish/')))
-console.log(path.join(__dirname, 'dist/ish/'));
+console.log(path.join(__dirname, 'dist/ish/'))
 // Set our api routes
 // app.use('/api', api);
 
