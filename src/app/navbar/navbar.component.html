@@ -136,21 +136,21 @@
                                    Financial flux
                                     <div style="margin-top:11%;text-align:center;display:inline-block; white-space: nowrap;" id ="nav" *ngIf="forFinalcial"class="dropdown-menu show" aria-labelledby="navbarDropdown">
                       
-                                  <a (click)="registration()"class="dropdown">Regitration <br></a>
-                                        <div id="nav" style="margin-left: 100%;margin-top:-56%;text-align:center;display:inline-block; white-space: nowrap;" *ngIf="toRegister" class="dropdown-menu show" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown">Company Registration<br></a>
-                                            <a class="dropdown">Trademark Registration<br></a> 
-                                            <a class="dropdown">SER<br></a>
-                                            <a class="dropdown">Intellectual Property<br></a>
-                                            <a class="dropdown">ESI Registration<br></a>
-                                            <a class="dropdown">MSME Registration<br></a>
-                                            <a class="dropdown">IECR<br></a>
-                                            <a class="dropdown">FSSAI<br></a>
-                                            <a class="dropdown">&nbsp;Food Safety Registration &nbsp;<br></a>
+                                  <a (click)="registration()" routerLink='/register' class="dropdown">Regitration <br></a>
+                                        <div id="nav" style="margin-left: 100%;margin-top:-58%;text-align:center;display:inline-block; white-space: nowrap;" *ngIf="toRegister" class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown" routerLink='/register' >Company Registration<br></a>
+                                            <a class="dropdown" routerLink='/register' >Trademark Registration<br></a> 
+                                            <a class="dropdown" routerLink='/register' >SER<br></a>
+                                            <a class="dropdown" routerLink='/register' >Intellectual Property<br></a>
+                                            <a class="dropdown" routerLink='/register' >ESI Registration<br></a>
+                                            <a class="dropdown" routerLink='/register' >MSME Registration<br></a>
+                                            <a class="dropdown" routerLink='/register' >IECR<br></a>
+                                            <a class="dropdown" routerLink='/register' >FSSAI<br></a>
+                                            <a class="dropdown" routerLink='/register' >&nbsp;Food Safety Registration &nbsp;<br></a>
 
-                                            <a class="dropdown">Iso Registration<br></a>
-                                            <a class="dropdown">patent<br></a>
-                                            <a class="dropdown">Copy Right Registration<br></a>
+                                            <a class="dropdown" routerLink='/register' >Iso Registration<br></a>
+                                            <a class="dropdown" routerLink='/register' >patent<br></a>
+                                            <a class="dropdown" routerLink='/register' >Copy Right Registration<br></a>
                                            
                                             </div>
                                         <a (click)="forGST()"class="dropdown" >GST <br></a>

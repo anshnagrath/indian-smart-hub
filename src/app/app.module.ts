@@ -20,6 +20,8 @@ import {
     FacebookLoginProvider,
 } from 'angular-6-social-login';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RegistrationComponent } from './registration/registration.component';
+
 
 export function getAuthServiceConfigs() {
     const config = new AuthServiceConfig(
@@ -41,7 +43,9 @@ export function getAuthServiceConfigs() {
         HomepageComponent,
         LoginComponent,
         SignupComponent,
-        NavbarComponent
+        NavbarComponent,
+        RegistrationComponent
+
     ],
     imports: [
         HttpClientModule,
@@ -54,7 +58,8 @@ export function getAuthServiceConfigs() {
         RouterModule.forRoot([
             { path: '', component: HomepageComponent, pathMatch: 'full' },
             { path: 'login', component: LoginComponent, pathMatch: 'full' },
-            { path: 'signup', component: SignupComponent, pathMatch: 'full' }
+            { path: 'signup', component: SignupComponent, pathMatch: 'full' },
+            { path: 'register', component: RegistrationComponent, pathMatch: 'full' }
         ]),
         SliderModule
     ],
