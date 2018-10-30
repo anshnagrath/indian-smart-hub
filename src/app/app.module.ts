@@ -21,6 +21,12 @@ import {
 } from 'angular-6-social-login';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { GstComponent } from './gst/gst.component';
+import { DocumentationComponent } from './documentation/documentation.component';
+import { FotterComponent } from './fotter/fotter.component';
+import { TaxComponent } from './tax/tax.component';
+import { PersoalComponent } from './persoal/persoal.component';
+import { FudingComponent } from './fuding/fuding.component';
 
 
 export function getAuthServiceConfigs() {
@@ -44,7 +50,13 @@ export function getAuthServiceConfigs() {
         LoginComponent,
         SignupComponent,
         NavbarComponent,
-        RegistrationComponent
+        RegistrationComponent,
+        GstComponent,
+        DocumentationComponent,
+        FotterComponent,
+        TaxComponent,
+        PersoalComponent,
+        FudingComponent
 
     ],
     imports: [
@@ -59,7 +71,12 @@ export function getAuthServiceConfigs() {
             { path: '', component: HomepageComponent, pathMatch: 'full' },
             { path: 'login', component: LoginComponent, pathMatch: 'full' },
             { path: 'signup', component: SignupComponent, pathMatch: 'full' },
-            { path: 'register', component: RegistrationComponent, pathMatch: 'full' }
+            { path: 'register', component: RegistrationComponent, pathMatch: 'full' },
+             { path: 'gst', component: GstComponent, pathMatch: 'full' },
+             { path: 'documentation', component: DocumentationComponent, pathMatch: 'full' },
+             { path: 'tax', component: TaxComponent, pathMatch: 'full' },
+             { path: 'personalservices', component: PersoalComponent, pathMatch: 'full' },
+             { path: 'Funding', component: FudingComponent, pathMatch: 'full' }
         ]),
         SliderModule
     ],
