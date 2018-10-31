@@ -148,14 +148,19 @@ nav.navbar.navbar-expand-lg.navbar-light{
     background: rgba(14, 14, 14, 0.4);
 }
 
+.eduban{ background:url(/assets/images/banner/Edu.png)no-repeat center;
+    opacity:0.7 };
+
+
+
 .hedder-up {
     padding: 10px 0px 0px;
     text-align: center;
 }
-.edubanner-img{ background:url(/assets/images/banner/Edu.png)no-repeat center;
+.edbanner-img{ background:url(/assets/images/banner/fiinancial.jpg)no-repeat center;
     opacity:0.7 };
-.fluxbanner-img{  background: url(/assets/images/banner/finance.png)no-repeat center;
-opacity:0.8}
+
+   
 .one-img{  background: url(/assets/images/banner/1.jpg)no-repeat center;}
 .two-img{  background: url(/assets/images/b2.jpg)no-repeat cente                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     r;}
 .three-img{  background: url(/assets/images/b3.jpg)no-repeat center;} 
