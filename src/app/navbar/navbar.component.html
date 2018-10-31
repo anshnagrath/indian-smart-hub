@@ -39,11 +39,20 @@
                     <li (clickOutside)="close()"class="nav-item dropdown">
                     
                               <a  (click)="forSmartHub()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                  Smart Hub
+                                  Smart Serve
                            <div style="margin-top:14%;text-align:center;" (click)="smarthubsec=true"id="nav" *ngIf="toScroll"class="dropdown-menu show" aria-labelledby="navbarDropdown">
 
-                                    <a class="dropdown" >About Us</a><br>
-                                    <a class="dropdown" >FAQ's</a>
+                                    <a class="dropdown" routerLink="serve" >Ecommerce Sales</a><br>
+                                    <a class="dropdown" routerLink="serve" >e-Challan </a><br>
+                                    <a class="dropdown" routerLink="serve" >Tax Payments</a><br>
+                                    <a class="dropdown" routerLink="serve">Ticketing</a><br>
+                                    <a class="dropdown" routerLink="serve">Aadhar</a><br>
+                                    <a class="dropdown" routerLink="serve">Insurance</a><br>
+                                    <a class="dropdown" routerLink="serve">Pension</a><br>
+                                    <a class="dropdown" routerLink="serve">Dth services</a><br>
+                                    <a class="dropdown" routerLink="serve">Mobile bill Payments</a><br>
+                                    <a class="dropdown" routerLink="serve">Utility bills</a><br>
+                                  
                                   </div>
                               </a>  
                              
@@ -204,11 +213,11 @@
                                   <a (click)="flip()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     edu basket
                                     <div style="margin-top:13%;text-align:center" id="nav" *ngIf="toflip"class="dropdown-menu show" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown">&nbsp;Future Planner &nbsp;<br></a>
-                                        <a class="dropdown" >&nbsp;Jagsun edu &nbsp;<br></a>
-                                        <a class="dropdown" >&nbsp;Jagsun academy &nbsp;<br></a>
-                                        <a class="dropdown" >&nbsp;Digital teaching aid &nbsp;<br></a>
-                                        <a class="dropdown" >&nbsp;K-12 Publishing&nbsp;<br></a>
+                                        <a class="dropdown" routerLink="/edu">&nbsp;Future Planner &nbsp;<br></a>
+                                        <a class="dropdown" routerLink="/edu">&nbsp;Jagsun edu &nbsp;<br></a>
+                                        <a class="dropdown" routerLink="/edu">&nbsp;Jagsun academy &nbsp;<br></a>
+                                        <a class="dropdown" routerLink="/edu">&nbsp;Digital teaching aid &nbsp;<br></a>
+                                        <a class="dropdown" routerLink="/edu">&nbsp;K-12 Publishing&nbsp;<br></a>
                                       </div>
                                   </a>
                                  

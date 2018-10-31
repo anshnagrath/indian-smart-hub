@@ -27,6 +27,8 @@ import { FotterComponent } from './fotter/fotter.component';
 import { TaxComponent } from './tax/tax.component';
 import { PersoalComponent } from './persoal/persoal.component';
 import { FudingComponent } from './fuding/fuding.component';
+import { EduComponent } from './edu/edu.component';
+import { SmartComponent } from './smart/smart.component';
 
 
 export function getAuthServiceConfigs() {
@@ -56,7 +58,9 @@ export function getAuthServiceConfigs() {
         FotterComponent,
         TaxComponent,
         PersoalComponent,
-        FudingComponent
+        FudingComponent,
+        EduComponent,
+        SmartComponent
 
     ],
     imports: [
@@ -68,15 +72,17 @@ export function getAuthServiceConfigs() {
         BrowserAnimationsModule,
         ClickOutsideModule,
         RouterModule.forRoot([
-            { path: '', component: HomepageComponent, pathMatch: 'full' },
             { path: 'login', component: LoginComponent, pathMatch: 'full' },
             { path: 'signup', component: SignupComponent, pathMatch: 'full' },
             { path: 'register', component: RegistrationComponent, pathMatch: 'full' },
-             { path: 'gst', component: GstComponent, pathMatch: 'full' },
-             { path: 'documentation', component: DocumentationComponent, pathMatch: 'full' },
-             { path: 'tax', component: TaxComponent, pathMatch: 'full' },
-             { path: 'personalservices', component: PersoalComponent, pathMatch: 'full' },
-             { path: 'Funding', component: FudingComponent, pathMatch: 'full' }
+            { path: 'gst', component: GstComponent, pathMatch: 'full' },
+            { path: 'documentation', component: DocumentationComponent, pathMatch: 'full' },
+            { path: 'tax', component: TaxComponent, pathMatch: 'full' },
+            { path: 'personalservices', component: PersoalComponent, pathMatch: 'full' },
+            { path: 'Funding', component: FudingComponent, pathMatch: 'full' },
+            { path: 'edu', component: EduComponent, pathMatch: 'full' },
+            { path: 'serve', component: SmartComponent, pathMatch: 'full' },
+            { path: '', component: HomepageComponent, pathMatch: 'full' }
         ]),
         SliderModule
     ],
