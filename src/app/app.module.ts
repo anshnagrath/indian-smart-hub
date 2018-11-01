@@ -29,6 +29,9 @@ import { PersoalComponent } from './persoal/persoal.component';
 import { FudingComponent } from './fuding/fuding.component';
 import { EduComponent } from './edu/edu.component';
 import { SmartComponent } from './smart/smart.component';
+import { BrandingComponent } from './branding/branding.component';
+import { DigitalComponent } from './digital/digital.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 
 export function getAuthServiceConfigs() {
@@ -60,7 +63,10 @@ export function getAuthServiceConfigs() {
         PersoalComponent,
         FudingComponent,
         EduComponent,
-        SmartComponent
+        SmartComponent,
+        BrandingComponent,
+        DigitalComponent,
+        PortfolioComponent
 
     ],
     imports: [
@@ -82,7 +88,12 @@ export function getAuthServiceConfigs() {
             { path: 'Funding', component: FudingComponent, pathMatch: 'full' },
             { path: 'edu', component: EduComponent, pathMatch: 'full' },
             { path: 'serve', component: SmartComponent, pathMatch: 'full' },
+            { path: 'brand', component: BrandingComponent, pathMatch: 'full' },
+             { path: 'digital', component: DigitalComponent, pathMatch: 'full' },
+             { path: 'portfolio', component: PortfolioComponent, pathMatch: 'full' },
             { path: '', component: HomepageComponent, pathMatch: 'full' }
+             
+            
         ]),
         SliderModule
     ],
