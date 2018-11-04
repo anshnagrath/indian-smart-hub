@@ -534,11 +534,7 @@ background-size:40px;
 .register-form {
     padding: 20px;
 }
-#card{
-    opacity:0.4;
-    z-index: -1;
-     
-}
+
 .register-form input[type="text"],
 .register-form input[type="email"], .register-form textarea,
 select.category2 {

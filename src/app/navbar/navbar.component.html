@@ -11,6 +11,8 @@
  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
  <!-- font-awesome icons -->
  <link href="../../assets/css/font-awesome.css" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
  <!-- For Clients slider -->
  <link rel="stylesheet" href="../../assets/css/flexslider.css" type="text/css" media="all" />
  <!-- //For clients slider -->
@@ -21,12 +23,47 @@
  <!--//stylesheets-->
  <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
 
-<nav class="navbar navbar-expand-lg navbar-light">
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+ 
+ <nav *ngIf="isMobile" class="navbar navbar-expand-lg navbar-light">
+  <button id="nav" (click)="toggleCollapsed()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+  aria-expanded="false" aria-label="Toggle navigation">
+  <span style="color: white !important;" class="navbar-toggler-icon"></span>
+  </button>
+  <div *ngIf="so" [ngClass]="{'collapse': collapsed, 'navbar-collapse': false}" id="navbarSupportedContent"class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+    <br><br> 
+    <ul class="navbar-nav ">
+      <li class="nav-item ">
+        <a  href='#'>Home </a>
+     </li>
+   
+      <li class="nav-item ">
+           <a  routerLink="/serve">Smart Serve </a>
+        </li>
+        <li class="nav-item">
+           <a  routerLink="/brand">Creative gallery</a>
+        </li>
+        <li class="nav-item">
+           <a  routerLink="/register">Financial Flux</a>
+        </li>
+        <li class="nav-item">
+           <a  routerLink="/edu">Edu basket</a>
+        </li>
+        <li class="nav-item">
+           <a  routerLink="/login">Login</a>
+        </li>
+      
+     </ul>
+  </div>
+</nav> 
+
+
+
+<nav id="size" *ngIf="!isMobile" class="navbar navbar-expand-lg">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigationbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
 
                   </button>
-                  <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+                  <div class="collapse navbar-collapse" id="navigationbar">
                      
                    <ul class="navbar-nav ">
                      <li class="nav-item">
@@ -34,211 +71,109 @@
                             <a href="#" class="pull-left"><img src="../../assets/images/logo/ish-logo (2) - Copy (1).png" width="80px" height="30px"></a> 
                        
                      </li>
-
+                     <li class="nav"   >
+                      <a  style="color:white;font-size: 13px;margin-top: 7%"    role="button"  aria-haspopup="true" aria-expanded="true">
+                        &nbsp;Jagsun edu&nbsp;&nbsp;</a>
+                     </li>
                      
-                    <li (clickOutside)="close()"class="nav-item dropdown">
-                    
-                              <a  style="color:white;font-size: 14px" (click)="forSmartHub()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <li (mouseenter) ="serveOpen()"   class="nav-item dropdown">
+                     
+                              <a  style="color:white;font-size: 13px"  class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                   Smart Serve
-                           <div style="margin-top:14%;text-align:center;" (click)="smarthubsec=true"id="nav" *ngIf="toScroll"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                           <div (mouseleave)=" closeServe()"  style="margin-top:14%;text-align:center;margin-left:-24%"  (click)="smarthubsec=true"id="nav" *ngIf="toScroll"class="dropdown-menu show" aria-labelledby="navbarDropdown">
 
-                                    <a class="dropdown" routerLink="/serve" >Ecommerce Sales</a><br>
-                                    <a class="dropdown" routerLink="/serve" >e-Challan </a><br>
-                                    <a class="dropdown" routerLink="/serve" >Tax Payments</a><br>
-                                    <a class="dropdown" routerLink="/serve">Ticketing</a><br>
-                                    <a class="dropdown" routerLink="/serve">Aadhar</a><br>
-                                    <a class="dropdown" routerLink="/serve">Insurance</a><br>
-                                    <a class="dropdown" routerLink="/serve">Pension</a><br>
-                                    <a class="dropdown" routerLink="/serve">Dth services</a><br>
-                                    <a class="dropdown" routerLink="/serve">Mobile bill Payments</a><br>
-                                    <a class="dropdown" routerLink="/serve">Utility bills</a><br>
+                                    <a style="display:inline-block; white-space: nowrap;" class="dropdown" routerLink='/serve' >Ecommerce Sales</a><br>
+                                    <a class="dropdown" routerLink='/serve' >e-Challan </a><br>
+                                    <a class="dropdown" routerLink='/serve' >Tax Payments</a><br>
+                                    <a class="dropdown" routerLink='/serve'>Ticketing</a><br>
+                                    <a class="dropdown" routerLink='/serve'>Aadhar</a><br>
+                                    <a class="dropdown" routerLink='/serve'>Insurance</a><br>
+                                    <a class="dropdown" routerLink='/serve'>Pension</a><br>
+                                    <a class="dropdown" routerLink='/serve'>Dth services</a><br>
+                                    <a style="display:inline-block; white-space: nowrap;"class="dropdown" routerLink='/serve'>&nbsp; Mobile bill Payments&nbsp;</a><br>
+                                    <a class="dropdown" routerLink='/serve'>Utility bills</a><br>
                                   
                                   </div>
                               </a>  
                              
                             </li>
 
-                            <li class="nav-item dropdown">
-                              <a  style="color:white;font-size: 14px" (click)="creativeGallery()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <li (mouseenter) ="galOpen()"  class="nav-item dropdown">
+                              <a  style="color:white;font-size: 13px" (click)="creativeGallery()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                              Creative gallery
-                                <div id="nav" style="margin-top:10%;text-align:center;"  (click)="creativeClose=true" *ngIf="creativeGall"class="dropdown-menu show" aria-labelledby="navbarDropdown">
-                                    <a (click)="brandingSol()" class="dropdown">Branding Solution </a>
+                                <div (mouseleave)="galClose()" id="nav" style="margin-top:10%;text-align:center;margin-left:-24%;"  (click)="creativeClose=true" *ngIf="creativeGall"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                    <a   routerLink='/brand' class="dropdown">Branding<br> </a>
                                     
-                                    <div id="nav"  style="margin-left: 100%;margin-top:-32%;text-align:center;display: inline-block; overflow: hidden;
-                                    white-space: nowrap;" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='brandingSols'>
-                                      <a class="dropdown" routerLink='/brand'>Logo Design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>Business Card<br></a> 
-                                      <a class="dropdown" routerLink='/brand'>Letterhead Design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>Standy Design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>Cover letter design <br></a>
-                                      <a class="dropdown" routerLink='/brand'>Envelop Design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>Invoice Design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>Voucher design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>Poster Design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>Product package Design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>customized design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>Outdoor Medium design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>Threature slide Design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>certificate design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>Flyer Design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>Brocher Design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>Magazine design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>Letterhead Design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>Banner Design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>Newsletter design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>Singage Design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>vehicle branding Design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>Press add design<br></a>
-                                      <a class="dropdown" routerLink='/brand'>&nbsp;Cd's and cd cover design&nbsp;<br></a>
-                                      <a class="dropdown" routerLink='/brand'>catelog design</a>
-                                     
-                                        </div>
+                                    
                                   
+                                    <a style="display:inline-block; white-space: nowrap;"  routerLink='/digital' class="dropdown" >&nbsp;Digital Marketing&nbsp;</a><br>
+
+                                 
+                                    <a style="display:inline-block; white-space: nowrap;" routerLink='/portfolio' class="dropdown" >&nbsp;Portfolio management&nbsp;</a>
                                   
-                                    <a (click)="digitalmarketing()"class="dropdown" >Digital Marketing</a><br>
-
-                                    <div id="nav" style="margin-left: 100%;margin-top:-25%;text-align:center;display: inline-block; overflow: hidden;
-                                    white-space: nowrap;" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='digital'>
-                                      <a class="dropdown" routerLink='/digital'>Content writing<br></a>
-                                      <a class="dropdown" routerLink='/digital'>Aticle writing<br></a> 
-                                      <a class="dropdown" routerLink='/digital'>Social media page creatiion<br></a>
-                                      <a class="dropdown" routerLink='/digital'>&nbsp;Social media page maintenance&nbsp;<br></a>
-                                      <a class="dropdown" routerLink='/digital'>Search engine optimization<br></a>
-                                      <a class="dropdown" routerLink='/digital'>Search engine marketing<br></a>
-                                      <a class="dropdown" routerLink='/digital'>Social media marketing<br></a>
-                                      <a class="dropdown" routerLink='/digital'>Social media optimization<br></a>
-                                      <a class="dropdown" routerLink='/digital'>Online campaign creation<br></a>
-                                      <a class="dropdown" routerLink='/digital'>Online reputation management<br></a>
-                                      <a class="dropdown" routerLink='/digital'>Email marketing<br></a>
-                                      <a class="dropdown" routerLink='/digital'>Sms marketing<br></a>
-                                      <a class="dropdown" routerLink='/digital'>Blog creation and maintains<br></a>
-                                      <a class="dropdown" routerLink='/digital'>Social media paid campaigns<br></a>
-                                      </div>
-                                    <a (click)="portfoliomanagment()"class="dropdown" >Portfolio management</a>
-                                    <div id="nav" style="margin-left: 100%;margin-top:-13%;text-align:center;display:inline-block;overflow:hidden; white-space: nowrap;" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='port'>
-                                      <a class="dropdown" routerLink='/portfolio'>&nbsp;Web Content writing<br></a>
-                                      <a class="dropdown" routerLink='/portfolio'>&nbsp;Blog article writing&nbsp;<br></a> 
-                                      <a class="dropdown" routerLink='/portfolio'>&nbsp;Social media page creatiion&nbsp;<br></a>
-                                      <a class="dropdown" routerLink='/portfolio'>&nbsp;Social media pages&nbsp;<br></a>
-                                      <a class="dropdown" routerLink='/portfolio'>&nbsp;maintains&nbsp;<br></a>
-                                      <a class="dropdown" routerLink='/portfolio'>&nbsp;website template design&nbsp;<br></a>
-                                      <a class="dropdown" routerLink='/portfolio'>&nbsp;content management system&nbsp;<br></a>
-                                      <a class="dropdown" routerLink='/portfolio'>&nbsp;E-commerece application&nbsp;<br></a>
-                                      <a class="dropdown" routerLink='/portfolio' >&nbsp;Devlopment&nbsp;<br></a>
-                                      <a class="dropdown" routerLink='/portfolio'>&nbsp;Web re design&nbsp;<br></a>
-                                      <a class="dropdown" routerLink='/portfolio'>&nbsp;web maintains&nbsp;<br></a>
-                                      <a class="dropdown" routerLink='/portfolio'>&nbsp;Bulk sms marketing&nbsp;<br></a>
-                                      <a class="dropdown" routerLink='/portfolio'>&nbsp;Voip services&nbsp;<br></a>
-                                      <a class="dropdown" routerLink='/portfolio'>&nbsp;Mobile application&nbsp;<br></a>
-                                      <a class="dropdown"routerLink='/portfolio'>&nbsp;devlopment&nbsp;<br></a>
-                                         
-
-    </div> 
                                   </div>
                               </a>
                              
                             </li>
                           
                            
-                              <li class="nav-item dropdown">
-                                  <a  style="color:white;font-size: 14px" (click)="finalcialFlux()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                              <li (mouseenter) ="openflux()" class="nav-item dropdown">
+                                  <a  style="color:white;font-size: 13px"  class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                    Financial flux
-                                    <div style="margin-top:11%;text-align:center;display:inline-block; white-space: nowrap;" id ="nav" *ngIf="forFinalcial"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                    <div  (mouseleave)="closeflux()" style="margin-top:11%;text-align:center;display:inline-block; white-space: nowrap;margin-left:-24%" id ="nav" *ngIf="forFinalcial"class="dropdown-menu show" aria-labelledby="navbarDropdown">
                       
-                                  <a (click)="registration()" class="dropdown">Regitration <br></a>
-                                        <div id="nav" style="margin-left: 100%;margin-top:-58%;text-align:center;display:inline-block; white-space: nowrap;" *ngIf="toRegister" class="dropdown-menu show" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown" routerLink='/register' >Company Registration<br></a>
-                                            <a class="dropdown" routerLink='/register' >Trademark Registration<br></a> 
-                                            <a class="dropdown" routerLink='/register' >SER<br></a>
-                                            <a class="dropdown" routerLink='/register' >Intellectual Property<br></a>
-                                            <a class="dropdown" routerLink='/register' >ESI Registration<br></a>
-                                            <a class="dropdown" routerLink='/register' >MSME Registration<br></a>
-                                            <a class="dropdown" routerLink='/register' >IECR<br></a>
-                                            <a class="dropdown" routerLink='/register' >FSSAI<br></a>
-                                            <a class="dropdown" routerLink='/register' >&nbsp;Food Safety Registration &nbsp;<br></a>
-
-                                            <a class="dropdown" routerLink='/register' >Iso Registration<br></a>
-                                            <a class="dropdown" routerLink='/register' >patent<br></a>
-                                            <a class="dropdown" routerLink='/register' >Copy Right Registration<br></a>
-                                           
-                                            </div>
-                                        <a (click)="forGST()"class="dropdown" >GST <br></a>
-                                        <div id="nav" style="margin-left:100%;margin-top:-50%;text-align:center;display:inline-block;white-space:nowrap" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='GST'>
-                                            <a class="dropdown" routerLink='/gst' >GST Registration<br></a>
-                                            <a class="dropdown" routerLink='/gst'>GST Data Entry<br></a> 
-                                            <a class="dropdown" routerLink='/gst'> &nbsp;GST return Filing  &nbsp;<br></a>
-                                            <a class="dropdown" routerLink='/gst'>GST invoice Entry<br></a>
-                                            
-
-                                        </div>
-                                        <a (click)="forDocumentation()"class="dropdown ">Documentation<br></a>
-                                        <div id="nav" style="margin-left: 100%;margin-top:-40%;text-align:center;display:inline-block;white-space:nowrap" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='Documentation'>
-                                            <a class="dropdown" routerLink='/documentation'>Lease Deed<br></a>
-                                            <a class="dropdown" routerLink='/documentation'>Offer letter<br></a> 
-                                            <a class="dropdown" routerLink='/documentation'>Appointment Letter<br></a>
-                                            <a class="dropdown" routerLink='/documentation'> &nbsp;Registration letter &nbsp;<br></a>
-                                            <a class="dropdown" routerLink='/documentation'>Lease Deed<br></a>
-                                        </div>
-                                        <a (click)="forTax()" class="dropdown" >Tax compliance<br></a>
-                                        <div id="nav" style="margin-left: 100%;margin-top:-30%" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='tax'>
-                                            <a class="dropdown" routerLink='/tax'>&nbsp;ITR filing&nbsp;<br></a>
-                                            <a class="dropdown" routerLink='/tax'>&nbsp;Annual filings&nbsp;<br></a> 
-                    
-                                        </div>
-                                        <a (click)="personalservice()"class="dropdown" >Personal services<br></a>
+                                  <a  class="dropdown">Regitration <br></a>
+                                       
+                                        <a   routerLink='/gst' class="dropdown" >GST <br></a>
+                                       
+                                        <a  routerLink='/documentation' class="dropdown ">Documentation<br></a>
+                                        
+                                        <a routerLink='/tax'class="dropdown" >Tax compliance<br></a>
+                                        
+                                        <a  routerLink='/personalservices'class="dropdown" >Personal services<br></a>
                                     
-                                      <div  id="nav" style="margin-left: 100%;margin-top:-20%;text-align:center;display:inline-block;white-space:nowrap" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='personalService'>
-                                          <a class="dropdown " routerLink='/personalservices'>Pan Card&nbsp;<br></a>
-                                          <a class="dropdown " routerLink='/personalservices' >Digital Signatures&nbsp;<br></a> 
-                                          <a class="dropdown " routerLink='/personalservices' >Legal services&nbsp;<br></a>
-                                          <a class="dropdown " routerLink='/personalservices' >ITR filing&nbsp;<br></a>
-                                          <a class="dropdown " routerLink='/personalservices' >passport&nbsp;<br></a>
-                                          <a class="dropdown " routerLink='/personalservices' >&nbsp;Electronic services&nbsp;<br></a>
-                                          <a class="dropdown "routerLink='/personalservices' >E-filings&nbsp;<br></a>
-                                        </div>
-                                        <a (click)="complainceandf()"class="dropdown" >&nbsp;Complaince and Funding&nbsp;<br></a>
+                                      
+                                        <a style="display:inline-block; white-space: nowrap;" (click)="complainceandf()" routerLink='/Funding' class="dropdown" >&nbsp;Complaince and Funding&nbsp;<br></a>
                             
-                                        <div id="nav" style="margin-left: 100%;margin-top:-15%;text-align:center;display:inline-block;white-space:nowrap" class="dropdown-menu show" aria-labelledby="navbarDropdown" *ngIf='complaince'>
-                                            <a class="dropdown" routerLink="/Funding">&nbsp;Buisness Plan&nbsp;<br></a>
-                                            <a class="dropdown" routerLink="/Funding">&nbsp;C.M.A report&nbsp;<br></a> 
-                                            <a class="dropdown" routerLink="/Funding">&nbsp;Team Loan&nbsp;<br></a>
-                                            <a class="dropdown" routerLink="/Funding">&nbsp;Working Capital Loans&nbsp;<br></a>
-                                            <a class="dropdown" routerLink="/Funding">&nbsp;Personal Loans&nbsp;<br></a>
-                                              </div>
+                                 
                                         </div>
                                   </a>
                                  
                                 </li>
-                                <li class="nav-item dropdown">
-                                  <a style="color:white;font-size: 14px" (click)="flip()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <li (mouseenter) ="openedu()" class="nav-item dropdown">
+                                  <a  style="color:white;font-size: 13px"  class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     edu basket
-                                    <div style="margin-top:13%;text-align:center" id="nav" *ngIf="toflip"class="dropdown-menu show" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown" routerLink="/edu">&nbsp;Future Planner &nbsp;<br></a>
-                                        <a class="dropdown" routerLink="/edu">&nbsp;Jagsun edu &nbsp;<br></a>
-                                        <a class="dropdown" routerLink="/edu">&nbsp;Jagsun academy &nbsp;<br></a>
-                                        <a class="dropdown" routerLink="/edu">&nbsp;Digital teaching  &nbsp;<br></a>
-                                        <a class="dropdown" routerLink="/edu">&nbsp;K-12 Publishing&nbsp;<br></a>
+                                    <div (mouseleave)="closeedu()" style="margin-top:13%;text-align:center;margin-left:-24%" id="nav" *ngIf="toflip"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                        <a style="display:inline-block; white-space: nowrap;"class="dropdown" routerLink="/edu">&nbsp;Future Planner &nbsp;</a>
+                                        <a style="display:inline-block; white-space: nowrap;"class="dropdown" routerLink="/edu">&nbsp;Jagsun edu &nbsp;<br></a>
+                                        <a style="display:inline-block; white-space: nowrap;"class="dropdown" routerLink="/edu">&nbsp;Jagsun academy &nbsp;<br></a>
+                                        <a style="display:inline-block; white-space: nowrap;"class="dropdown" routerLink="/edu">&nbsp;Digital teaching  &nbsp;<br></a>
+                                        <a style="display:inline-block; white-space: nowrap;" class="dropdown" routerLink="/edu">&nbsp;K-12 Publishing&nbsp;<br></a>
                                       </div>
                                   </a>
                                  
                                 </li>
-                                <li class="nav-item dropdown">
-                                  <a  style="color:white;font-size: 14px" (click)="login()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <li (mouseenter) ="openlogin()" class="nav-item dropdown">
+                                  <a  style="color:white;font-size: 13px" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                  Login
                                </a>
-                               <div style="margin-top:18%;text-align:center"  id="nav" *ngIf="logins"class="dropdown-menu show" aria-labelledby="navbarDropdown">
-                                  <a style="color:white;font-size:124%"routerLink='/login'class="dropdown">&nbsp;Login<br>&nbsp;</a>
-                                  <a style="color:white;font-size:124%"routerLink='/signup'class="dropdown" >&nbsp;Sign up &nbsp;</a>
+                               <div (mouseleave)="closelogin()" style="margin-top:18%;text-align:center;margin-left:-24%"  id="nav" *ngIf="logins"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                  <a style="color:white;font-size:100%" class="dropdown" (click)="redirect()" >&nbsp;Mail<br>&nbsp;</a>
+                                  <a style="color:white;font-size:100%;display:inline-block; white-space: nowrap;" class="dropdown" >&nbsp;Market Place &nbsp;</a>
       
                                 </div>
+                                
                                </li>
-                              
+                               <li class="nav">
+                                <a  style="color:white;font-size: 13px;;margin-top: 7%" (click)="forSmartHub()"   role="button"  aria-haspopup="true" aria-expanded="true">
+                                  &nbsp;&nbsp;Contact us&nbsp;</a>
+                               </li>
                         
                      </ul>
                   </div>
                </nav>
                <script src='../../assets/js/jquery-2.2.3.min.js'></script>
-               <!--//js working-->
+           
                <!-- carousal service slider-->
                <script src="../../assets/js/slick.js"></script>
                <script>

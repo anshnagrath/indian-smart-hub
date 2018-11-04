@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -10,156 +12,84 @@ export class NavbarComponent implements OnInit {
   public toflip = false; tax = false; personalService = false; creativeGall = false; digital = false; logins = false;
   public forFinalcial = false; port = false; creativeClose = false;
   public GST = false; smarthubsec = false;
-  constructor() { }
+  public isMobile = false;
+  so = false;
+
+  collapsed = false;
+  constructor(@Inject(DOCUMENT) private document: any) {
+    console.log(this.collapsed, 'looosdsdsdsd')
+  }
 
   ngOnInit() {
+    (455 < window.innerWidth && window.innerWidth < 991) ? this.isMobile = true : this.isMobile = false;
+    console.log(window.innerWidth, this.isMobile, 'asasaas');
   }
-  close() {
-    // this.toScroll = true;
+  toggleCollapsed() {
+    this.so = true;
+    this.collapsed = !this.collapsed;
+    console.log(this.collapsed, 'looosdsdsdsd')
 
-    if (this.smarthubsec !== true && this.creativeClose !== true) {
-      this.toScroll = false;
-      console.log('in');
-      this.smarthubsec = true;
-      // this.scroll == false ? this.creativeGall = true : this.creativeGall = false;
-      // console.log("in")
-    }
-    // if (this.smarthubsec == true && this.creativeClose !== true) {
-    //   this.creativeGall = false;
-    //   console.log('in2')
-
-    // }
-    // if (this.creativeClose == true) { this.creativeGall = false; }
-    //  else console.log("outside ")
-    // else {
-    //   console.log(this.smarthubsec, 'scsdccccccccccccccccccccccC')
-
-    // }
   }
-  forSmartHub() {
-    this.toScroll = !this.toScroll;
+  redirect() {
+
+    this.document.location.href = 'https://gmail.com';
+  }
+  closeServe() {
+
+    this.toScroll = false;
+
+  }
+
+  serveOpen() {
+    console.log('over1');
+    this.creativeGall = false;
+    this.toScroll = true;
+    this.forFinalcial = false;
+
+  }
+  galOpen() {
+
+    console.log('over2');
+    this.toflip = false;
     this.logins = false;
+    this.forFinalcial = false;
+    this.toScroll = false;
+    this.creativeGall = true;
+  }
+  galClose() {
+    this.creativeGall = false;
+
+  }
+  openflux() {
+    this.toflip = false;
+    this.logins = false;
+    this.forFinalcial = true;
+    this.toScroll = false;
+    this.creativeGall = false;
+  }
+  closeflux() {
+    this.forFinalcial = false;
+  }
+  openedu() {
+    this.toflip = true;
+    this.logins = false;
+    this.toScroll = false;
     this.creativeGall = false;
     this.forFinalcial = false;
+  }
+  closeedu() {
     this.toflip = false;
 
   }
-  flip() {
-    this.toflip = !this.toflip;
-    this.logins = false;
-    this.creativeGall = false;
-    this.forFinalcial = false;
-    this.toScroll = false;
-
-
-  }
-  finalcialFlux() {
-    this.logins = false;
-    this.forFinalcial = !this.forFinalcial;
-    this.toflip = false;
-    this.creativeGall = false;
-    this.toScroll = false;
-
-
-  }
-  registration() {
-    this.forFinalcial = false;
-    this.GST = false;
-    this.Documentation = false;
-    this.tax = false;
-    this.toRegister = !this.toRegister;
-    this.personalService = false;
-    this.complaince = false;
-
-  }
-  forGST() {
-    this.forFinalcial = false;
-    this.toRegister = false;
-    this.Documentation = false;
-    this.tax = false;
-    this.GST = !this.GST;
-    this.personalService = false;
-    this.complaince = false;
-
-  }
-  forDocumentation() {
-    this.complaince = false;
-    this.GST = false;
-    this.toRegister = false;
-    this.toScroll = false;
-    this.forFinalcial = false;
-    this.tax = false;
-    this.personalService = false;
-    this.Documentation = !this.Documentation;
-  }
-  forTax() {
-    // console.log(this.tax, 'asxassa')
-    this.forFinalcial = false;
-    this.Documentation = false;
-    this.GST = false;
-    this.toRegister = false;
-    this.tax = !this.tax;
-    this.personalService = false;
-    this.complaince = false;
-
-  }
-  personalservice() {
-    this.forFinalcial = false;
-    this.personalService = !this.personalService;
-    this.forFinalcial = false;
-    this.Documentation = false;
-    this.tax = false;
-    this.GST = false;
-    this.toRegister = false;
-    this.complaince = false;
-
-
-  }
-  complainceandf() {
-    this.forFinalcial = false;
-    this.forFinalcial = false;
-    this.Documentation = false;
-    this.GST = false;
-    this.personalService = false;
-    this.forFinalcial = false;
-    this.toRegister = false;
-    this.complaince = !this.complaince;
-  }
-  creativeGallery() {
-    console.log('in3')
-    this.creativeGall = !this.creativeGall;
-    this.logins = false;
-    this.forFinalcial = false;
-    this.toScroll = false;
-    this.toflip = false;
-  }
-  brandingSol() {
-    this.creativeGall = false;
-    this.digital = false;
-    this.port = false;
-    this.brandingSols = !this.brandingSols;
-  }
-  digitalmarketing() {
-    this.creativeGall = false;
-    this.brandingSols = false;
-    this.logins = false;
-    this.port = false;
-    this.digital = !this.digital;
-  }
-  portfoliomanagment() {
-    this.digital = false;
-    this.creativeGall = false;
-    this.logins = false;
-    this.toScroll = false;
-    this.toScroll = false;
-    this.port = !this.port;
-  }
-  login() {
-    this.logins = !this.logins;
+  openlogin() {
+    this.logins = true;
     this.toflip = false;
     this.toScroll = false;
+    this.creativeGall = false;
     this.forFinalcial = false;
+  }
+  closelogin() {
+    this.logins = false;
 
   }
-
 }
