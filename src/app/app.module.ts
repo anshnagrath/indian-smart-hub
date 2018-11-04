@@ -3,8 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
+
 import { ClickOutsideModule } from 'ng4-click-outside';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SliderModule } from 'angular-image-slider';
@@ -52,8 +51,6 @@ export function getAuthServiceConfigs() {
     declarations: [
         AppComponent,
         HomepageComponent,
-        LoginComponent,
-        SignupComponent,
         NavbarComponent,
         RegistrationComponent,
         GstComponent,
@@ -78,8 +75,6 @@ export function getAuthServiceConfigs() {
         BrowserAnimationsModule,
         ClickOutsideModule,
         RouterModule.forRoot([
-            { path: 'login', component: LoginComponent, pathMatch: 'full' },
-            { path: 'signup', component: SignupComponent, pathMatch: 'full' },
             { path: 'register', component: RegistrationComponent, pathMatch: 'full' },
             { path: 'gst', component: GstComponent, pathMatch: 'full' },
             { path: 'documentation', component: DocumentationComponent, pathMatch: 'full' },
@@ -89,11 +84,11 @@ export function getAuthServiceConfigs() {
             { path: 'edu', component: EduComponent, pathMatch: 'full' },
             { path: 'serve', component: SmartComponent, pathMatch: 'full' },
             { path: 'brand', component: BrandingComponent, pathMatch: 'full' },
-             { path: 'digital', component: DigitalComponent, pathMatch: 'full' },
-             { path: 'portfolio', component: PortfolioComponent, pathMatch: 'full' },
+            { path: 'digital', component: DigitalComponent, pathMatch: 'full' },
+            { path: 'portfolio', component: PortfolioComponent, pathMatch: 'full' },
             { path: '', component: HomepageComponent, pathMatch: 'full' }
-             
-            
+
+
         ]),
         SliderModule
     ],
