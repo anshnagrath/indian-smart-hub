@@ -1,5 +1,5 @@
 #nav{
-    background: white;
+    background: black;
 }
 nav.navbar.navbar-expand-lg.navbar-light[_ngcontent-c2] {
     padding: 0.5em 0em;
@@ -20,3 +20,8 @@ nav.navbar.navbar-expand-lg.navbar-light[_ngcontent-c2] {
     -ms-transition: 0.5s all;
     
 }
+
+    a[_ngcontent-c2]:hover {
+        color: white;
+        text-decoration: none;
+    }

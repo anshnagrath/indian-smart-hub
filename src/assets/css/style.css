@@ -634,6 +634,12 @@ label.header {
 	    background-attachment: fixed;
 		padding-top:0em;
 }
+.sec{
+    background: url(/assets/images/banner/EduBasketBanner(2).png) no-repeat 0px 0px;
+    background-size: cover;
+    background-attachment: fixed;
+	padding-top:0em;
+}
 .video-left-w3l iframe {
     width: 600px;
     height: 334px;

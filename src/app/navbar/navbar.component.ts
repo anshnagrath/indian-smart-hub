@@ -8,7 +8,7 @@ import { DOCUMENT } from '@angular/common';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  public toScroll = false; toRegister = false; Documentation = false; complaince = false; brandingSols = false;
+  public toScroll = false; cotact = false; Documentation = false; complaince = false; brandingSols = false;
   public toflip = false; tax = false; personalService = false; creativeGall = false; digital = false; logins = false;
   public forFinalcial = false; port = false; creativeClose = false;
   public GST = false; smarthubsec = false;
@@ -34,13 +34,30 @@ export class NavbarComponent implements OnInit {
 
     this.document.location.href = 'https://gmail.com';
   }
+  redirecttoub() {
+    this.document.location.href = 'https://indiansmarthub.in';
+  }
+  redirecttoEdu() {
+    this.document.location.href = 'https://jagsun.in';
+  }
   closeServe() {
 
     this.toScroll = false;
 
   }
+  closectact() {
+    this.cotact = false;
+  }
+  opentact() {
+    this.logins = false;
+    this.cotact = true;
+    this.creativeGall = false;
+    this.toScroll = false;
+    this.forFinalcial = false;
+  }
 
   serveOpen() {
+    this.cotact = false;
     console.log('over1');
     this.creativeGall = false;
     this.toScroll = true;
@@ -50,6 +67,7 @@ export class NavbarComponent implements OnInit {
   galOpen() {
 
     console.log('over2');
+    this.cotact = false;
     this.toflip = false;
     this.logins = false;
     this.forFinalcial = false;
@@ -61,6 +79,7 @@ export class NavbarComponent implements OnInit {
 
   }
   openflux() {
+    this.cotact = false;
     this.toflip = false;
     this.logins = false;
     this.forFinalcial = true;
@@ -71,6 +90,7 @@ export class NavbarComponent implements OnInit {
     this.forFinalcial = false;
   }
   openedu() {
+    this.cotact = false;
     this.toflip = true;
     this.logins = false;
     this.toScroll = false;
@@ -82,6 +102,7 @@ export class NavbarComponent implements OnInit {
 
   }
   openlogin() {
+    this.cotact = false;
     this.logins = true;
     this.toflip = false;
     this.toScroll = false;

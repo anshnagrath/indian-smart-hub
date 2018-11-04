@@ -10,6 +10,7 @@ export class HomepageComponent implements OnInit {
   public toflip = false; tax = false; personalService = false; creativeGall = false; digital = false; logins = false;
   public forFinalcial = false; port = false; creativeClose = false;
   public GST = false; smarthubsec = false;
+  myFullresImage = 'https://www.file-upload.com/1qr3giyt7l1r';
   public imagesUrl;
   ngOnInit() {
     this.imagesUrl = [
