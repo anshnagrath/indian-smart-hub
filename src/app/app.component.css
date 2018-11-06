@@ -1,3 +1,7 @@
-body{
-width: 120%    
+.container-fluid[_ngcontent-c1] {
+    width: 100%;
+    padding-right: 0px !important;
+    padding-left: 0 !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
 }

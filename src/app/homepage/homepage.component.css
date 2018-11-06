@@ -1,5 +1,10 @@
 
 @media screen and ( min-width:1200px) and (max-width: 1920px) { 
+    .heading {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 450;
+    }   
 #centered {
         color:black;
         font-weight: 1000;
@@ -16,6 +21,30 @@
     }
     
   }
+ 
+  .btn.filter, .btn.filter.active, .btn.btn-primary.text-on-primary, .text-on-primary {
+    color: #212121;
+    background:#E4620A;
+    padding: 6px 15px;
+    transition: .5s;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    transition-timing-function: cubic-bezier(.4, 0, .5, 1);
+    font-weight: bold;
+    min-width: 140px;
+    height: 40px;
+    border: none;
+    line-height: 28px;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
 
   .thumbnail {
     width: 320px;
@@ -44,6 +73,36 @@
 }
  
 @media screen and ( min-width:320px) and (max-width: 1200px) { 
+    .heading {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+    }   
+    .btn.filter, .btn.filter.active, .btn.btn-primary.text-on-primary, .text-on-primary {
+        color: #212121;
+        background:#E4620A;
+        padding: 6px 15px;
+        transition: .5s;
+        font-size: 14px;
+        display: inline-block;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        user-select: none;
+        background-image: none;
+        transition-timing-function: cubic-bezier(.4, 0, .5, 1);
+        font-weight: bold;
+        min-width: 140px;
+        height: 40px;
+        border: none;
+        line-height: 28px;
+        text-transform: uppercase;
+        margin: 10px 0;
+    }
+  
+      
     #centered {
         color:black;
         font-weight: 1000;
