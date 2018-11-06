@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
-var port = process.env.PORT || 4200;
+var port = process.env.PORT || 3000;
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 var router = express.Router();
 
