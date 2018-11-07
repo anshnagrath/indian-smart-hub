@@ -6,6 +6,14 @@ nav.navbar.navbar-expand-lg.navbar-light[_ngcontent-c2] {
     background-color: black;
     /* font-size: 0px; */
 }
+.container-fluid[_ngcontent-c1] {
+    width: 100%;
+    padding-right: 7px !important;
+    padding-left: 7px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
 #size {
     padding: 0.5em 0em;
     background-color: black;

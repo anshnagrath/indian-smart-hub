@@ -19,6 +19,14 @@
     
          
     }
+    .container-fluid[_ngcontent-c1] {
+        width: 100%;
+        padding-right: 7px !important;
+        padding-left: 7px !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+    
     
   }
  
