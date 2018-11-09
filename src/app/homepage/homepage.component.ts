@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ElementRef } from '@angular/core';
+import { HostListener } from "@angular/core";
+@HostListener('window:scroll', [])
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -10,7 +12,7 @@ export class HomepageComponent implements OnInit {
   public toflip = false; tax = false; personalService = false; creativeGall = false; digital = false; logins = false;
   public forFinalcial = false; port = false; creativeClose = false;
   public GST = false; smarthubsec = false;
-  public Name;lastName;mail;phone;
+  public Name; lastName; mail; phone; chatboxShow = false;
 
   myFullresImage = 'https://www.file-upload.com/1qr3giyt7l1r';
   public imagesUrl;
@@ -27,7 +29,11 @@ export class HomepageComponent implements OnInit {
     ];
   }
   constructor(private _eref: ElementRef) {
-  }
+  } 
+  showChatbox() {
+    console.log('clicked','sadcsadcasdcasdcasdc')
+    this.chatboxShow =!this.chatboxShow;
 
+  }
 
 }

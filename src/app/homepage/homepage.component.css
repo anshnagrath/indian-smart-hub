@@ -1,10 +1,44 @@
 
 @media screen and ( min-width:1200px) and (max-width: 1920px) { 
-    .heading {
+  
+  .heading {
         text-align: center;
         text-transform: uppercase;
         font-weight: 450;
     }   
+#chatbutton{
+  bottom: 0!important;
+  margin-left:78%; 
+  position: fixed;
+  opacity: 9;
+ height: 5%;
+ font-size: 175%;
+ background: black;
+ padding-bottom:2%;
+ padding-right:2%;
+ padding-left:2%;
+ border-top-left-radius: 15px;
+ border-top-right-radius: 15px;
+ border-bottom-left-radius: 15px;
+ border-bottom-right-radius: 15px;
+border: none !important;
+}
+.chatinput{
+  background: transparent;
+  color:white;
+  font-size: 100%;
+
+}
+#chatdiv{
+  padding:2%;
+  position: fixed;
+  bottom: 0%!important;
+  margin-left:75%; 
+  opacity: 9;
+  font-size: 175%;
+  background: black;
+ border: none !important;
+}
 #centered {
         color:black;
         font-weight: 1000;
