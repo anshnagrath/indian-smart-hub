@@ -31,6 +31,7 @@ import { SmartComponent } from './smart/smart.component';
 import { BrandingComponent } from './branding/branding.component';
 import { DigitalComponent } from './digital/digital.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { AppearDirective } from './appear.directive';
 
 
 export function getAuthServiceConfigs() {
@@ -63,7 +64,8 @@ export function getAuthServiceConfigs() {
         SmartComponent,
         BrandingComponent,
         DigitalComponent,
-        PortfolioComponent
+        PortfolioComponent,
+        AppearDirective
 
     ],
     imports: [

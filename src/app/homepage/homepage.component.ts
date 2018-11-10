@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ElementRef } from '@angular/core';
-import { HostListener } from "@angular/core";
-@HostListener('window:scroll', [])
+import { Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -28,12 +28,26 @@ export class HomepageComponent implements OnInit {
       'https://www.file-upload.com/q2ky6363ea35',
     ];
   }
-  constructor(private _eref: ElementRef) {
+  constructor(private _eref: ElementRef,@Inject(DOCUMENT) private document: any) {
   } 
   showChatbox() {
     console.log('clicked','sadcsadcasdcasdcasdc')
     this.chatboxShow =!this.chatboxShow;
 
   }
+ redirectToTwitter() {
 
+    this.document.location.href = 'https://twitter.com/indiansmarthub';
+  }
+   redirectToFacebook() {
+
+    this.document.location.href = 'https://www.facebook.com/Indian-Smart-Hub-748135222196160/?modal=admin_todo_tour';
+  }
+   redirectToInsta() {
+
+    this.document.location.href = 'https://www.instagram.com/indiansmarthub/';
+  }
+  ondisplay(){
+    console.log("ascdcasdcasdcsacsadcs")
+  }
 }

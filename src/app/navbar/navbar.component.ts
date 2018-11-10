@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
 
   collapsed = false;
   constructor(@Inject(DOCUMENT) private document: any) {
-    console.log(this.collapsed, 'looosdsdsdsd')
+ 
   }
 
   ngOnInit() {
