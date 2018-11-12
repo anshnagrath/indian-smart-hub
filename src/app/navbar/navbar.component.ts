@@ -21,7 +21,7 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
-    (455 < window.screen.width && window.screen.width < 991) ? this.isMobile = true : this.isMobile = false;
+    (300 < window.screen.width && window.screen.width < 991) ? this.isMobile = true : this.isMobile = false;
     console.log(window.screen.width, this.isMobile, 'asasaas');
   }
   @HostListener('window:scroll', ['$event'])
