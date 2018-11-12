@@ -142,7 +142,11 @@ a.navbar-brand span {
     -o-transition: 0.5s all;
     -ms-transition: 0.5s all;
 }
-.one-img{  background: url(/assets/images/banner/1.jpg)no-repeat center;}
+.one-img{  background: url(/assets/images/banner/1.jpg)no-repeat center;
+    min-width: 100%;
+    min-height: 100%;
+
+}
 .serveban{ background:url(/assets/images/banner/ban/3.jpg)no-repeat center;
     opacity:0.7 };
 nav.navbar.navbar-expand-lg.navbar-light{

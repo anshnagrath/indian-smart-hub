@@ -1,6 +1,13 @@
 
 @media screen and ( min-width:1200px) and (max-width: 1920px) { 
-  
+.image-responsive{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+  .#financialflux{
+    float:right; 
+  }
   .heading {
         text-align: center;
         text-transform: uppercase;
@@ -8,6 +15,9 @@
         font-size:350%;
         font-family: Helvetica;
     }   
+    #banner{
+      margin-top: 100%;
+    }
 #chatbutton{
   bottom: 0!important;
   margin-left:78%; 
@@ -210,6 +220,22 @@ overflow-x: hidden;
  
 
 @media screen and ( min-width:320px) and (max-width: 1200px) { 
+  .image-responsive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  #banner{
+    margin-top: 10%;
+  }
+  #financialflux{
+   position: relative;
+   margin-bottom:3%
+  }
+  #creativegallery{
+    margin-top:2%; 
+    margin-bottom:2%;
+   }
     .heading {
         text-align: center;
         text-transform: uppercase;
