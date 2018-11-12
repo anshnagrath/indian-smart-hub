@@ -6,6 +6,7 @@
         text-transform: uppercase;
         font-weight: 450;
         font-size:350%;
+        font-family: Helvetica;
     }   
 #chatbutton{
   bottom: 0!important;

@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
-import { NgxImageZoomModule } from 'ngx-image-zoom';
 import { ClickOutsideModule } from 'ng4-click-outside';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SliderModule } from 'angular-image-slider';
@@ -11,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { AppService } from './app.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
+
 
 import {
     AuthServiceConfig,
@@ -76,7 +76,6 @@ export function getAuthServiceConfigs() {
         SocialLoginModule,
         BrowserAnimationsModule,
         ClickOutsideModule,
-        NgxImageZoomModule.forRoot(),
         RouterModule.forRoot([
             { path: 'register', component: RegistrationComponent, pathMatch: 'full' },
             { path: 'gst', component: GstComponent, pathMatch: 'full' },

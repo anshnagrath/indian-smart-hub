@@ -15,17 +15,21 @@ export class NavbarComponent implements OnInit {
   public isMobile = false;
   so = false;
 
-  collapsed = false;
+  collapsed = true;
   constructor(@Inject(DOCUMENT) private document: any) {
- 
+
   }
 
   ngOnInit() {
-    (455 < window.innerWidth && window.innerWidth < 991) ? this.isMobile = true : this.isMobile = false;
-    console.log(window.innerWidth, this.isMobile, 'asasaas');
+    (455 < window.screen.width && window.screen.width < 991) ? this.isMobile = true : this.isMobile = false;
+    console.log(window.screen.width, this.isMobile, 'asasaas');
+  }
+  @HostListener('window:scroll', ['$event'])
+  scrollHandler(event) {
+    console.log("Scroll Event");
   }
   toggleCollapsed() {
-    this.so = true;
+    this.so = !this.so;
     this.collapsed = !this.collapsed;
     console.log(this.collapsed, 'looosdsdsdsd')
 
