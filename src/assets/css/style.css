@@ -142,7 +142,10 @@ a.navbar-brand span {
     -o-transition: 0.5s all;
     -ms-transition: 0.5s all;
 }
-.one-img{  background: url(/assets/images/banner/1.jpg)no-repeat center;
+.one-img{  background: url(/assets/images/banner/1.jpg)no-repeat center  center fixed;   
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     min-width: 100%;
     min-height: 100%;
 
