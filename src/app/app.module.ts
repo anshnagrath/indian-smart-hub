@@ -32,6 +32,9 @@ import { BrandingComponent } from './branding/branding.component';
 import { DigitalComponent } from './digital/digital.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AppearDirective } from './appear.directive';
+import { TicketingComponent } from './ticketing/ticketing.component';
+import { InsuranceComponent } from './insurance/insurance.component';
+import { KnowmoreComponent } from './knowmore/knowmore.component';
 
 
 export function getAuthServiceConfigs() {
@@ -65,7 +68,10 @@ export function getAuthServiceConfigs() {
         BrandingComponent,
         DigitalComponent,
         PortfolioComponent,
-        AppearDirective
+        AppearDirective,
+        TicketingComponent,
+        InsuranceComponent,
+        KnowmoreComponent
 
     ],
     imports: [
@@ -88,6 +94,9 @@ export function getAuthServiceConfigs() {
             { path: 'brand', component: BrandingComponent, pathMatch: 'full' },
             { path: 'digital', component: DigitalComponent, pathMatch: 'full' },
             { path: 'portfolio', component: PortfolioComponent, pathMatch: 'full' },
+            { path: 'ticketing', component: TicketingComponent, pathMatch: 'full' },
+            { path: 'insurance', component: InsuranceComponent, pathMatch: 'full' },
+            { path: 'knowmore', component: KnowmoreComponent, pathMatch: 'full' },
             { path: '', component: HomepageComponent, pathMatch: 'full' }
 
 
