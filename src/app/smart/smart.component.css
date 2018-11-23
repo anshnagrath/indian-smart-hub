@@ -1,5 +1,7 @@
 
 @media screen and ( min-width:1200px) and (max-width: 1920px) { 
+#serveban{ background:url(/assets/images/banner/ban/smartservebanner.png)no-repeat center !important;
+        opacity:0.7 !important;};
     #centered {
             color:black;
             font-weight: 1000;
@@ -20,6 +22,8 @@
      
      
     @media screen and ( min-width:320px) and (max-width: 1200px) { 
+        #serveban{ background:url(/assets/images/banner/ban/smartservebanner.png)no-repeat center !important;
+            opacity:0.7 };
         #centered {
             color:black;
             font-weight: 1000;

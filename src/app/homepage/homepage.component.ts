@@ -11,7 +11,7 @@ export class HomepageComponent implements OnInit {
   public toScroll = false; toRegister = false; Documentation = false; complaince = false; brandingSols = false;
   public toflip = false; tax = false; personalService = false; creativeGall = false; digital = false; logins = false;
   public forFinalcial = false; port = false; creativeClose = false; isMobile = false;
-  public GST = false; smarthubsec = false;
+  public serveClick = true; creativeClick = false; fiancialClick = false; eduClick = false;
   public Name; lastName; mail; phone; chatboxShow = false;
 
   myFullresImage = 'https://www.file-upload.com/1qr3giyt7l1r';
@@ -41,7 +41,31 @@ export class HomepageComponent implements OnInit {
 
     this.document.location.href = 'https://www.instagram.com/indiansmarthub/';
   }
-  ondisplay() {
-    console.log("ascdcasdcasdcsacsadcs")
+  serveClicked() {
+    this.serveClick = true;
+    this.creativeClick = false;
+    this.fiancialClick = false;
+    this.eduClick = false;
+  }
+  creativeClicked() {
+    console.log('in creative', this.serveClick, this.creativeClick, this.fiancialClick, this.eduClick);
+    this.serveClick = false;
+    this.creativeClick = true;
+    this.fiancialClick = false;
+    this.eduClick = false;
+  }
+  fiancialClicked() {
+    this.fiancialClick = true;
+    this.serveClick = false;
+    this.creativeClick = false;
+    this.eduClick = false;
+  }
+  eduClicked() {
+    console.log("edu")
+    this.eduClick = true;
+    this.fiancialClick = false;
+    this.serveClick = false;
+    this.creativeClick = false;
+
   }
 }

@@ -35,6 +35,9 @@ import { AppearDirective } from './appear.directive';
 import { TicketingComponent } from './ticketing/ticketing.component';
 import { InsuranceComponent } from './insurance/insurance.component';
 import { KnowmoreComponent } from './knowmore/knowmore.component';
+import { CreativeknowComponent } from './creativeknow/creativeknow.component';
+import { FinancialknowmoreComponent } from './financialknowmore/financialknowmore.component';
+import { EduKnowmoreComponent } from './edu-knowmore/edu-knowmore.component';
 
 
 export function getAuthServiceConfigs() {
@@ -71,7 +74,10 @@ export function getAuthServiceConfigs() {
         AppearDirective,
         TicketingComponent,
         InsuranceComponent,
-        KnowmoreComponent
+        KnowmoreComponent,
+        CreativeknowComponent,
+        FinancialknowmoreComponent,
+        EduKnowmoreComponent
 
     ],
     imports: [
@@ -97,6 +103,9 @@ export function getAuthServiceConfigs() {
             { path: 'ticketing', component: TicketingComponent, pathMatch: 'full' },
             { path: 'insurance', component: InsuranceComponent, pathMatch: 'full' },
             { path: 'knowmore', component: KnowmoreComponent, pathMatch: 'full' },
+            { path: 'creativemore', component: CreativeknowComponent, pathMatch: 'full' },
+            { path: 'financialmore', component: FinancialknowmoreComponent, pathMatch: 'full' },
+            { path: 'edumore', component: EduComponent, pathMatch: 'full' },
             { path: '', component: HomepageComponent, pathMatch: 'full' }
 
 

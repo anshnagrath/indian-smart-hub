@@ -116,8 +116,8 @@
          <h1 class="heading" style="margin-top:3%;font-family:Helvetica;font-size: 250%;font-size: 270%;text-align:center"> Our Services</h1>
          <div style="padding-left:1%">
          <div class="row" style="margin-top:4%">
-          <div (appear)="ondisplay()" style="padding:1%" class="col-lg-6 animated bounceInRight delay-1s pull-left" >
-            <img animateOnScroll animationName="animation-class-name" src=".../../assets/services/creativegallery.jpg" width="100%" height="85%"  alt=" " />
+          <div style="padding:1%" class="col-lg-6 animated bounceInRight delay-1s pull-left" >
+            <img  src=".../../assets/services/creativegallery.jpg" width="100%" height="85%"  alt=" " />
         </div>
             <div class="col-lg-6  info-sub-w4" style="float:right;padding:1%;margin-top:1%" >     
             <div>
@@ -162,6 +162,7 @@
                                 </div>
                                 <div class="col-lg-6 info-sub-w4">     
                                     <h1 style="font-size:270%;margin-left:5%;margin-top:5%">Smart Serve</h1><br>
+
                                     <p style="text-align:justify;margin-left:3%;">Do things smartly with us. Pay your taxes.
                                     Do E-filing. Get yourself PAN CARD, ADHAAR CARD
                                     with biometric authentication. Serve yourself with our services! <br></p>
@@ -210,16 +211,16 @@
               <!-- <h1 class="heading" style="margin-top:3%"> Gallery</h1><br> -->
       <div  *ngIf='!isMobile' class="container-fluid">
             <div style="display: inline-block" class="filter-categories filter-mixitup">
-                    <span style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;" class=" btn btn-primary text-on-primary readmore1">Smart Serve</span>
-                    <span style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;" class="btn btn-primary text-on-primary readmore1" >Creative Gallery</span>
-                    <span  style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;" class="btn btn-primary text-on-primary readmore1">Financial Flux</span>
-                    <span style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;"  class="btn btn-primary text-on-primary readmore1">Edu basket</span>
+                    <span (click)="serveClicked()" style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;" class=" btn btn-primary text-on-primary readmore1">Smart Serve</span>
+                    <span (click)="creativeClicked()" style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;" class="btn btn-primary text-on-primary readmore1" >Creative Gallery</span>
+                    <span (click)="fiancialClicked()"style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;" class="btn btn-primary text-on-primary readmore1">Financial Flux</span>
+                    <span (click)="eduClicked()"style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;"  class="btn btn-primary text-on-primary readmore1">Edu basket</span>
                 </div>
         <div *ngIf='isMobile'>
             <h1 class="heading">Gallery</h1>
         </div>
        <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div style="margin-left:24%"  class="animated  bounceInLeft delay-2s" *ngIf="eduClick && !fiancialClick && !serveClick &&!creativeClick"  class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="hovereffect">
                     <img  height="100%" width="100%" src="../../assets/aller/1 (2).jpg" alt="">
                     <div class="overlay">
@@ -227,7 +228,16 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div style="margin-left:24%" class="animated  bounceInLeft delay-2s" *ngIf="fiancialClick && !eduClick &&!creativeClick && !eduClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="hovereffect">
+                    <img height="110%" width="100%" src="../../assets/aller/what-is-gst-1498543610.jpg" alt="">
+                    <div class="overlay">
+                       <!-- <h2>Hover effect 1v2</h2>
+                       <a class="info" href="#">link here</a> -->
+                    </div>
+                </div>
+            </div>
+            <div style="margin-left:5%" *ngIf="fiancialClick && !eduClick &&!creativeClick && !eduClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     <div class="hovereffect">
                         <img class="img-responsive" height="300vw" width="100%" src="../../assets/aller/198476.jpg" alt="">
                         <div class="overlay">
@@ -236,7 +246,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div style="margin-left:5%" *ngIf="eduClick &&!creativeClick && !serveClick  && !fiancialClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                         <div class="hovereffect">
                             <img height="100%" width="100%" src="../../assets/aller/2 (1).jpg" alt="">
                             <div class="overlay">
@@ -245,7 +255,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div style="margin-left:24%" *ngIf="creativeClick && !eduClick  && !fiancialClick &&!eduClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                             <div class="hovereffect">
                                 <img  height="100%" width="100%" src="../../assets/aller/8.jpg" alt="">
                                 <div class="overlay">
@@ -254,44 +264,40 @@
                                 </div>
                             </div>
                         </div>  
-                </div>
-                <div class="row" style="margin-top:1%">
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                <div class="hovereffect">
-                                    <img class="img-responsive" height="110%" width="100%" src="../../assets/aller/hkZdKM.jpg" alt="">
-                                    <div class="overlay">
-                                       <!-- <h2>Hover effect 1v2</h2>
-                                       <a class="info" href="#">link here</a> -->
-                                    </div>
+                        <div style="margin-left:5%" *ngIf="creativeClick && !eduClick  && !fiancialClick &&!serveClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="hovereffect">
+                                <img class="img-responsive" height="110%" width="100%" src="../../assets/aller/hkZdKM.jpg" alt="">
+                                <div class="overlay">
+                                   <!-- <h2>Hover effect 1v2</h2>
+                                   <a class="info" href="#">link here</a> -->
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        </div>
+
+                </div>
+                <div  class="row" style="margin-top:1%">
+                        
+                          
+                            <div class="animated  bounceInLeft delay-2s"  style="margin-left:24%"*ngIf="serveClick && !creativeClick && !eduClick  && !fiancialClick " class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                     <div class="hovereffect">
-                                        <img  height="110%" width="100%" src="../../assets/aller/Right-to-Education-in-India.jpg" alt="">
+                                        <img  height="120%" width="100%" src="../../assets/aller/Right-to-Education-in-India.jpg" alt="">
                                         <div class="overlay">
                                            <!-- <h2>Hover effect 1v2</h2>
                                            <a class="info" href="#">link here</a> -->
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                <div class="animated  bounceInLeft delay-2s"  style="margin-left:5%;" *ngIf="serveClick && !creativeClick && !eduClick  && !fiancialClick "  class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                         <div class="hovereffect">
-                                            <img height="110%" width="100%" src="../../assets/aller/Indian-Flag-HD-Images-Wallpapers-Free-Download-3 (1).jpg" alt="">
+                                            <img height="120%" width="100%" src="../../assets/aller/Indian-Flag-HD-Images-Wallpapers-Free-Download-3 (1).jpg" alt="">
                                             <div class="overlay">
                                                <!-- <h2>Hover effect 1v2</h2>
                                                <a class="info" href="#">link here</a> -->
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                            <div class="hovereffect">
-                                                <img height="110%" width="100%" src="../../assets/aller/what-is-gst-1498543610.jpg" alt="">
-                                                <div class="overlay">
-                                                   <!-- <h2>Hover effect 1v2</h2>
-                                                   <a class="info" href="#">link here</a> -->
-                                                </div>
-                                            </div>
-                                        </div>
+                           
+                                   
                                 </div>
             <br><br><br>
             <div  class="container-fliud" style="background-image:url(../../assets/images/banner/Edupng); 
