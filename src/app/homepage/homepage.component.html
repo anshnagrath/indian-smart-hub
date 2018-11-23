@@ -32,7 +32,10 @@
          <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
       </head>
       <body>
-        <div class="container-fluid">
+          <div  *ngIf='hideit' style="margin-top:10%;" class="container-fluid">
+    <app-spinner></app-spinner>
+        </div>
+        <div *ngIf='!hideit'class="container-fluid">
         <div class="header-outs" id="home">
             <div class="header-bar">
                <app-navbar></app-navbar>
@@ -410,7 +413,7 @@
     
      </div>
      
-            <button *ngIf='!isMobile' id="chatbutton"  (click)="showChatbox()" class="btn btn-info btn-lg">
+            <button *ngIf='!isMobile && !hideit' id="chatbutton"  (click)="showChatbox()" class="btn btn-info btn-lg">
                            <span style="float:left;margin-top:1%" class="glyphicon glyphicon-envelope" ></span>
                            &nbsp;&nbsp; Send us a message
               </button>

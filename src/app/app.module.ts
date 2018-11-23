@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { AppService } from './app.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
-
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 import {
     AuthServiceConfig,
@@ -38,6 +38,7 @@ import { KnowmoreComponent } from './knowmore/knowmore.component';
 import { CreativeknowComponent } from './creativeknow/creativeknow.component';
 import { FinancialknowmoreComponent } from './financialknowmore/financialknowmore.component';
 import { EduKnowmoreComponent } from './edu-knowmore/edu-knowmore.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 
 export function getAuthServiceConfigs() {
@@ -77,11 +78,13 @@ export function getAuthServiceConfigs() {
         KnowmoreComponent,
         CreativeknowComponent,
         FinancialknowmoreComponent,
-        EduKnowmoreComponent
+        EduKnowmoreComponent,
+        SpinnerComponent
 
     ],
     imports: [
         HttpClientModule,
+        NgxSpinnerModule,
         HttpModule,
         FormsModule,
         BrowserModule,

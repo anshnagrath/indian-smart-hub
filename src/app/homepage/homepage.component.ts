@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ElementRef } from '@angular/core';
 import { Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { NgxSpinnerService } from 'ngx-spinner';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -12,16 +13,19 @@ export class HomepageComponent implements OnInit {
   public toflip = false; tax = false; personalService = false; creativeGall = false; digital = false; logins = false;
   public forFinalcial = false; port = false; creativeClose = false; isMobile = false;
   public serveClick = true; creativeClick = false; fiancialClick = false; eduClick = false;
-  public Name; lastName; mail; phone; chatboxShow = false;
+  public Name; lastName; mail; phone; chatboxShow = false; afterLoader = false; hideit = true;
 
   myFullresImage = 'https://www.file-upload.com/1qr3giyt7l1r';
   public imagesUrl;
-  constructor(private _eref: ElementRef, @Inject(DOCUMENT) private document: any) {
-  }
-  ngOnInit() {
+  constructor(private _eref: ElementRef, @Inject(DOCUMENT) private document: any, private spinner: NgxSpinnerService) {
     (300 < window.screen.width && window.screen.width < 991) ? this.isMobile = true : this.isMobile = false;
     console.log(window.screen.width, this.isMobile, 'asasaas');
 
+  }
+  ngOnInit() {
+    setTimeout(() => {
+      this.hideit = false;
+    }, 7000);
   }
 
   showChatbox() {
