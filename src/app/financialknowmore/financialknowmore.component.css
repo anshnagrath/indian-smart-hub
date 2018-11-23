@@ -1,0 +1,26 @@
+.gal-item{
+	overflow: hidden;
+	padding: 8px;
+}
+.gal-item .box{
+	height: 100%;
+	overflow: hidden;
+}
+.box img{
+	height: 100%;
+	width: auto;
+	object-fit:cover;
+}
+.info-sub-w4[_ngcontent-c2] p[_ngcontent-c2] {
+    font-size: 20px;
+    color: #7d7979;
+    letter-spacing: 2px;
+    line-height: 30px;
+    padding: 15px 0px 20px;
+}
+p[_ngcontent-c1] {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+}

@@ -29,18 +29,7 @@ export class HomepageComponent implements OnInit {
     this.chatboxShow = !this.chatboxShow;
 
   }
-  redirectToTwitter() {
 
-    this.document.location.href = 'https://twitter.com/indiansmarthub';
-  }
-  redirectToFacebook() {
-
-    this.document.location.href = 'https://www.facebook.com/Indian-Smart-Hub-748135222196160/?modal=admin_todo_tour';
-  }
-  redirectToInsta() {
-
-    this.document.location.href = 'https://www.instagram.com/indiansmarthub/';
-  }
   serveClicked() {
     this.serveClick = true;
     this.creativeClick = false;
