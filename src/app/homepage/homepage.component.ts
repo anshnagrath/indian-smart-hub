@@ -12,7 +12,7 @@ export class HomepageComponent implements OnInit {
   public toScroll = false; toRegister = false; Documentation = false; complaince = false; brandingSols = false;
   public toflip = false; tax = false; personalService = false; creativeGall = false; digital = false; logins = false;
   public forFinalcial = false; port = false; creativeClose = false; isMobile = false;
-  public serveClick = true; creativeClick = false; fiancialClick = false; eduClick = false;
+  public serveClick = false; creativeClick = false; fiancialClick = false; eduClick = false;
   public Name; lastName; mail; phone; chatboxShow = false; afterLoader = false; hideit = true;
 
   myFullresImage = 'https://www.file-upload.com/1qr3giyt7l1r';

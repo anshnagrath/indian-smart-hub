@@ -119,7 +119,7 @@
          <h1 class="heading" style="margin-top:3%;font-family:Helvetica;font-size: 250%;font-size: 270%;text-align:center"> Our Services</h1>
          <div style="padding-left:1%">
          <div class="row" style="margin-top:4%">
-          <div style="padding:1%" class="col-lg-6 animated bounceInRight delay-1s pull-left" >
+          <div style="padding:1%" class="col-lg-6 animated bounceInRight delay-5s pull-left" >
             <img  src=".../../assets/services/creativegallery.jpg" width="100%" height="85%"  alt=" " />
         </div>
             <div class="col-lg-6  info-sub-w4" style="float:right;padding:1%;margin-top:1%" >     
@@ -141,12 +141,12 @@
                         <a class="animated infinite bounce delay-2s btn btn-primary text-on-primary readmore1">Read More</a>  
                     </div>    
                     </div>
-                          <div id="financialflux" class="col-lg-6  push-xs-6" >
+                          <div id="financialflux" class="col-lg-6  push-xs-6 animated bounceInLeft delay-5s" >
                               <img  src=".../../assets/services/financial.jpg" height="300vw" width="107%"alt=" " class="img-responsive" />
                           </div>
                         </div>
                         <div *ngIf='isMobile' class="row" >
-                                <div id="financialflux" class="col-lg-6  push-xs-6" >
+                                <div id="financialflux" class="col-lg-6  push-xs-6 animated bounceInRight delay-5s" >
                                         <img  src=".../../assets/services/financial.jpg" height="300vw" width="107%"alt=" " class="img-responsive" />
                                     </div>
                                 <div class="col-lg-6  pull-xs-6">     
@@ -160,7 +160,7 @@
                                   </div>
                         <div class="row" style="margin-top:4%">
                           
-                                <div  class="col-lg-6 info-sub-w4" >
+                                <div  class="col-lg-6 info-sub-w4 animated bounceInLeft delay-5s" >
                                     <img  src="../../assets/services/smart serve.jpg" width="100%" height="300vw"  alt=" " class="img-responsive" />
                                 </div>
                                 <div class="col-lg-6 info-sub-w4">     
@@ -182,12 +182,12 @@
                                                 <br>
                                                 <a class="animated infinite bounce delay-2s btn btn-primary text-on-primary readmore1">Read More</a> 
                                             </div>
-                                              <div style="float:right;padding-left:3%" class="col-lg-6" >
+                                              <div style="float:right;padding-left:3%" class="col-lg-6 animated bounceInRight delay-5s" >
                                                   <img src="../../assets/services/student-education.jpg" height="300vw" width="107%"  alt=" " class="img-responsive" />
                                               </div>
                                             
                                             </div>   
-                                            <div *ngIf="isMobile" class="row" style="margin-top:4%">
+                                            <div *ngIf="isMobile" class="row animated bounceInLeft delay-5s" style="margin-top:4%">
                                                     <div style="float:right;padding-left:3%" class="col-lg-6" >
                                                             <img src="../../assets/services/student-education.jpg" height="300vw" width="107%"  alt=" " class="img-responsive" />
                                                         </div>
@@ -212,18 +212,18 @@
                                         margin-right: auto;" src="../../assets/c.png" width=19% height="5%" alt="">
               </div>
               <!-- <h1 class="heading" style="margin-top:3%"> Gallery</h1><br> -->
-      <div  *ngIf='!isMobile' class="container-fluid">
-            <div style="display: inline-block" class="filter-categories filter-mixitup">
-                    <span (click)="serveClicked()" style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;" class=" btn btn-primary text-on-primary readmore1">Smart Serve</span>
-                    <span (click)="creativeClicked()" style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;" class="btn btn-primary text-on-primary readmore1" >Creative Gallery</span>
-                    <span (click)="fiancialClicked()"style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;" class="btn btn-primary text-on-primary readmore1">Financial Flux</span>
-                    <span (click)="eduClicked()"style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;"  class="btn btn-primary text-on-primary readmore1">Edu basket</span>
+      <div  *ngIf='!isMobile' class="container-fluid ">
+            <div style="display: inline-block" class="filter-categories filter-mixitup animated infinite bounce delay-2s">
+                    <span class="animated infinite bounce delay-2s" (click)="serveClicked()" style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;" class=" btn btn-primary text-on-primary readmore1">Smart Serve</span>
+                    <span class="animated infinite bounce delay-2s" (click)="creativeClicked()" style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;" class="btn btn-primary text-on-primary readmore1" >Creative Gallery</span>
+                    <span class="animated infinite bounce delay-2s" (click)="fiancialClicked()"style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;" class="btn btn-primary text-on-primary readmore1">Financial Flux</span>
+                    <span class="animated infinite bounce delay-2s" (click)="eduClicked()"style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;"  class="btn btn-primary text-on-primary readmore1">Edu basket</span>
                 </div>
         <div *ngIf='isMobile'>
             <h1 class="heading">Gallery</h1>
         </div>
-       <div class="row">
-        <div style="margin-left:24%"  class="animated  bounceInLeft delay-2s" *ngIf="eduClick && !fiancialClick && !serveClick &&!creativeClick"  class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+       <div class="row bounceInRight delay-4s">
+        <div   class="animated  bounceILeft delay-5s" *ngIf="eduClick && !fiancialClick && !serveClick &&!creativeClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick"  class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="hovereffect">
                     <img  height="100%" width="100%" src="../../assets/aller/1 (2).jpg" alt="">
                     <div class="overlay">
@@ -231,7 +231,7 @@
                     </div>
                 </div>
             </div>
-            <div style="margin-left:24%" class="animated  bounceInLeft delay-2s" *ngIf="fiancialClick && !eduClick &&!creativeClick && !eduClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div  class="animated  bounceILeft delay-5s" *ngIf="fiancialClick && !eduClick &&!creativeClick && !eduClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="hovereffect">
                     <img height="110%" width="100%" src="../../assets/aller/what-is-gst-1498543610.jpg" alt="">
                     <div class="overlay">
@@ -240,7 +240,7 @@
                     </div>
                 </div>
             </div>
-            <div style="margin-left:5%" *ngIf="fiancialClick && !eduClick &&!creativeClick && !eduClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div  *ngIf="fiancialClick && !eduClick &&!creativeClick && !eduClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     <div class="hovereffect">
                         <img class="img-responsive" height="300vw" width="100%" src="../../assets/aller/198476.jpg" alt="">
                         <div class="overlay">
@@ -249,7 +249,7 @@
                         </div>
                     </div>
                 </div>
-                <div style="margin-left:5%" *ngIf="eduClick &&!creativeClick && !serveClick  && !fiancialClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div *ngIf="eduClick &&!creativeClick && !serveClick  && !fiancialClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                         <div class="hovereffect">
                             <img height="100%" width="100%" src="../../assets/aller/2 (1).jpg" alt="">
                             <div class="overlay">
@@ -258,7 +258,7 @@
                             </div>
                         </div>
                     </div>
-                    <div style="margin-left:24%" *ngIf="creativeClick && !eduClick  && !fiancialClick &&!eduClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div  *ngIf="creativeClick && !eduClick  && !fiancialClick &&!eduClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                             <div class="hovereffect">
                                 <img  height="100%" width="100%" src="../../assets/aller/8.jpg" alt="">
                                 <div class="overlay">
@@ -267,7 +267,7 @@
                                 </div>
                             </div>
                         </div>  
-                        <div style="margin-left:5%" *ngIf="creativeClick && !eduClick  && !fiancialClick &&!serveClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div  *ngIf="creativeClick && !eduClick  && !fiancialClick &&!serveClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                             <div class="hovereffect">
                                 <img class="img-responsive" height="110%" width="100%" src="../../assets/aller/hkZdKM.jpg" alt="">
                                 <div class="overlay">
@@ -277,11 +277,10 @@
                             </div>
                         </div>
 
-                </div>
-                <div  class="row" style="margin-top:1%">
+      
                         
                           
-                            <div class="animated  bounceInLeft delay-2s"  style="margin-left:24%"*ngIf="serveClick && !creativeClick && !eduClick  && !fiancialClick " class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="animated  bounceILeft delay-5s" *ngIf="serveClick && !creativeClick && !eduClick  && !fiancialClick || !eduClick && !fiancialClick && !serveClick && !creativeClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                     <div class="hovereffect">
                                         <img  height="120%" width="100%" src="../../assets/aller/Right-to-Education-in-India.jpg" alt="">
                                         <div class="overlay">
@@ -290,7 +289,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="animated  bounceInLeft delay-2s"  style="margin-left:5%;" *ngIf="serveClick && !creativeClick && !eduClick  && !fiancialClick "  class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                <div class="animated  bounceILeft delay-5s"   *ngIf="serveClick && !creativeClick && !eduClick  && !fiancialClick || !eduClick && !fiancialClick && !serveClick && !creativeClick"  class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                         <div class="hovereffect">
                                             <img height="120%" width="100%" src="../../assets/aller/Indian-Flag-HD-Images-Wallpapers-Free-Download-3 (1).jpg" alt="">
                                             <div class="overlay">
