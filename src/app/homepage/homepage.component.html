@@ -260,6 +260,15 @@
                     </div>
                 </div>
             </div>
+            <div  *ngIf="creativeClick && !eduClick  && !fiancialClick &&!serveClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="hovereffect">
+                        <img  height="110%" width="100%" src="../../assets/aller/hkzdkm.jpeg" alt="">
+                        <div class="overlay">
+                           <!-- <h2>Hover effect 1v2</h2>
+                           <a class="info" href="#">link here</a> -->
+                        </div>
+                    </div>
+                </div>
             <div  *ngIf="fiancialClick && !eduClick &&!creativeClick && !eduClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     <div class="hovereffect">
                         <img class="img-responsive" height="300vw" width="100%" src="../../assets/aller/198476.jpg" alt="">
@@ -269,7 +278,7 @@
                         </div>
                     </div>
                 </div>
-                <div *ngIf="eduClick &&!creativeClick && !serveClick  && !fiancialClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div style="margin-top:1%" *ngIf="eduClick &&!creativeClick && !serveClick  && !fiancialClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                         <div class="hovereffect">
                             <img height="100%" width="100%" src="../../assets/aller/2 (1).jpg" alt="">
                             <div class="overlay">
@@ -278,7 +287,7 @@
                             </div>
                         </div>
                     </div>
-                    <div  *ngIf="creativeClick && !eduClick  && !fiancialClick &&!eduClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div style="margin-top:1%" *ngIf="creativeClick && !eduClick  && !fiancialClick &&!eduClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                             <div class="hovereffect">
                                 <img  height="100%" width="100%" src="../../assets/aller/8.jpg" alt="">
                                 <div class="overlay">
@@ -287,20 +296,12 @@
                                 </div>
                             </div>
                         </div>  
-                        <div  *ngIf="creativeClick && !eduClick  && !fiancialClick &&!serveClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                            <div class="hovereffect">
-                                <img class="img-responsive" height="110%" width="100%" src="../../assets/aller/hkZdKM.jpg" alt="">
-                                <div class="overlay">
-                                   <!-- <h2>Hover effect 1v2</h2>
-                                   <a class="info" href="#">link here</a> -->
-                                </div>
-                            </div>
-                        </div>
+                    
 
       
                         
                           
-                            <div class="animated  bounceILeft delay-5s" *ngIf="serveClick && !creativeClick && !eduClick  && !fiancialClick || !eduClick && !fiancialClick && !serveClick && !creativeClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div style="margin-top:1%" class="animated  bounceILeft delay-5s" *ngIf="serveClick && !creativeClick && !eduClick  && !fiancialClick || !eduClick && !fiancialClick && !serveClick && !creativeClick" class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                     <div class="hovereffect">
                                         <img  height="120%" width="100%" src="../../assets/aller/Right-to-Education-in-India.jpg" alt="">
                                         <div class="overlay">
@@ -309,7 +310,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="animated  bounceILeft delay-5s"   *ngIf="serveClick && !creativeClick && !eduClick  && !fiancialClick || !eduClick && !fiancialClick && !serveClick && !creativeClick"  class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                <div style="margin-top:1%" class="animated  bounceILeft delay-5s"   *ngIf="serveClick && !creativeClick && !eduClick  && !fiancialClick || !eduClick && !fiancialClick && !serveClick && !creativeClick"  class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                         <div class="hovereffect">
                                             <img height="120%" width="100%" src="../../assets/aller/Indian-Flag-HD-Images-Wallpapers-Free-Download-3 (1).jpg" alt="">
                                             <div class="overlay">
