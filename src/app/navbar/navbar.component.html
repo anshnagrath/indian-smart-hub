@@ -84,10 +84,10 @@
                               <a  style="color:#A7A3A3;font-size: 13px;margin-top: 8%"  class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                   Smart Serve
                            <div (mouseleave)=" closeServe()"  style="background: black;margin-top:14%;text-align:center;margin-left:-10%;font-size: 15px"  (click)="smarthubsec=true"id="nav" *ngIf="toScroll"class="dropdown-menu show" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown" routerLink='/serve' >bill desk </a><br>                              
-                                    <a class="dropdown" routerLink='/ticketing'>Ticketing</a><br>
-                                    <a class="dropdown" routerLink='/insurance'>Insurance</a><br>
-                                    <a class="dropdown" routerLink='/knowmore'>&nbsp;know more&nbsp;</a><br>
+                                    <a class="dropdown" style="color:#A7A3A3" routerLink='/serve' >bill desk </a><br>                              
+                                    <a class="dropdown" style="color:#A7A3A3"  routerLink='/ticketing'>Ticketing</a><br>
+                                    <a class="dropdown" style="color:#A7A3A3" routerLink='/insurance'>Insurance</a><br>
+                                    <a class="dropdown" style="color:#A7A3A3" routerLink='/knowmore'>&nbsp;know more&nbsp;</a><br>
                                    
                                   </div>
                               </a>  
@@ -98,15 +98,15 @@
                               <a  style="color:#A7A3A3;font-size: 13px;margin-top: 6%"  class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                              Creative gallery
                                 <div (mouseleave)="galClose()" id="nav" style="background: black;margin-top:10%;text-align:center;margin-left:-24%;font-size: 15px;"  (click)="creativeClose=true" *ngIf="creativeGall"class="dropdown-menu show" aria-labelledby="navbarDropdown">
-                                    <a   routerLink='/brand' class="dropdown">Branding<br> </a>
+                                    <a   routerLink='/brand' style="color:#A7A3A3"class="dropdown">Branding<br> </a>
                                     
                                     
                                   
-                                    <a style="display:inline-block; white-space: nowrap;"  routerLink='/digital' class="dropdown" >&nbsp;Digital Marketing&nbsp;</a><br>
+                                    <a style="display:inline-block; white-space: nowrap;color:#A7A3A3"  routerLink='/digital' class="dropdown" >&nbsp;Digital Marketing&nbsp;</a><br>
 
                                  
-                                    <a style="display:inline-block; white-space: nowrap;" routerLink='/portfolio' class="dropdown" >&nbsp;Portfolio management&nbsp;</a>
-                                    <a style="display:inline-block; white-space: nowrap;" routerLink='/creativemore' class="dropdown" >&nbsp;Know more&nbsp;</a>
+                                    <a style="display:inline-block; white-space: nowrap;color:#A7A3A3" routerLink='/portfolio' class="dropdown" >&nbsp;Portfolio management&nbsp;</a>
+                                    <a style="display:inline-block; white-space: nowrap;color:#A7A3A3" routerLink='/creativemore' class="dropdown" >&nbsp;Know more&nbsp;</a>
                                   </div>
                               </a>
                              
@@ -118,20 +118,20 @@
                                    Financial flux
                                     <div  (mouseleave)="closeflux()" style="background: black;margin-top:11%;text-align:center;display:inline-block; white-space: nowrap;margin-left:-24%;font-size: 15px" id ="nav" *ngIf="forFinalcial"class="dropdown-menu show" aria-labelledby="navbarDropdown">
                       
-                                  <a  routerLink='/register' class="dropdown">Regitration <br></a>
+                                  <a style="color:#A7A3A3"  routerLink='/register' class="dropdown">Regitration <br></a>
                                        
-                                        <a   routerLink='/gst' class="dropdown" >GST <br></a>
+                                        <a  style="color:#A7A3A3" routerLink='/gst' class="dropdown" >GST <br></a>
                                        
-                                        <a  routerLink='/documentation' class="dropdown ">Documentation<br></a>
+                                        <a style="color:#A7A3A3" routerLink='/documentation' class="dropdown ">Documentation<br></a>
                                         
-                                        <a routerLink='/tax'class="dropdown" >Tax compliance<br></a>
+                                        <a style="color:#A7A3A3" routerLink='/tax'class="dropdown" >Tax compliance<br></a>
                                         
-                                        <a  routerLink='/personalservices'class="dropdown" >Personal services<br></a>
+                                        <a style="color:#A7A3A3" routerLink='/personalservices'class="dropdown" >Personal services<br></a>
                                       
                                     
                                       
-                                        <a style="display:inline-block; white-space: nowrap;"  routerLink='/Funding' class="dropdown" >&nbsp;Complaince and Funding&nbsp;</a><br>
-                                        <a class="dropdown" routerLink='/financialmore'>know more</a><br>
+                                        <a style="display:inline-block; white-space: nowrap;color:#A7A3A3"  routerLink='/Funding' class="dropdown" >&nbsp;Complaince and Funding&nbsp;</a><br>
+                                        <a class="dropdown" style="color:#A7A3A3" routerLink='/financialmore'>know more</a><br>
                                  
                                         </div>
                                   </a>
@@ -141,12 +141,12 @@
                                   <a  style="color:#A7A3A3;font-size: 13px;margin-top: 9%"  class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     edu baskets
                                     <div (mouseleave)="closeedu()" style="background: black;margin-top:13%;text-align:center;margin-left:-24%;font-size: 15px" id="nav" *ngIf="toflip"class="dropdown-menu show" aria-labelledby="navbarDropdown">
-                                        <a style="display:inline-block; white-space: nowrap;"class="dropdown" routerLink="/edu">&nbsp;Future Planner &nbsp;</a>
-                                        <a style="display:inline-block; white-space: nowrap;"class="dropdown" routerLink="/edu">&nbsp;Jagsun edu &nbsp;<br></a>
-                                        <a style="display:inline-block; white-space: nowrap;"class="dropdown" routerLink="/edu">&nbsp;Jagsun academy &nbsp;<br></a>
-                                        <a style="display:inline-block; white-space: nowrap;"class="dropdown" routerLink="/edu">&nbsp;Digital teaching  &nbsp;<br></a>
-                                        <a style="display:inline-block; white-space: nowrap;" class="dropdown" routerLink="/edu">&nbsp;K-12 Publishing&nbsp;<br></a>
-                                        <a style="display:inline-block; white-space: nowrap;" class="dropdown" routerLink="/edumore">&nbsp;know more&nbsp;<br></a>
+                                        <a style="display:inline-block; white-space: nowrap;color:#A7A3A3;"class="dropdown" routerLink="/edu">&nbsp;Future Planner &nbsp;</a>
+                                        <a style="display:inline-block; white-space: nowrap;color:#A7A3A3;"class="dropdown" routerLink="/edu">&nbsp;Jagsun edu &nbsp;<br></a>
+                                        <a style="display:inline-block; white-space: nowrap;color:#A7A3A3;"class="dropdown" routerLink="/edu">&nbsp;Jagsun academy &nbsp;<br></a>
+                                        <a style="display:inline-block; white-space: nowrap;color:#A7A3A3;"class="dropdown" routerLink="/edu">&nbsp;Digital teaching  &nbsp;<br></a>
+                                        <a style="display:inline-block; white-space: nowrap;color:#A7A3A3;" class="dropdown" routerLink="/edu">&nbsp;K-12 Publishing&nbsp;<br></a>
+                                        <a style="display:inline-block; white-space: nowrap;color:#A7A3A3;" class="dropdown" routerLink="/edumore">&nbsp;know more&nbsp;<br></a>
                                       </div>
                                   </a>
                                  
