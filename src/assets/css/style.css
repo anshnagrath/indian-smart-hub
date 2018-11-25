@@ -140,7 +140,7 @@ a.navbar-brand span {
     text-align: center;
 }
 .serveban{ background:url(/assets/images/banner/ban/smartservebanner.png)no-repeat center;
-    opacity:0.7 };
+    opacity:1 };
 .navbar-light .navbar-nav .nav-link {
     /* color: #fff; */
     font-size: 15px;
@@ -156,7 +156,7 @@ a.navbar-brand span {
 }
 
 .eduban{ background:url(/assets/images/banner/edu.png)no-repeat center;
-    opacity:0.7;};
+    opacity:1;};
 
 
 nav.navbar.navbar-expand-lg.navbar-light{
@@ -165,21 +165,22 @@ nav.navbar.navbar-expand-lg.navbar-light{
 }
 
 .creative{ background:url(/assets/images/creative/4.jpg)no-repeat center;
-    opacity:0.7 };
+    opacity:1 };
 
 .hedder-up {
     padding: 10px 0px 0px;
     text-align: center;
 }
 .edbanner-img{ background:url(/assets/images/banner/2.jpg)no-repeat center;
-    opacity:0.7 };
+    opacity:1 };
 
 
 .two-img{  background: url(/assets/images/b2.jpg)no-repeat cente                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     r;}
 .three-img{  background: url(/assets/images/b3.jpg)no-repeat center;} 
 .slider-img{ 
      background-size: cover;
-    min-height: 800px;
+    min-height: 100%;
+    padding-top:5%;
 	background-attachment:fixed;}  
 .rslides {
   position: relative;

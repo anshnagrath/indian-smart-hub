@@ -7,8 +7,8 @@
 	overflow: hidden;
 }
 .box img{
-	height: 100%;
-	width: auto;
+	/* height: 100%; */
+	/* width: auto; */
 	object-fit:cover;
 }
 .info-sub-w4[_ngcontent-c2] p[_ngcontent-c2] {

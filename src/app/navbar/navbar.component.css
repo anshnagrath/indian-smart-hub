@@ -14,6 +14,11 @@ nav.navbar.navbar-expand-lg.navbar-light[_ngcontent-c2] {
     margin-left: auto !important;
 }
 
+a[_ngcontent-c3]:hover {
+    color:white !important;
+    text-decoration: none !important;
+}
+
 #size {
     padding: 0.5em 0em;
     background-color: black;
