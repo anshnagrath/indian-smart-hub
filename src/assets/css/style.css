@@ -472,9 +472,9 @@ background-size:40px;
     color: #000;
 }
 /*-- counter--*/
-.rate {
+/* .rate {
     background: url(../images/r1.jpg)no-repeat center;
-}
+} */
 .stats-grid {
     text-align: center;
     margin: 0 auto;
@@ -1453,7 +1453,7 @@ footer p a {
 } */
 /*--//footer--*/
 /*-- bottom-to-top --*/
-#toTop {
+/* #toTop {
     display: none;
     text-decoration: none;
     position: fixed;
@@ -1467,7 +1467,7 @@ footer p a {
     text-indent: 100%;
     background: url("../images/arr.png") no-repeat 0px 0px;
     background-size: 40px;
-}
+} */
 #toTopHover {
     width: 40px;
     height: 40px;
