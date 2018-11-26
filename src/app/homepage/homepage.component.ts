@@ -20,7 +20,7 @@ export class HomepageComponent implements OnInit {
   constructor(private _eref: ElementRef, @Inject(DOCUMENT) private document: any, private spinner: NgxSpinnerService) {
     (300 < window.screen.width && window.screen.width < 991) ? this.isMobile = true : this.isMobile = false;
     console.log(window.screen.width, this.isMobile, 'asasaas');
-
+    localStorage.setItem('isMobile', JSON.stringify(this.isMobile));
   }
   ngOnInit() {
     setTimeout(() => {

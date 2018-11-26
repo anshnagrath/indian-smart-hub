@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-
-  constructor() { }
+  public Mobile;
+  constructor() {
+    this.Mobile = JSON.parse(localStorage.getItem('isMobile'));
+  }
 
   ngOnInit() {
   }

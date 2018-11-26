@@ -35,21 +35,25 @@
      <div class="header-outs" id="home">
          <div class="header-bar">
             <app-navbar></app-navbar>
-            <div style="text-align:center" class="hedder-up">
+            <div *ngIf='!this.Mobile'style="text-align:center" class="hedder-up">
                <h1 style="margin-left:40%" ><a class="navbar-brand">Bill desk<br><br><span class="fa fa-lightbulb-o" aria-hidden="true"></span>
                
               </a></h1>
             </div>
+            <div *ngIf='this.Mobile'  class="hedder-up">
+              <h1 style="margin-left:20%;margin-top:10%" ><a class="navbar-brand">Bill desk<span class="fa fa-lightbulb-o" aria-hidden="true"></span>
+              
+             </a></h1>
+           </div>
          </div>
 
          <!-- Slideshow 4 -->
-         <div class="slider">
+         <div *ngIf='!this.Mobile' class="slider">
             <div class="callbacks_container">
                <ul class="rslides" id="slider4">
                   <li>
                      <div  class="slider-img serveban">
-                        <div class="container">
-                     </div>
+                     
                      </div>
                   </li>
                  
@@ -57,6 +61,19 @@
             </div>
            
          </div>
+         <div *ngIf='this.Mobile' class="slider">
+          <div class="callbacks_container">
+             <ul class="rslides" id="slider4">
+                <li>
+                   <div  class="slider-img mobileban">
+                   
+                   </div>
+                </li>
+               
+             </ul>
+          </div>
+         
+    </div>
          <div class="clearfix"></div>
       </div>
       <!-- //banner -->

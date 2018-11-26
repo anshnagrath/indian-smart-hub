@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edu.component.css']
 })
 export class EduComponent implements OnInit {
-
-  constructor() { }
+  public Mobile;
+  constructor() {
+    this.Mobile = JSON.parse(localStorage.getItem('isMobile'));
+  }
 
   ngOnInit() {
   }

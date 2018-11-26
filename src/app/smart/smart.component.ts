@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./smart.component.css']
 })
 export class SmartComponent implements OnInit {
-
-  constructor() { }
+  public Mobile;
+  constructor() {
+    this.Mobile = JSON.parse(localStorage.getItem('isMobile'));
+    console.log(this.Mobile, 'mobile');
+  }
 
   ngOnInit() {
   }
