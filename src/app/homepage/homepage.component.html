@@ -65,7 +65,7 @@
                 <div class="callbacks_container">
                    <ul class="rslides" id="slider4">
                       <li>
-                         <div class="slider-img mobile-img">
+                         <div class="slider-img mobile-img" >
                             <div class="container">
                             
                             </div>
@@ -94,19 +94,32 @@
         margin-right: auto;" src="../../assets/c.png" width=19% height="5%" alt="">
          <h2  style="font-size: 270%;text-align:center;margin-top:3%;">What we do ?</h2>
          <div class="about">
-            <div class="container-fluid">
+            <div *ngIf="!isMobile" class="container-fluid">
                   <div class="col-lg-12">
                      <img src="../../assets/images/banner/EduBasketBanner(2).png" width=103% height="100%"style="margin-left:-2%" alt="">
                   </div>
           
             </div>
+            <div *ngIf="isMobile" class="container-fluid">
+                <div class="col-lg-12">
+                   <img src="../../assets/mobileview/Indian Smart Hub2.jpg" width=105% height="100%"style="margin-left:-2%" alt="">
+                </div>
+        
+          </div>
          </div>
          <div>
-            <div class="col-lg-12">
+            <div *ngIf="!isMobile" class="col-lg-12">
           
-          <img src="../../assets/images/banner/banner.jpg" width="100%" height="80%">
+          <img src="../../assets/images/banner/banner.jpg" width="100%" height="100%">
         </div>
+        <div *ngIf="isMobile" class="col-lg-12">
           
+            <img src="../../assets/mobileview/Indian Smart Hub.jpg" width="100%" height="100%">
+          </div>
+          <div *ngIf="isMobile" class="col-lg-12">
+          
+            <img src="../../assets/mobileview/Indian Smart Hub1.jpg" width="100%" height="100%">
+          </div>
          </div>
       
         
@@ -135,7 +148,7 @@
          <h2 style="margin-top:3%;font-size: 270%;text-align:center"> Our Services</h2>
          <div style="padding-left:1%">
          <div class="row" style="margin-top:4%">
-          <div style="padding:1%" class="col-lg-6 animated bounceInRight delay-5s pull-left" >
+          <div style="padding:1%" class="col-lg-6 col-sm-12 animated bounceInRight delay-5s pull-left" >
             <img  src=".../../assets/services/creativegallery.jpg" width="100%" height="85%"  alt=" " />
         </div>
             <div class="col-lg-6 info-sub-w4" style="float:right;padding:0%;" >     
@@ -382,53 +395,6 @@
             </div>
       </div>
       
-
-      <!-- <div  id = "foot"class="footer" style="padding-left:5%" >
-        <div class="container">
-           <div style="font-family:Helvetica" class="row footer-agile-grids">
-         
-              <div class="col-lg-6  wthree-left-right">
-                 <h4 style="color:#E4620A;font-family:Helvetica;">Our Address</h4>
-                 <div class="addres-up">
-                    <ul>
-                       <li style="display:inline-block; white-space: nowrap;">
-                          <span class="fa fa-map-marker icons-left" aria-hidden="true"></span>
-                          <p>Garhi multan   ,kamila road gharaunda,<br>karnal-132114
-                       </li>
-                       <li style="display:inline-block; white-space: nowrap;">
-                          <span class="fa fa-map-marker icons-left" aria-hidden="true"></span>
-                          <p>Indian SmartHub,Basement 1Sultanpur,Metro <br> Station Delhi,110030</p>
-                       </li>
-                       <li>
-                          <span class="fa fa-envelope"></span>
-                          <p><a href="support@indiansmarthub.in">support@indiansmarthub.in</a></p>
-                       </li>
-                       <li>
-                          <span class="fa fa-fax" aria-hidden="true"></span>
-                          <p>(000)1122333</p>
-                       </li>
-                       <li>
-                          <span class="fa fa-windows" aria-hidden="true"></span>
-                          <p>https//indiansmarthub.net</p>
-                       </li>
-                    </ul>
-                 </div>
-                 <div class="icons">
-                    <ul>
-                       <li><a (click)="redirectToFacebook()"><span class="fa fa-facebook"></span></a></li>
-                       <li><a (click)="redirectToTwiter()"><span class="fa fa-twitter"></span></a></li>
-                       <li><a (click)="redirectToInsta()"><span class="fa fa-rss"></span></a></li>
-                       
-                    </ul>
-                 </div>
-              </div>
-             
-           </div>
-        </div>
-     </div>
-     <footer style="background-color:black !important;padding-left: 1%">
-        <p>© All Rights Reserved | Design by <a href="www.google.com`" target="_blank">Digital Boxitin</a></p>
-     </footer>-->
 <app-fotter></app-fotter>
     
      </div>
