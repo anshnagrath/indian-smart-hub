@@ -44,7 +44,7 @@ export class NavbarComponent implements OnChanges {
         this.document.location.href = 'https://indiansmarthub.in';
     }
     redirecttoEdu() {
-        this.document.location.href = 'https://jagsun.in';
+        this.document.location.href = 'www.jagsun.in';
     }
     closeServe() {
 

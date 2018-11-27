@@ -61,4 +61,9 @@ export class HomepageComponent implements OnInit {
     this.creativeClick = false;
 
   }
+  getStyle() {
+    if (this.hideit === true) {
+      return 'black';
+    }
+  }
 }

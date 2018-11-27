@@ -9,7 +9,7 @@ export class SmartComponent implements OnInit {
   public Mobile;
   constructor() {
     this.Mobile = JSON.parse(localStorage.getItem('isMobile'));
-    console.log(this.Mobile, 'mobile');
+ 
   }
 
   ngOnInit() {

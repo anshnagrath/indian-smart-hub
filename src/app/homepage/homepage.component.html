@@ -32,7 +32,7 @@
          <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
       </head>
       <body>
-          <div  *ngIf='hideit' style="margin-top:10%;" class="container-fluid">
+          <div  [style.background-color]="getStyle()" *ngIf='hideit' style="margin-top:10%;" class="container-fluid">
     <app-spinner></app-spinner>
         </div>
         <div *ngIf='!hideit'class="container-fluid" style="padding-left:0px !important;padding-right:0px !important">
@@ -418,7 +418,7 @@
                
 <div id="chatdiv">
                   
-                <p style="color:white;font-size:90%;margin-top:-7%;margin-bottom:3%;"> Please leave your message in the form below and we will reply by e-mail</p>
+                <p style="color:white;font-size:90%;margin-top:-7%;margin-bottom:3%;"> Please leave your message in the form below and we will reply by message</p>
                <label style="font-size:90%;color:white;">Name:</label>
                 <input style="margin-top:1%" class="chatinput" placeholder="Your name" /><br><br>
                 <label style="font-size:90%;color:white;">Message:</label>
