@@ -28,7 +28,6 @@ export class NavbarComponent implements OnChanges {
     }
     @HostListener('window:scroll', ['$event'])
     scrollHandler(event) {
-        console.log("Scroll Event");
     }
     toggleCollapsed() {
         this.so = !this.so;
