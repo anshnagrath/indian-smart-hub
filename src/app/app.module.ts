@@ -39,6 +39,7 @@ import { CreativeknowComponent } from './creativeknow/creativeknow.component';
 import { FinancialknowmoreComponent } from './financialknowmore/financialknowmore.component';
 import { EduKnowmoreComponent } from './edu-knowmore/edu-knowmore.component';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { CarrierComponent } from './carrier/carrier.component';
 
 
 export function getAuthServiceConfigs() {
@@ -79,7 +80,8 @@ export function getAuthServiceConfigs() {
         CreativeknowComponent,
         FinancialknowmoreComponent,
         EduKnowmoreComponent,
-        SpinnerComponent
+        SpinnerComponent,
+        CarrierComponent
 
     ],
     imports: [
@@ -109,6 +111,7 @@ export function getAuthServiceConfigs() {
             { path: 'creativemore', component: CreativeknowComponent, pathMatch: 'full' },
             { path: 'financialmore', component: FinancialknowmoreComponent, pathMatch: 'full' },
             { path: 'edumore', component: EduKnowmoreComponent, pathMatch: 'full' },
+            { path: 'carrier', component: CarrierComponent, pathMatch: 'full' }
             { path: '', component: HomepageComponent, pathMatch: 'full' }
 
 
