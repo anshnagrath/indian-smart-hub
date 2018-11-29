@@ -32,9 +32,9 @@
          <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
       </head>
       <body>
-          <!-- <div  [style.background-color]="getStyle()" *ngIf='hideit' style="margin-top:10%;" class="container-fluid">
+          <div  [style.background-color]="getStyle()" *ngIf='hideit' style="margin-top:10%;" class="container-fluid">
     <app-spinner></app-spinner>
-        </div> -->
+        </div>
         <div *ngIf='!hideit'class="container-fluid" style="padding-left:0px !important;padding-right:0px !important">
         <div class="header-outs" id="home">
             <div class="header-bar">
@@ -45,14 +45,12 @@
             </div>
             <!-- //Navigation -->
             <!-- Slideshow 4 -->
-            <div *ngIf='!isMobile' class="slider">
+            <div  class="slider">
                <div class="callbacks_container">
                   <ul class="rslides" id="slider4">
                      <li>
                         <div class="slider-img one-img">
-                           <div class="container">
-                           
-                           </div>
+                        
                         </div>
                      </li>
                    
@@ -61,22 +59,7 @@
                </div>
               
             </div>
-            <div *ngIf='isMobile' class="slider">
-                <div class="callbacks_container">
-                   <ul class="rslides" id="slider4">
-                      <li>
-                         <div class="slider-img mobile-img" >
-                            <div class="container">
-                            
-                            </div>
-                         </div>
-                      </li>
-                    
-                     
-                   </ul>
-                </div>
-               
-             </div>
+     
             <div class="clearfix"></div>
          </div>
          <!-- //banner -->
@@ -93,44 +76,33 @@
         margin-left: auto;
         margin-right: auto;" src="../../assets/c.png" width=19% height="5%" alt="">
          <h2  style="font-size: 270%;text-align:center;margin-top:3%;">What we do ?</h2>
-         <div class="about">
-            <div *ngIf="!isMobile" class="container-fluid">
-                  <div class="col-lg-12">
-                     <img src="../../assets/images/banner/EduBasketBanner(2).png" width=103% height="100%"style="margin-left:-2%" alt="">
-                  </div>
-          
+       
+            <div class="whatDoWeDo" style="margin-top:5%;">
+        
+                     <img *ngIf="!isMobile" src="../../assets/images/banner/EduBasketBanner(2).png" width=100% height="100%">
+                     <img *ngIf="isMobile" src="../../assets/mobileview/Indian Smart Hub2.jpg" width=100% height="100%">
+    
             </div>
-            <div *ngIf="isMobile" class="container-fluid">
-                <div class="col-lg-12">
-                   <img src="../../assets/mobileview/Indian Smart Hub2.jpg" width=105% height="100%"style="margin-left:-2%" alt="">
-                </div>
         
-          </div>
-         </div>
-         <div>
-            <div *ngIf="!isMobile" class="col-lg-12">
+        <div  class="row">
           
-          <img src="../../assets/images/banner/banner.jpg" width="100%" height="100%">
+          <img *ngIf="!isMobile" src="../../assets/images/banner/banner.jpg" width="100%" height="100%">
+          <img *ngIf="isMobile" src="../../assets/mobileview/Indian Smart Hub.jpg" width="100%" height="100%">
+          <img *ngIf="isMobile" src="../../assets/mobileview/Indian Smart Hub1.jpg" width="100%" height="100%">
+          <img class="animated bounceInLeft delay-5s" *ngIf="!isMobile" style="position:absolute;margin-left: 61%;margin-top:20%" src="../../assets/images/banner/BasketBanner3.jpg" width="27%" height="25%">
+          <img *ngIf="!isMobile" src="../../assets/images/banner/BasketBanner.jpg" width="100%" height="100%">
+          <img class="animated rollIn delay-5s" *ngIf="!isMobile" style="position:absolute;margin-left: 67%;margin-top:65%" src="../../assets/images/banner/1 (2).png" width="15%" height="20%">
+          <img class="animated rollIn delay-5s" *ngIf="!isMobile" style="position:absolute;margin-left: 67%;margin-top:75%" src="../../assets/images/banner/2 (1).png" width="15%" height="20%">
+          <img class="animated rollIn delay-5s" *ngIf="!isMobile" style="position:absolute;margin-left: 67%;margin-top:85%" src="../../assets/images/banner/3 (2).png" width="15%" height="20%">
+
         </div>
-        <div *ngIf="isMobile" class="col-lg-12">
-          
-            <img src="../../assets/mobileview/Indian Smart Hub.jpg" width="100%" height="100%">
-          </div>
-          <div *ngIf="isMobile" class="col-lg-12">
-          
-            <img src="../../assets/mobileview/Indian Smart Hub1.jpg" width="100%" height="100%">
-          </div>
-         </div>
-      
-        
          <!--services-->
-         <div id="banner" class="service-video">
-            <div class="service" id="services">
+       
+            <div class="service" style="margin-top:5%"id="services">
                <div class="container">
-                 
                   <div class="w3ls_banner_bottom_grids agileinfo_testimonial_grids">
-                     <div style="margin-top:2%" class="service-info">
-                        <h5 style="font-family:Helvetica">Quality is never an accident it is always the result of high intention, sincere effort, intelligent direction and skillful execution; it represents the wise choice of many alternatives.
+                     <div class="service-info">
+                        <h5 style="font-family:Helvetica" class="animated bounceInLeft delay-5s" >Quality is never an accident it is always the result of high intention, sincere effort, intelligent direction and skillful execution; it represents the wise choice of many alternatives.
                         </h5>
                      </div>
                    
@@ -138,8 +110,8 @@
                </div>
          
              </div>
-             <br>
-         </div>
+         
+
         
             <img style=" display: block;
             margin-top:3%;
@@ -156,7 +128,7 @@
                 <strong><h1 style="font-size:270%;padding-left:4%;"> Creative gallery</h1></strong><p style="text-align: justify;padding-left:4%">Add an artist's touch to your business! Transform it into tapestry.
                 Let us design for you! Think and we will project your thoughts into 
                 liberating designs.<br><br>
-                <a class="animated infinite bounce delay-2s btn btn-primary text-on-primary readmore1">Read More</a>     
+                <a class="animated infinite bounce delay-2s btn btn-primary text-on-primary readmore1" style="border-bottom-left-radius: 15px;">Read More</a>     
                     </p>
               </div>   
         </div>
@@ -171,7 +143,7 @@
                         <h1  style="margin-top:3%;text-align:justify;padding-right:4%;padding-left:4%;font-size:270%;">Financial flux</h1><br>
                         <p style="padding-left:4%;" >Get your business started easily with our help! 
                         Register your firm. Get GST filing done. <br><br>
-                        <a class="animated infinite bounce delay-2s btn btn-primary text-on-primary readmore1">Read More</a> </p> 
+                        <a class="animated infinite bounce delay-2s btn btn-primary text-on-primary readmore1" style="border-bottom-left-radius: 15px;">Read More</a> </p> 
 
                     </div>
                 </div>
@@ -187,7 +159,7 @@
                                     <p style="text-align:justify;padding-left:4%;margin-top:3%">Do things smartly with us. Pay your taxes.
                                     Do E-filing. Get yourself PAN CARD, ADHAAR CARD
                                     with biometric authentication. Serve yourself with our services! <br><br>
-                                    <a  class="animated infinite bounce delay-2s btn btn-primary text-on-primary readmore1">Read More</a> </p>
+                                    <a  class="animated infinite bounce delay-2s btn btn-primary text-on-primary readmore1" style=" border-bottom-left-radius: 15px;">Read More</a> </p>
                                     </div>    
                               </div>
                  <div  style="margin-top:8%">
@@ -204,7 +176,7 @@
                                                           Get trained by the finest!
                                                           Grow and transform yourself into the best with our help
                                                           <br><br>
-                                                          <a class="animated infinite bounce delay-2s btn btn-primary text-on-primary readmore1">Read More</a> </p>
+                                                          <a class="animated infinite bounce delay-2s btn btn-primary text-on-primary readmore1" style="border-bottom-left-radius: 15px;">Read More</a> </p>
                                                     
                                                        </div>
                                                       </div>    
@@ -219,28 +191,27 @@
             margin-right: auto;" src="../../assets/c.png" width=19% height="5%" alt="">
            
       <div class="container-fluid"style="margin-top:5%">
-            <h2 style="font-size: 270%;text-align:center;margin-bottom:4%"> Gallery</h2> 
-            <div style="display: inline-block" class="filter-categories filter-mixitup animated infinite bounce delay-2s">
-                    <span class="animated infinite bounce delay-2s" (click)="serveClicked()" style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;" class=" btn btn-primary text-on-primary readmore1">Smart Serve</span>
+            <h2 style="font-size: 290%;text-align:center;margin-bottom:4%"> Gallery</h2> 
+         
+            <div class="filter-categories filter-mixitup animated infinite bounce delay-2s col-lg-12 col-md-12 col">
+                    <span class="animated infinite bounce delay-2s" (click)="serveClicked()" style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;border-bottom-left-radius: 15px;" class=" btn btn-primary text-on-primary readmore1">Smart Serve</span>
                     <span class="animated infinite bounce delay-2s" (click)="creativeClicked()" style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;" class="btn btn-primary text-on-primary readmore1" >Creative Gallery</span>
                     <span class="animated infinite bounce delay-2s" (click)="fiancialClicked()"style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;" class="btn btn-primary text-on-primary readmore1">Financial Flux</span>
-                    <span class="animated infinite bounce delay-2s" (click)="eduClicked()"style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;"  class="btn btn-primary text-on-primary readmore1">Edu basket</span>
-                </div>
-        <!-- <div *ngIf='isMobile'>
-            <h1 class="heading">Gallery</h1>
-        </div> -->
-       <div class="row bounceInRight delay-4s">
-        <div   class="animated  bounceILeft delay-5s" *ngIf="eduClick && !fiancialClick && !serveClick &&!creativeClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick"  class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                    <span class="animated infinite bounce delay-2s" (click)="eduClicked()"style="margin-left:2%;margin-top:3%;border:none;font-family:Helvetica;border-bottom-right-radius: 15px;"  class="btn btn-primary text-on-primary readmore1">Edu basket</span>    
+            </div>
+        
+       <div >
+        <div   *ngIf="eduClick && !fiancialClick && !serveClick &&!creativeClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick"  class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
                 <div class="hovereffect">
-                    <img  height="100%" width="100%" src="../../assets/aller/1 (2).jpg" alt="">
+                    <img  height="200vw" width="100%" src="../../assets/aller/1 (2).jpg" alt="">
                     <div class="overlay">
                      
                     </div>
                 </div>
             </div>
-            <div  class="animated  bounceILeft delay-5s" *ngIf="fiancialClick && !eduClick &&!creativeClick && !eduClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+            <div   *ngIf="fiancialClick && !eduClick && !creativeClick && !eduClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
                 <div class="hovereffect">
-                    <img height="110%" width="100%" src="../../assets/aller/what-is-gst-1498543610.jpg" alt="">
+                    <img height="200vw" width="100%" src="../../assets/aller/what-is-gst-1498543610.jpg" alt="">
                     <div class="overlay">
                        <!-- <h2>Hover effect 1v2</h2>
                        <a class="info" href="#">link here</a> -->
@@ -249,34 +220,34 @@
             </div>
             <div  *ngIf="creativeClick && !eduClick  && !fiancialClick &&!serveClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
                     <div class="hovereffect">
-                        <img  height="110%" width="100%" src="../../assets/aller/hkzdkm.jpeg" alt="">
+                        <img  height="200vw" width="100%" src="../../assets/aller/hkzdkm.jpeg" alt="">
                         <div class="overlay">
                            <!-- <h2>Hover effect 1v2</h2>
                            <a class="info" href="#">link here</a> -->
                         </div>
                     </div>
                 </div>
-            <div  *ngIf="fiancialClick && !eduClick &&!creativeClick && !eduClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+            <div  *ngIf="fiancialClick && !eduClick &&!creativeClick && !eduClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-12 col-xs-12 hidden-xs">
                     <div class="hovereffect">
-                        <img class="img-responsive" height="300vw" width="100%" src="../../assets/aller/198476.jpg" alt="">
+                        <img  height="200vw" width="100%" src="../../assets/aller/198476.jpg" alt="">
                         <div class="overlay">
                            <!-- <h2>Hover effect 1v2</h2>
                            <a class="info" href="#">link here</a> -->
                         </div>
                     </div>
                 </div>
-                <div style="margin-top:1%" *ngIf="eduClick &&!creativeClick && !serveClick  && !fiancialClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                <div style="margin-top:1%" *ngIf="eduClick &&!creativeClick && !serveClick  && !fiancialClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-12 col-xs-12 hidden-xs">
                         <div class="hovereffect">
-                            <img height="100%" width="100%" src="../../assets/aller/2 (1).jpg" alt="">
+                            <img height="200vw" width="100%" src="../../assets/aller/2 (1).jpg" alt="">
                             <div class="overlay">
                                <!-- <h2>Hover effect 1v2</h2>
                                <a class="info" href="#">link here</a> -->
                             </div>
                         </div>
                     </div>
-                    <div style="margin-top:1%" *ngIf="creativeClick && !eduClick  && !fiancialClick &&!eduClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                    <div style="margin-top:1%" *ngIf="creativeClick && !eduClick  && !fiancialClick &&!eduClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick" class="col-lg-3 col-md-4 col-sm-12 col-xs-12 hidden-xs">
                             <div class="hovereffect">
-                                <img  height="100%" width="100%" src="../../assets/aller/8.jpg" alt="">
+                                <img  height="200vw" width="100%" src="../../assets/aller/8.jpg" alt="">
                                 <div class="overlay">
                                    <!-- <h2>Hover effect 1v2</h2>
                                    <a class="info" href="#">link here</a> -->
@@ -288,37 +259,30 @@
       
                         
                           
-                            <div style="margin-top:1%" class="animated  bounceILeft delay-5s" *ngIf="serveClick && !creativeClick && !eduClick  && !fiancialClick || !eduClick && !fiancialClick && !serveClick && !creativeClick" class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                            <div style="margin-top:1%" *ngIf="serveClick && !creativeClick && !eduClick  && !fiancialClick || !eduClick && !fiancialClick && !serveClick && !creativeClick" class="col-lg-3 col-md-4 col-sm-12 col-xs-12 hidden-xs">
                                     <div class="hovereffect">
-                                        <img  height="120%" width="100%" src="../../assets/aller/Right-to-Education-in-India.jpg" alt="">
+                                        <img  height="200vw" width="100%" src="../../assets/aller/Right-to-Education-in-India.jpg" alt="">
                                         <div class="overlay">
                                            <!-- <h2>Hover effect 1v2</h2>
                                            <a class="info" href="#">link here</a> -->
                                         </div>
                                     </div>
                                 </div>
-                                <div style="margin-top:1%" class="animated  bounceILeft delay-5s"   *ngIf="serveClick && !creativeClick && !eduClick  && !fiancialClick || !eduClick && !fiancialClick && !serveClick && !creativeClick"  class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                                <div style="margin-top:1%"   *ngIf="serveClick && !creativeClick && !eduClick  && !fiancialClick || !eduClick && !fiancialClick && !serveClick && !creativeClick"  class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
                                         <div class="hovereffect">
-                                            <img height="120%" width="100%" src="../../assets/aller/Indian-Flag-HD-Images-Wallpapers-Free-Download-3 (1).jpg" alt="">
+                                            <img height="200vw" width="100%" src="../../assets/aller/Indian-Flag-HD-Images-Wallpapers-Free-Download-3 (1).jpg" alt="">
                                             <div class="overlay">
                                                <!-- <h2>Hover effect 1v2</h2>
                                                <a class="info" href="#">link here</a> -->
                                             </div>
                                         </div>
                                     </div>
-                           
-                                   
+
                                 </div>
-            <br><br><br>
-            <div  class="container-fliud" style="background-image:url(../../assets/images/banner/Edupng); 
-            background-position: 50% 50%;
-            width: 100%;
-            background-size: cover; height:100%;
-            ">
-              <div class="container">
-                
-                <div style="margin-top:0%;" class="row">
-                    <div  class="col-xs-6">
+        
+          <div  class="row contactus">     
+              
+                    <div  class="col-lg-6  col-md-12 col-sm-12 col-xs-12 m-5">
                  
                         <form  style="margin-top:35%;"name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
                             <div style="color:white;" class="form-group">
@@ -364,15 +328,13 @@
                         </form>
                     </div>
                 </div>
-            </div>
-            </div>
       </div>
       
-<app-fotter></app-fotter>
+<app-fotter ></app-fotter>
     
      </div>
      
-            <button *ngIf='!isMobile && !hideit' id="chatbutton"  (click)="showChatbox()" class="btn btn-info btn-lg">
+            <button *ngIf='!isMobile && !hideit' id="chatbutton"  (click)="showChatbox()" class="btn btn-info btn-lg hidden-xs hidden-sm hidden-md">
                            <span style="float:left;margin-top:1%" class="glyphicon glyphicon-envelope" ></span>
                            &nbsp;&nbsp; Send us a message
               </button>
@@ -381,28 +343,33 @@
             
             
               <div  *ngIf="chatboxShow && !isMobile">
-               
-        <div style="background:#E4620A!important;color:white; position: fixed; padding:1%;bottom:67%!important;margin-left:75%;font-size:190%;width:308px;height:63px;border-top-left-radius: 25px;"><p>&nbsp;&nbsp;Send us a message</p>
-            <button style="color:black;font-size:180%;margin-top:-10%;float:right"type="button" class="close" aria-label="Close">
+            <div class="row">  
+                <div class="col-lg-12"> 
+        <div style="background:#E4620A!important;color:white; position: fixed; padding:1%;bottom:64%!important;margin-left:76.2%;font-size:190%;width:320px;height:63px;border-top-left-radius: 25px;"><p>&nbsp;&nbsp;Send us a message</p>
+            <button style="color:black;font-size:180%;margin-top:-9%;float:right"type="button" class="close" aria-label="Close">
                     <span (click)="chatboxShow=false;"aria-hidden="true">&times;</span>
                   </button>
                   <p style="margin-top:1%;color:white;font-size:70%;float:right;">© Powered by digital boxitin</p><br>
                 </div>
-               
-<div id="chatdiv">
-                  
+            </div>
+            </div>
+            <div class="col-lg-12">
+            <div id="chatdiv">
+                <div class="row" style="padding-left:3%">
                 <p style="color:white;font-size:90%;margin-top:-7%;margin-bottom:3%;"> Please leave your message in the form below and we will reply by message</p>
                <label style="font-size:90%;color:white;">Name:</label>
                 <input style="margin-top:1%" class="chatinput" placeholder="Your name" /><br><br>
                 <label style="font-size:90%;color:white;">Message:</label>
                 <textarea style="margin-top:1%" class="chatinput"placeholder="Your message" style="width:250px !important;height:170px !important;" ></textarea>
-               
+                </div>
+                <div class="col-lg-12">
                 <button style="margin-top:3%;background:#E4620A!important;font-size:90%;float:right;color:white"   class="btn  btn-lg">
                     Send
                 </button>
+            </div>
             
         </div>
-        
+    </div>
        
        </div>
        

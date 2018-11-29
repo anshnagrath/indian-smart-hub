@@ -1,11 +1,33 @@
 
 @media screen and ( min-width:1200px) and (max-width: 1920px) { 
-  
-.image-responsive{
-  display: block;
-  max-width: 100%;
-  height: auto;
+.contactus{
+  background-image:url(/assets/images/banner/Edupng); 
+  background-position: 50% 50%;
+  min-width: 100%;
+  background-size: cover; 
+  min-height:100%;
 }
+.whatDoWeDo{
+
+  background: url(/assets/images/banner/Edua.jpg) no-repeat center  center fixed;   
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  min-width: auto;
+  min-height: auto;
+  
+
+}
+.one-img{ 
+   background: url(/assets/images/banner/1.jpg)no-repeat center  center fixed;   
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  min-width: auto;
+  min-height: auto;
+
+}
+
   .#financialflux{
     float:right; 
   }
@@ -220,13 +242,28 @@ overflow-x: hidden;
 }
  
 
-@media screen and ( min-width:320px) and (max-width: 1200px) { 
-  .mobile-img{  background: url(/assets/mobileview/Indian\ Smart\ Hub\ Banner.jpg)no-repeat center  center fixed;   
+@media screen and ( min-width:300px) and (max-width: 1200px) { 
+  .contactus{
+  background: url(/assets/mobileview/plain-black-8-x-5-flag-10243-p.jpg)no-repeat center  center fixed;
+  
+  }
+  .one-img{ 
+    
+    background: url(/assets/mobileview/Indian\ Smart\ Hub\ Banner.jpg)no-repeat center  center fixed;   
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     width: auto;
     height: auto;
+
+}
+.whatDoWeDo{
+  background: url(/assets/mobileview/IndianSmartHub2.jpg)no-repeat center  center fixed;   
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  min-width: auto;
+  min-height: auto;
 
 }
   .image-responsive{
@@ -258,7 +295,7 @@ overflow-x: hidden;
         font-size: 14px;
         display: inline-block;
         text-align: center;
-        white-space: nowrap;
+      
         vertical-align: middle;
         touch-action: manipulation;
         cursor: pointer;
