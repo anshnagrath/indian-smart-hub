@@ -11,7 +11,7 @@ export class NavbarComponent implements OnChanges {
     public toScroll = false; cotact = false; Documentation = false; complaince = false; brandingSols = false;
     public toflip = false; tax = false; personalService = false; creativeGall = false; digital = false; logins = false;
     public forFinalcial = false; port = false; creativeClose = false;
-    public GST = false; smarthubsec = false;
+    public GST = false; smarthubsec = false;togler=false;
     public isMobile = false;
     so = false;
 
@@ -19,16 +19,11 @@ export class NavbarComponent implements OnChanges {
     constructor(@Inject(DOCUMENT) private document: any) {
         (300 < window.screen.width && window.screen.width < 991) ? this.isMobile = true : this.isMobile = false;
         console.log(window.screen.width, this.isMobile, 'asasaas');
-
-
     }
-
     ngOnChanges() {
         (300 < window.screen.width && window.screen.width < 991) ? this.isMobile = true : this.isMobile = false;
     }
-    @HostListener('window:scroll', ['$event'])
-    scrollHandler(event) {
-    }
+   
     toggleCollapsed() {
         this.so = !this.so;
         this.collapsed = !this.collapsed;
@@ -43,7 +38,7 @@ export class NavbarComponent implements OnChanges {
         this.document.location.href = 'https://indiansmarthub.in';
     }
     redirecttoEdu() {
-        this.document.location.href = 'www.jagsun.in';
+            this.document.location.href= 'http://www.jagsun.in';
     }
     closeServe() {
 
@@ -68,6 +63,10 @@ export class NavbarComponent implements OnChanges {
         this.toScroll = true;
         this.forFinalcial = false;
 
+    }
+    dropdown(){
+        this.togler = !this.togler;
+        console.log(this.togler,'asdcascsac')
     }
     galOpen() {
 

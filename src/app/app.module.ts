@@ -112,6 +112,7 @@ export function getAuthServiceConfigs() {
             { path: 'financialmore', component: FinancialknowmoreComponent, pathMatch: 'full' },
             { path: 'edumore', component: EduKnowmoreComponent, pathMatch: 'full' },
             { path: 'carrier', component: CarrierComponent, pathMatch: 'full' },
+            
             { path: '', component: HomepageComponent, pathMatch: 'full' }
 
 
