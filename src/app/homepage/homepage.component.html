@@ -5,8 +5,6 @@
          <!--meta tags -->
          <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1">
-         <meta name="keywords" content="Leccy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-            Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
          <script>
             addEventListener("load", function () {
               setTimeout(hideURLbar, 0);
@@ -77,18 +75,19 @@
         margin-right: auto;" src="../../assets/c.png" width=19% height="5%" alt="">
          <h2  style="font-size: 270%;text-align:center;margin-top:3%;">What we do ?</h2>
        
-            <div class="whatDoWeDo" style="margin-top:5%;">
+            <div  style="margin-top:5%;">
         
-                     <img *ngIf="!isMobile" src="../../assets/images/banner/EduBasketBanner(2).png" width=100% height="100%">
-                     <img *ngIf="isMobile" src="../../assets/mobileview/Indian Smart Hub2.jpg" width=100% height="100%">
+                     <img *ngIf="!isMobile" src="../../assets/images/banner/asa.png" width=100% height="100%">
+                     <img *ngIf="isMobile" src="../../assets/mobileview/IndianSmartHub2.jpg" width=100% height="100%">
     
             </div>
-        
+  
         <div  class="row">
-          
+          <div *ngIf="isMobile" class="container-fluid">
+            <img  src="../../assets/mobileview/Indian Smart Hub.jpg" width="100%" height="100%">
+        </div>
+       
           <img *ngIf="!isMobile" src="../../assets/images/banner/banner.jpg" width="100%" height="100%">
-          <img *ngIf="isMobile" src="../../assets/mobileview/Indian Smart Hub.jpg" width="100%" height="100%">
-          <img *ngIf="isMobile" src="../../assets/mobileview/Indian Smart Hub1.jpg" width="100%" height="100%">
           <img class="animated bounceInLeft delay-5s" *ngIf="!isMobile" style="position:absolute;margin-left: 61%;margin-top:20%" src="../../assets/images/banner/BasketBanner3.jpg" width="27%" height="25%">
           <img *ngIf="!isMobile" src="../../assets/images/banner/BasketBanner.jpg" width="100%" height="100%">
           <img class="animated rollIn delay-5s" *ngIf="!isMobile" style="position:absolute;margin-left: 67%;margin-top:65%" src="../../assets/images/banner/1 (2).png" width="15%" height="20%">
@@ -96,8 +95,13 @@
           <img class="animated rollIn delay-5s" *ngIf="!isMobile" style="position:absolute;margin-left: 67%;margin-top:85%" src="../../assets/images/banner/3 (2).png" width="15%" height="20%">
 
         </div>
+        <div>
+                <img  style="margin-top:5%;margin-bottom:5%"src="../../assets/mobileview/Indian Smart Hub1.jpg" width="100%" height="100%">
+
+        </div>   
+        
          <!--services-->
-       
+     
             <div class="service" style="margin-top:5%"id="services">
                <div class="container">
                   <div class="w3ls_banner_bottom_grids agileinfo_testimonial_grids">
@@ -111,14 +115,14 @@
          
              </div>
          
-
+       
         
             <img style=" display: block;
             margin-top:3%;
           margin-left: auto;
           margin-right: auto;" src="../../assets/c.png" width=19% height="5%" alt="">
          <h2 style="margin-top:3%;font-size: 290%;text-align:center"> Our Services</h2>
-         <div class="container">
+      <div class="container">
          <div class="row" style="margin-top:4%">
           <div class="col-lg-6 col-sm-12 col-xs-12 animated bounceInRight delay-5s pull-left" >
             <img  src=".../../assets/services/creativegallery.jpg" width="102%" height="85%"  alt=" " />
@@ -130,12 +134,12 @@
                 liberating designs.<br><br>
                 <a class="animated infinite bounce delay-2s btn btn-primary text-on-primary readmore1" style="border-bottom-left-radius: 15px;">Read More</a>     
                     </p>
-              </div>   
+        
         </div>
         <div style="margin-top:4%;">
                 <div  class="row" >
           <div class="col-lg-6  col-lg-push-6 col-sm-12 col-xs-12 animated bounceInLeft delay-5s" >
-                    <img  src=".../../assets/services/financial.jpg" height="100%" width="102%"/>
+                    <img  src=".../../assets/services/financial.jpg" height="100%" width="100%"/>
                  </div>
                        
                       <div class="col-lg-6 col-lg-pull-6 col-sm-12 col-xs-12 info-sub-w4">     
@@ -185,6 +189,7 @@
                                  
                                         
               </div>
+            </div>
               <img style=" display: block;
               margin-top:5%;
             margin-left: auto;
@@ -201,6 +206,7 @@
             </div>
         
        <div >
+   
         <div   *ngIf="eduClick && !fiancialClick && !serveClick &&!creativeClick || !eduClick && !fiancialClick && !serveClick &&!creativeClick"  class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
                 <div class="hovereffect">
                     <img  height="200vw" width="100%" src="../../assets/aller/1 (2).jpg" alt="">
@@ -279,57 +285,56 @@
                                     </div>
 
                                 </div>
-        
-          <div  class="row contactus">     
+                          
+      </div>
+      <div  style="margin-top:5%"class="row contactus">     
               
-                    <div  class="col-lg-6  col-md-12 col-sm-12 col-xs-12 m-5">
-                 
-                        <form  style="margin-top:35%;"name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
-                            <div style="color:white;" class="form-group">
-                                <label style="color:white;font-size:220%;font-family:Helvetica" for="#name">Name:</label>
-                                <input style="background:transparent;color:white;width:100%"  type="text" placeholder="Name" class="form-control" name="firstName" width="120%" [(ngModel)] = "Name" #firstName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required />
-                                <div *ngIf="f.submitted && firstName.invalid;" class="invalid-feedback">
-                                    <div *ngIf="firstName.errors.required">First Name is required</div>
-                                </div>
-                                <br>
-                            </div>
-                            <div style="color:white;" class="form-group">
-                                <label style="color:white;font-size:220%;font-family:Helvetica" for="#mail">Email:</label>
-                                <input style="background:transparent;color:white;width:100%" placeholder="Email" type="text" class="form-control" name="lastName" [(ngModel)]="mail" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
-                                <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
-                                    <div *ngIf="lastName.errors.required">Last Name is required</div>
-                                </div>
-                                <br>
-                            </div>
-                            <div style="color:white;" class="form-group">
-                                <label  style="color:white;font-size:220%;font-family:Helvetica"for="#phone">Phone:</label>
-                                <input style="background:transparent;color:white;width:100%" type="text" placeholder="phone" class="form-control" name="email" [(ngModel)]="phone" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email />
-                                <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
-                                    <div *ngIf="email.errors.required">Phone is required</div>
-                                    <div *ngIf="email.errors.email">Email must be a valid email address</div>
-                                    <br>
-                                </div>
-                            </div>
-                            <div style="color:white;" class="form-group">
-                              <br>
-                              <label style="color:white;font-size:220%;font-family:Helvetica;" for="#message">Message:</label>
-                                <textarea  style="background:transparent;color:white;width:100%;"  rows="6" cols="62">
-                                    </textarea>
-                                <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
-                                    <div *ngIf="password.errors.required">Password is required</div>
-                                    <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
-                                </div>
-                                <br>
-                            </div>
-                            <div class="form-group" style="text-align:center;">
-                                <button style="color:white;background:#E4620A;width:100%;font-size:220%;margin-top:3%;font-family:Helvetica;"class="btn btn">Submit</button>
-                            </div>
-                            <br>
-                        </form>
+        <div  class="col-lg-6 m-5 col-md-12 col-sm-12 col-xs-12 ">
+     
+            <form  class="contactusform"name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+                <div style="color:white;" class="form-group">
+                    <label style="color:white;font-size:220%;font-family:Helvetica" for="#name">Name:</label>
+                    <input style="background:transparent;color:white;"  type="text" placeholder="Name" class="form-control" name="firstName" width="120%" [(ngModel)] = "Name" #firstName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required />
+                    <div *ngIf="f.submitted && firstName.invalid;" class="invalid-feedback">
+                        <div *ngIf="firstName.errors.required">First Name is required</div>
+                    </div>
+                    <br>
+                </div>
+                <div style="color:white;" class="form-group">
+                    <label style="color:white;font-size:220%;font-family:Helvetica" for="#mail">Email:</label>
+                    <input style="background:transparent;color:white;width:100%" placeholder="Email" type="text" class="form-control" name="lastName" [(ngModel)]="mail" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                    <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                        <div *ngIf="lastName.errors.required">Last Name is required</div>
+                    </div>
+                    <br>
+                </div>
+                <div style="color:white;" class="form-group">
+                    <label  style="color:white;font-size:220%;font-family:Helvetica"for="#phone">Phone:</label>
+                    <input style="background:transparent;color:white;width:100%" type="text" placeholder="phone" class="form-control" name="email" [(ngModel)]="phone" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email />
+                    <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                        <div *ngIf="email.errors.required">Phone is required</div>
+                        <div *ngIf="email.errors.email">Email must be a valid email address</div>
+                        <br>
                     </div>
                 </div>
-      </div>
-      
+                <div style="color:white;" class="form-group">
+                  <br>
+                  <label style="color:white;font-size:220%;font-family:Helvetica;" for="#message">Message:</label>
+                    <textarea  style="background:transparent;color:white;width:100%;"  rows="6" cols="62">
+                        </textarea>
+                    <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+                        <div *ngIf="password.errors.required">Password is required</div>
+                        <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+                    </div>
+                    <br>
+                </div>
+                <div class="form-group" style="text-align:center;">
+                    <button style="color:white;background:#E4620A;width:100%;font-size:220%;margin-top:3%;font-family:Helvetica;"class="btn btn">Submit</button>
+                </div>
+                <br>
+            </form>
+        </div>
+    </div>
 <app-fotter ></app-fotter>
     
      </div>
@@ -344,13 +349,12 @@
             
               <div  *ngIf="chatboxShow && !isMobile">
             <div class="row">  
-                <div class="col-lg-12"> 
-        <div style="background:#E4620A!important;color:white; position: fixed; padding:1%;bottom:64%!important;margin-left:76.2%;font-size:190%;width:320px;height:63px;border-top-left-radius: 25px;"><p>&nbsp;&nbsp;Send us a message</p>
+            
+        <div style="background:#E4620A!important;color:white; position: fixed; padding:1%;bottom:63%!important;margin-left:76.2%;font-size:190%;width:320px;height:67px;border-top-left-radius: 25px;"><p>&nbsp;&nbsp;Send us a message</p>
             <button style="color:black;font-size:180%;margin-top:-9%;float:right"type="button" class="close" aria-label="Close">
                     <span (click)="chatboxShow=false;"aria-hidden="true">&times;</span>
                   </button>
-                  <p style="margin-top:1%;color:white;font-size:70%;float:right;">© Powered by digital boxitin</p><br>
-                </div>
+                  <p style="margin-top:1%;color:white;font-size:70%;float:right;">© Powered by digital boxitin</p>
             </div>
             </div>
             <div class="col-lg-12">

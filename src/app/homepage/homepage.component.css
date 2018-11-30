@@ -6,6 +6,10 @@
   min-width: 100%;
   background-size: cover; 
   min-height:100%;
+
+}
+.contactusform{
+  margin-top:35%;
 }
 .whatDoWeDo{
 
@@ -246,6 +250,9 @@ overflow-x: hidden;
   .contactus{
   background: url(/assets/mobileview/plain-black-8-x-5-flag-10243-p.jpg)no-repeat center  center fixed;
   
+  }
+  .contactusform{
+    margin-top:5%;
   }
   .one-img{ 
     
