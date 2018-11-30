@@ -23,7 +23,7 @@
      
     @media screen and ( min-width:320px) and (max-width: 1200px) { 
         .mobileban{
-            background: url(/assets/mobileview/Smart\ Serve1.jpg)no-repeat center  center fixed;   
+            background: url(/assets/mobileview/Smart\ Serve1.jpg)no-repeat fixed;   
          
             min-width: auto;
             min-height: 30%;   

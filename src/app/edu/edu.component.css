@@ -1,8 +1,8 @@
 .mobileban{
-    background: url(/assets/mobileview/Edu\ Basket.jpg)no-repeat center  center fixed;   
+    background: url(/assets/mobileview/Edu\ Basket.jpg)no-repeat fixed;   
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    min-width: auto;
-    min-height: auto;   
+    min-width: 100%;
+    min-height: 100%;   
 }
