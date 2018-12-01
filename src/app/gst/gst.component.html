@@ -38,7 +38,7 @@
                     </div>
          <!-- //Navigation -->
          <!-- Slideshow 4 -->
-         <div class="slider">
+         <div *ngIf="!this.Mobile" class="slider">
             <div class="callbacks_container">
                <ul class="rslides" id="slider4">
                   <li>
@@ -50,7 +50,21 @@
                  
                </ul>
             </div>
-           
+            </div>
+            <div *ngIf="this.Mobile" class="slider">
+                <div class="callbacks_container">
+                   <ul class="rslides" id="slider4">
+                      <li>
+                        <div class="slider-img mobileban">
+                          <div class="container">
+                       </div>
+                         </div>
+                      </li>
+                     
+                   </ul>
+                </div>
+               
+             
          </div>
          <div class="clearfix"></div>
       </div>
@@ -67,7 +81,7 @@
                   <strong>   <br>GST<br></strong>
                   </h2>
                   <div  class="info-sub-w4">
-                     <p style="text-align:justify;padding-left: 1%;padding-right: 1%">One of the most important and essential factor now days is filling GST an indirect tax levied on the supply of goods and services. With Indian Smart Hub, real time GST reporting becomes a effortless task, freeing up valuable business resources. autoTax integrates with the ERP, or accounting system or eCommerce platform you already use, allowing you to put GST preparation and submission on autopilot
+                     <p style="text-align:justify;padding-left: 3%;padding-right: 3%">One of the most important and essential factor now days is filling GST an indirect tax levied on the supply of goods and services. With Indian Smart Hub, real time GST reporting becomes a effortless task, freeing up valuable business resources. autoTax integrates with the ERP, or accounting system or eCommerce platform you already use, allowing you to put GST preparation and submission on autopilot
                      </p>
                   </div>
                  

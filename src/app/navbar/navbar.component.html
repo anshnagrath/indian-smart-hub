@@ -38,18 +38,46 @@
         <a  href='#'>Home </a>
      </li>
    
-      <li class="nav-item ">
-           <a  routerLink="/serve">Smart Serve </a>
+     <li class="dropdown open">
+      <a style="color: white" class="dropdown-toggle"(click)="dropdown()">Smart Serve </a>
+      <ul *ngIf="this.togler" >
+        <li><a routerLink='/serve'>bill desk</a></li>
+        <li><a routerLink='/ticketing'>Ticketing</a></li>
+        <li><a routerLink='/insurance'>Insurance</a></li>
+         <li><a routerLink='/knowmore'>&nbsp;know more&nbsp;</a></li>
+      </ul>
+      </li>
+      <li class="dropdown open">
+        <a style="color: white" class="dropdown-toggle"(click)="creativetoggler()">Creative gallery </a>
+        <ul *ngIf="  this.togleCreative" >
+          <li><a routerLink='/brand' >Branding</a></li>
+          <li><a  routerLink='/digital'>&nbsp;Digital Marketing&nbsp;</a></li>
+          <li><a routerLink='/portfolio'>&nbsp;Portfolio management&nbsp;</a></li>
+           <li><a routerLink='/creativemore'>&nbsp;know more&nbsp;</a></li>
+        </ul>
         </li>
-        <li class="nav-item">
-           <a  routerLink="/brand">Creative gallery</a>
-        </li>
-        <li class="nav-item">
-           <a  routerLink="/register">Financial Flux</a>
-        </li>
-        <li class="nav-item">
-           <a  routerLink="/edu">Edu basket</a>
-        </li>
+        <li class="dropdown open">
+          <a style="color: white" class="dropdown-toggle"(click)="financialTogler()">Financial Flux</a>
+          <ul *ngIf="this.fluxToggler" >
+            <li><a routerLink='/register' >Regitration</a></li>
+            <li><a  routerLink='/gst'>&nbsp;GST&nbsp;</a></li>
+            <li><a routerLink='/documentation' >&nbsp;Documentation&nbsp;</a></li>
+             <li><a routerLink='/tax'>&nbsp;Tax complianc&nbsp;</a></li>
+             <li><a routerLink='/personalservices'>&nbsp;Personal services&nbsp;</a></li>
+          </ul>
+          </li>
+          <li class="dropdown open">
+            <a style="color: white" class="dropdown-toggle"(click)="edutogler()">edu baskets</a>
+            <ul *ngIf="this.eduTogglers" >
+              <li><a routerLink='/edu' >&nbsp;Future Planner &nbsp;</a></li>
+              <li><a  routerLink='/edu'>&nbsp;Jagsun edu &nbsp;</a></li>
+              <li><a routerLink='/edu' >&nbsp;Jagsun academy &nbsp;</a></li>
+               <li><a routerLink='/edu'>&nbsp;Digital teaching  &nbsp;</a></li>
+               <li><a routerLink='/edu'>&nbsp;K-12 Publishing&nbsp;</a></li>
+               <li><a routerLink='/edu'>&nbsp;know more&nbsp;</a></li>
+            </ul>
+            </li>
+ 
         <li class="nav-item">
            <a  routerLink="/login">Login</a>
         </li>
@@ -71,7 +99,7 @@
                    <ul class="navbar-nav ">
                      <li class="nav-item">
 
-                            <!-- <a (click)="redirecttoub()" class="pull-left"><img src="../../assets/images/logo/ish-logo (2) - Copy (1).png" width="60px" height="25px"></a>  -->
+                            <a (click)="redirecttoub()" class="pull-left"><img src="../../assets/images/logo/ish-logo (2) - Copy (1).png" width="60px" height="25px"></a> 
                        
                      </li>
                      <li class="nav">
@@ -83,7 +111,7 @@
                      
                               <a  style="color:white;font-size: 13px;margin-top: 8%"  class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                   Smart Serve
-                           <div (mouseleave)=" closeServe()"  style="background: grey;margin-top:14%;text-align:center;margin-left:-10%;font-size: 15px"  (click)="smarthubsec=true"id="nav" *ngIf="toScroll"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                           <div (mouseleave)=" closeServe()"  style="background: black;margin-top:14%;text-align:center;margin-left:-10%;font-size: 15px"  (click)="smarthubsec=true"id="nav" *ngIf="toScroll"class="dropdown-menu show" aria-labelledby="navbarDropdown">
                                     <a class="dropdown" style="color:white" routerLink='/serve' >bill desk </a><br>                              
                                     <a class="dropdown" style="color:white"  routerLink='/ticketing'>Ticketing</a><br>
                                     <a class="dropdown" style="color:white" routerLink='/insurance'>Insurance</a><br>
@@ -97,7 +125,7 @@
                             <li (mouseenter) ="galOpen()"  class="nav-item dropdown">
                               <a  style="color:white;font-size: 13px;margin-top: 6%"  class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                              Creative gallery
-                                <div (mouseleave)="galClose()" id="nav" style="background: grey;margin-top:10%;text-align:center;margin-left:-24%;font-size: 15px;"  (click)="creativeClose=true" *ngIf="creativeGall"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                <div (mouseleave)="galClose()" id="nav" style="background: black;margin-top:10%;text-align:center;margin-left:-24%;font-size: 15px;"  (click)="creativeClose=true" *ngIf="creativeGall"class="dropdown-menu show" aria-labelledby="navbarDropdown">
                                     <a   routerLink='/brand' style="color:white"class="dropdown">Branding<br> </a>
                                     
                                     
@@ -116,11 +144,11 @@
                               <li (mouseenter) ="openflux()" class="nav-item dropdown">
                                   <a  style="color:white;font-size: 13px;margin-top: 8%"  class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                    Financial flux
-                                    <div  (mouseleave)="closeflux()" style="background: grey;margin-top:11%;text-align:center;display:inline-block; white-space: nowrap;margin-left:-24%;font-size: 15px" id ="nav" *ngIf="forFinalcial"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                    <div  (mouseleave)="closeflux()" style="background: black;margin-top:11%;text-align:center;display:inline-block; white-space: nowrap;margin-left:-24%;font-size: 15px" id ="nav" *ngIf="forFinalcial"class="dropdown-menu show" aria-labelledby="navbarDropdown">
                       
                                   <a style="color:white"  routerLink='/register' class="dropdown">Regitration <br></a>
                                        
-                                        <a  style="color:" routerLink='/gst' class="dropdown" >GST <br></a>
+                                        <a  style="color:white" routerLink='/gst' class="dropdown" >GST <br></a>
                                        
                                         <a style="color:white" routerLink='/documentation' class="dropdown ">Documentation<br></a>
                                         
@@ -140,7 +168,7 @@
                                 <li (mouseenter) ="openedu()" class="nav-item dropdown">
                                   <a  style="color:white;font-size: 13px;margin-top: 9%"  class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     edu baskets
-                                    <div (mouseleave)="closeedu()" style="background: grey;margin-top:13%;text-align:center;margin-left:-24%;font-size: 15px" id="nav" *ngIf="toflip"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                    <div (mouseleave)="closeedu()" style="background: black;margin-top:13%;text-align:center;margin-left:-24%;font-size: 15px" id="nav" *ngIf="toflip"class="dropdown-menu show" aria-labelledby="navbarDropdown">
                                         <a style="display:inline-block; white-space: nowrap;color:white;"class="dropdown" routerLink="/edu">&nbsp;Future Planner &nbsp;</a>
                                         <a style="display:inline-block; white-space: nowrap;color:white;"class="dropdown" routerLink="/edu">&nbsp;Jagsun edu &nbsp;<br></a>
                                         <a style="display:inline-block; white-space: nowrap;color:white;"class="dropdown" routerLink="/edu">&nbsp;Jagsun academy &nbsp;<br></a>
@@ -155,7 +183,7 @@
                                   <a  style="color:white;font-size: 13px;margin-top:15%" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                  Login
                                </a>
-                               <div (mouseleave)="closelogin()" style="background: grey;margin-top:18%;text-align:center;margin-left:-28%;font-size: 15px"  id="nav" *ngIf="logins"class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                               <div (mouseleave)="closelogin()" style="background: black;margin-top:18%;text-align:center;margin-left:-28%;font-size: 15px"  id="nav" *ngIf="logins"class="dropdown-menu show" aria-labelledby="navbarDropdown">
                                   <a style="color:white;font-size:100%" class="dropdown" (click)="redirect()" >&nbsp;Mail&nbsp;</a><br>
                                   <a style="color:white;font-size:100%;display:inline-block; white-space: nowrap;" class="dropdown" >&nbsp;Market Place &nbsp;</a>
 
@@ -166,7 +194,7 @@
                                <li (mouseenter)="opentact()" class="nav-item dropdown">
                                 <a  style="color:white;font-size: 13px;margin-top: 8%;" class="nav-link dropdown-toggle"  role="button"  aria-haspopup="true" aria-expanded="true">
                                   &nbsp;&nbsp;Contact us&nbsp;</a>
-                                  <div  (mouseleave)="closectact()" style="background: grey;margin-top:12%;text-align:center;margin-left:-98%;font-size: 15px"  id="nav" *ngIf="cotact" class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                  <div  (mouseleave)="closectact()" style="background: black;margin-top:12%;text-align:center;margin-left:-98%;font-size: 15px"  id="nav" *ngIf="cotact" class="dropdown-menu show" aria-labelledby="navbarDropdown">
                                     <a style="color:white;font-size:100%" class="dropdown"  >&nbsp;Indian Smart Hub&nbsp;</a>
                                     <a style="color:white;font-size:100%;display:inline-block; white-space: nowrap;" class="dropdown" >&nbsp;Indian Smart Hub Partner &nbsp;</a>
                                     

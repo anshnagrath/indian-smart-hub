@@ -11,19 +11,19 @@ export class NavbarComponent implements OnChanges {
     public toScroll = false; cotact = false; Documentation = false; complaince = false; brandingSols = false;
     public toflip = false; tax = false; personalService = false; creativeGall = false; digital = false; logins = false;
     public forFinalcial = false; port = false; creativeClose = false;
-    public GST = false; smarthubsec = false;togler=false;
-    public isMobile = false;
+    public GST = false; smarthubsec = false; togler = false; togleCreative = false;
+    public isMobile = false; fluxToggler = false; eduTogglers = false;
     so = false;
 
     collapsed = true;
     constructor(@Inject(DOCUMENT) private document: any) {
         (300 < window.screen.width && window.screen.width < 991) ? this.isMobile = true : this.isMobile = false;
-        console.log(window.screen.width, this.isMobile, 'asasaas');
+
     }
     ngOnChanges() {
         (300 < window.screen.width && window.screen.width < 991) ? this.isMobile = true : this.isMobile = false;
     }
-   
+
     toggleCollapsed() {
         this.so = !this.so;
         this.collapsed = !this.collapsed;
@@ -38,7 +38,7 @@ export class NavbarComponent implements OnChanges {
         this.document.location.href = 'https://indiansmarthub.in';
     }
     redirecttoEdu() {
-            this.document.location.href= 'http://www.jagsun.in';
+        this.document.location.href = 'http://www.jagsun.in';
     }
     closeServe() {
 
@@ -55,7 +55,13 @@ export class NavbarComponent implements OnChanges {
         this.toScroll = false;
         this.forFinalcial = false;
     }
+    financialTogler() {
+        this.fluxToggler = !this.fluxToggler;
+        this.togler = false;
+        this.togleCreative = false;
 
+        this.eduTogglers = false;
+    }
     serveOpen() {
         this.cotact = false;
         console.log('over1');
@@ -64,9 +70,24 @@ export class NavbarComponent implements OnChanges {
         this.forFinalcial = false;
 
     }
-    dropdown(){
+    edutogler() {
+        this.eduTogglers = !this.eduTogglers;
+        this.togler = false;
+        this.togleCreative = false;
+        this.fluxToggler = false;
+
+    }
+    creativetoggler() {
+        this.togleCreative = !this.togleCreative;
+        this.togler = false;
+        this.fluxToggler = false;
+        this.eduTogglers = false;
+    }
+    dropdown() {
         this.togler = !this.togler;
-        console.log(this.togler,'asdcascsac')
+        this.togleCreative = false;
+        this.fluxToggler = false;
+        this.eduTogglers = false;
     }
     galOpen() {
 

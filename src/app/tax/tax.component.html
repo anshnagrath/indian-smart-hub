@@ -39,7 +39,7 @@
          </div>
          <!-- //Navigation -->
          <!-- Slideshow 4 -->
-         <div class="slider">
+         <div *ngIf="!this.Mobile"  class="slider">
             <div class="callbacks_container">
                <ul class="rslides" id="slider4">
                   <li>
@@ -53,7 +53,20 @@
             </div>
            
          </div>
+         <div *ngIf="this.Mobile" class="slider">
+            <div class="callbacks_container">
+               <ul class="rslides" id="slider4">
+                  <li>
+                    <div class="slider-img mobileban">
+                      <div class="container">
+                   </div>
+                     </div>
+                  </li>
+                 
+               </ul>
+            </div>
          <div class="clearfix"></div>
+      </div>
       </div>
       <!-- //banner -->
       <!--about -->
@@ -65,7 +78,7 @@
                   <strong>   <br>Tax Compliance<br></strong>
                   </h2>
                   <div  class="info-sub-w4">
-                     <p style="text-align:justify;padding-left: 1%;padding-right:1%">With the helpm of Indain Smart Hub, tax payments and producing and submitting information to the tax authorities on time and in the required formats will become very easy.
+                     <p style="text-align:justify;padding-left: 3%;padding-right:3%">With the helpm of Indain Smart Hub, tax payments and producing and submitting information to the tax authorities on time and in the required formats will become very easy.
 
                         With just one click you can easily resolve tax related issues.
                      </p>

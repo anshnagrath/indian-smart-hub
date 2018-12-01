@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GstComponent implements OnInit {
 
-  constructor() { }
-
+  constructor() {
+    this.Mobile = JSON.parse(localStorage.getItem('isMobile'));
+  }
+  public Mobile;
   ngOnInit() {
   }
 

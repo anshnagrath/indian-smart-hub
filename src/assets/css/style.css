@@ -1,10 +1,4 @@
 
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
 #foot{
     background:black;
 
@@ -86,7 +80,9 @@ ul {
 .about,.clients,.team,.contact,.service,.footer,.gallery,.pricing{
     padding: 5em 0;
 }
-
+.eduban{  background:url(/assets/images/banner/ban/edubaset-banners.jpg)no-repeat center;
+    opacity:1;
+};
 .title {
     font-size: 50px;
     text-align: center;
@@ -148,8 +144,7 @@ a.navbar-brand span {
     -ms-transition: 0.5s all;
 }
 
-.eduban{ background:url(/assets/images/banner/edu.png)no-repeat center;
-    opacity:1;};
+
 
 
 nav.navbar.navbar-expand-lg.navbar-light{
@@ -2382,6 +2377,7 @@ a.navbar-brand span {
 }
 
 }
+
 /*--//responsive--*/
 
 

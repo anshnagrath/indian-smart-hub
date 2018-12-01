@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./documentation.component.css']
 })
 export class DocumentationComponent implements OnInit {
-
-  constructor() { }
+public Mobile;
+  constructor() {
+    this.Mobile = JSON.parse(localStorage.getItem('isMobile'));
+  }
 
   ngOnInit() {
   }

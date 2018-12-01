@@ -40,7 +40,7 @@
          <!-- //Navigation -->
          <!-- Slideshow 4 -->
          <div class="slider">
-            <div class="callbacks_container">
+            <div  *ngIf="!this.Mobile" class="callbacks_container">
                <ul class="rslides" id="slider4">
                   <li>
                      <div class="slider-img edbanner-img">
@@ -53,6 +53,19 @@
             </div>
            
          </div>
+         <div *ngIf="this.Mobile" class="slider">
+            <div class="callbacks_container">
+               <ul class="rslides" id="slider4">
+                  <li>
+                    <div class="slider-img mobileban">
+                      <div class="container">
+                   </div>
+                     </div>
+                  </li>
+                 
+               </ul>
+            </div>
+            </div>
          <div class="clearfix"></div>
       </div>
       <!-- //banner -->
@@ -68,7 +81,7 @@
                   <strong>   <br>Personal services<br></strong>
                   </h2>
                   <div  class="info-sub-w4">
-                     <p style="text-align:justify;padding-left: 1%;padding-right: 1%">In this Indian smart hub provides bunch of services that make your life easy and comforting, with subscription of  ISH you can enjoy the services just by the hit of one click.  
+                     <p style="text-align:justify;padding-left: 3%;padding-right: 3%">In this Indian smart hub provides bunch of services that make your life easy and comforting, with subscription of  ISH you can enjoy the services just by the hit of one click.  
                      </p>
                   </div>
                  

@@ -21,13 +21,13 @@ a[_ngcontent-c3]:hover {
 
 #size[_ngcontent-c3] {
     position:fixed;
-    background-color: grey;
+    background-color:black;
     text-transform: uppercase;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     margin-top: 2%;
-    margin-left: 18%;
-    margin-right: 6%;
+    margin-left: 22%;
+    margin-right: 0%;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
