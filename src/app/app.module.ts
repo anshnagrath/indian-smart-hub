@@ -11,7 +11,6 @@ import { AppService } from './app.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
-
 import {
     AuthServiceConfig,
     SocialLoginModule,
@@ -85,6 +84,7 @@ export function getAuthServiceConfigs() {
 
     ],
     imports: [
+        FormsModule,
         HttpClientModule,
         NgxSpinnerModule,
         HttpModule,

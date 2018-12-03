@@ -291,46 +291,34 @@
               
         <div  class="col-lg-6 m-5 col-md-12 col-sm-12 col-xs-12 ">
      
-            <form  class="contactusform"name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+            <form  class="contactusform" (ngSubmit)="contactUs(f)" #f="ngForm" validate >
                 <div style="color:white;" class="form-group">
                     <label style="color:white;font-size:220%;font-family:Helvetica" for="#name">Name:</label>
-                    <input style="background:transparent;color:white;"  type="text" placeholder="Name" class="form-control" name="firstName" width="120%" [(ngModel)] = "Name" #firstName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required />
-                    <div *ngIf="f.submitted && firstName.invalid;" class="invalid-feedback">
-                        <div *ngIf="firstName.errors.required">First Name is required</div>
-                    </div>
+                    <input style="background:transparent;color:white;font-size:220%;"  type="text"  class="form-control" name="name" width="120%"    required ngModel/>
+               
                     <br>
                 </div>
                 <div style="color:white;" class="form-group">
                     <label style="color:white;font-size:220%;font-family:Helvetica" for="#mail">Email:</label>
-                    <input style="background:transparent;color:white;width:100%" placeholder="Email" type="text" class="form-control" name="lastName" [(ngModel)]="mail" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
-                    <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
-                        <div *ngIf="lastName.errors.required">Last Name is required</div>
-                    </div>
+                    <input style="background:transparent;color:white;width:100%;font-size:220%;"  type="text" class="form-control" name="email" width="120%"   required ngModel/>
+                  
                     <br>
                 </div>
                 <div style="color:white;" class="form-group">
-                    <label  style="color:white;font-size:220%;font-family:Helvetica"for="#phone">Phone:</label>
-                    <input style="background:transparent;color:white;width:100%" type="text" placeholder="phone" class="form-control" name="email" [(ngModel)]="phone" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email />
-                    <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
-                        <div *ngIf="email.errors.required">Phone is required</div>
-                        <div *ngIf="email.errors.email">Email must be a valid email address</div>
-                        <br>
-                    </div>
+                    <label  style="color:white;font-size:220%;font-family:Helvetica"for="#mobileNumber">Phone:</label>
+                    <input style="background:transparent;color:white;width:100%;font-size:220%;" type="number" class="form-control" name="mobileNumber"  required ngModel />
+                  <br>
                 </div>
                 <div style="color:white;" class="form-group">
                   <br>
                   <label style="color:white;font-size:220%;font-family:Helvetica;" for="#message">Message:</label>
-                    <textarea  style="background:transparent;color:white;width:100%;"  rows="6" cols="62">
+                    <textarea [(ngModel)]="message" style="background:transparent;color:white;width:100%;font-size:220%;" name="messsage" rows="5" cols="62" required ngModel>
                         </textarea>
-                    <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
-                        <div *ngIf="password.errors.required">Password is required</div>
-                        <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
-                    </div>
                     <br>
                 </div>
-                <div class="form-group" style="text-align:center;">
-                    <button style="color:white;background:#E4620A;width:100%;font-size:220%;margin-top:3%;font-family:Helvetica;"class="btn btn">Submit</button>
-                </div>
+               
+                    <button   type="submit"  [disabled]="f.invalid" value="submit" style="color:white;background:#E4620A;width:100%;font-size:220%;margin-top:3%;font-family:Helvetica;" class="btn btn">Submit</button>
+         
                 <br>
             </form>
         </div>
