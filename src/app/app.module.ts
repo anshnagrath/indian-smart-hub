@@ -39,7 +39,8 @@ import { FinancialknowmoreComponent } from './financialknowmore/financialknowmor
 import { EduKnowmoreComponent } from './edu-knowmore/edu-knowmore.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { CarrierComponent } from './carrier/carrier.component';
-
+import {ToasterService} from './toaster.service';
+import { ToasterComponent } from './toaster/toaster.component'
 
 export function getAuthServiceConfigs() {
     const config = new AuthServiceConfig(
@@ -80,7 +81,8 @@ export function getAuthServiceConfigs() {
         FinancialknowmoreComponent,
         EduKnowmoreComponent,
         SpinnerComponent,
-        CarrierComponent
+        CarrierComponent,
+        ToasterComponent
 
     ],
     imports: [
@@ -119,10 +121,8 @@ export function getAuthServiceConfigs() {
         ]),
         SliderModule
     ],
-    providers: [{
-        provide: AuthServiceConfig,
-        useFactory: getAuthServiceConfigs
-    },
+    providers: [
+        ToasterService,
         AppService
     ],
     bootstrap: [AppComponent]
