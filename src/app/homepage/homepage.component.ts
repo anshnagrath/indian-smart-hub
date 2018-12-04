@@ -76,9 +76,7 @@ export class HomepageComponent implements OnInit {
         if (this.hideit === true) {
             return 'black';
         }
-    success(message: string) { 
-       ;
-    }
+  
  
     }
 }
