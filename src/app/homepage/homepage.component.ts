@@ -39,7 +39,7 @@ export class HomepageComponent implements OnInit {
         const obj = {};
         const email = this.service.sendEmail(para.value).then(data =>{
                console.log(data, 'logging email');
-                this.toastService.success('We have recieved your query and we will get in touch with you shortly');
+               '// this.toastService.success('We have recieved your query and we will get in touch with you shortly');
         });
      
 
