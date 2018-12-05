@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ElementRef } from '@angular/core';
 import { Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import {ToasterService} from './../toaster.service';
+import { ToasterService } from './../toaster.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 @Component({
     selector: 'app-homepage',
@@ -20,8 +20,7 @@ export class HomepageComponent implements OnInit {
 
     myFullresImage = 'https://www.file-upload.com/1qr3giyt7l1r';
     public imagesUrl;
-    constructor(private _eref: ElementRef, @Inject(DOCUMENT) private document: any, public service: AppService,public toastService: ToasterService) {
-        (300 < window.screen.width && window.screen.width < 991) ? this.isMobile = true : this.isMobile = false;
+    constructor(private _eref: ElementRef, @Inject(DOCUMENT) private document: any, public service: AppService, public toastService: ToasterService) {
         console.log(window.screen.width, this.isMobile, 'asasaas');
         localStorage.setItem('isMobile', JSON.stringify(this.isMobile));
     }
@@ -37,11 +36,11 @@ export class HomepageComponent implements OnInit {
     }
     contactUs(para) {
         const obj = {};
-        const email = this.service.sendEmail(para.value).then(data =>{
-               console.log(data, 'logging email');
-               '// this.toastService.success('We have recieved your query and we will get in touch with you shortly');
+        const email = this.service.sendEmail(para.value).then(data => {
+            console.log(data, 'logging email');
+            //ve this.toastService.success('We have recieved your query and we will get in touch with you shortly');
         });
-     
+
 
     }
 
@@ -76,7 +75,7 @@ export class HomepageComponent implements OnInit {
         if (this.hideit === true) {
             return 'black';
         }
-  
- 
+
+
     }
 }

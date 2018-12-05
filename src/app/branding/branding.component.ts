@@ -9,6 +9,7 @@ export class BrandingComponent implements OnInit {
   public Mobile;
   constructor() {
     this.Mobile = JSON.parse(localStorage.getItem('isMobile'));
+    console.log("this.mobileasda", this.Mobile);
   }
 
   ngOnInit() {
