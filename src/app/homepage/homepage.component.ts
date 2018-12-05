@@ -20,8 +20,9 @@ export class HomepageComponent implements OnInit {
 
     myFullresImage = 'https://www.file-upload.com/1qr3giyt7l1r';
     public imagesUrl;
-    constructor(private _eref: ElementRef, @Inject(DOCUMENT) private document: any, public service: AppService, public toastService: ToasterService) {
+    constructor(private _eref: ElementRef, @Inject(DOCUMENT) private document: any, public service: AppService) {
         console.log(window.screen.width, this.isMobile, 'asasaas');
+        (300 < window.screen.width && window.screen.width < 991) ? this.isMobile = true : this.isMobile = false;
         localStorage.setItem('isMobile', JSON.stringify(this.isMobile));
     }
     ngOnInit() {
